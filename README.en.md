@@ -10,7 +10,7 @@ Explore five years of fictional travel across 120 flights without installing any
 
 ![A recording of the moving aircraft and following camera](docs/media/journey.gif)
 
-Replay completed flights with a camera that follows the aircraft. Choose 1×, 2× or 3×, tap the route to search your history, or hide the compact glass controls. Browse a separate flight list and export a travel passport as an image
+Replay completed flights with a camera that follows the aircraft. Tap one speed button to cycle through 1×, 2×, 4× and 8×, tap the route to search your history, or hide the compact glass controls. Browse a separate flight list and export a travel passport as an image
 
 The screenshots use fictional journeys. Routes estimate airport connections using great circles; they are not recorded flight tracks
 

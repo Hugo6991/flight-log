@@ -14,7 +14,7 @@ import {
 import type { Airport, Flight } from "../../shared/model";
 import { Button } from "../components/ui/button";
 import { Card } from "../components/ui/card";
-import { SegmentedControl } from "../components/ui/segmented-control";
+import { nextPlaybackSpeed, type PlaybackSpeed } from "./playback-speed";
 import FlightPicker from "./FlightPicker";
 import {
   Collapsible,
@@ -41,12 +41,12 @@ type Props = {
   tour: TourState;
   ready: boolean;
   earth: boolean;
-  speed: string;
+  speed: PlaybackSpeed;
   onMapChange(): void;
   onToggle(): void;
   onStep(delta: number): void;
   onSelect(index: number): void;
-  onSpeed(value: string): void;
+  onSpeed(value: PlaybackSpeed): void;
 };
 
 export default function JourneyControls({
@@ -265,17 +265,17 @@ export default function JourneyControls({
                 <SkipForward aria-hidden="true" />
               </Button>
             </div>
-            <SegmentedControl
-              label="放映速度"
+            <Button
+              className="camera-speed"
+              variant="ghost"
+              size="icon"
               disabled={!ready || tour.reduced}
-              value={speed}
-              onValueChange={onSpeed}
-              options={[
-                { value: "1", label: "1×", accessibleLabel: "1 倍速" },
-                { value: "2", label: "2×", accessibleLabel: "2 倍速" },
-                { value: "3", label: "3×", accessibleLabel: "3 倍速" },
-              ]}
-            />
+              onClick={() => onSpeed(nextPlaybackSpeed(speed))}
+              aria-label={`目前 ${speed} 倍速，切換至 ${nextPlaybackSpeed(speed)} 倍速`}
+              title={`切換至 ${nextPlaybackSpeed(speed)} 倍速`}
+            >
+              {speed}×
+            </Button>
           </div>
         </Card>
       </CollapsibleContent>

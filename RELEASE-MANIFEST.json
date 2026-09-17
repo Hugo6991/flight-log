@@ -68,6 +68,7 @@
     "src/journey/controller.test.ts",
     "src/journey/controller.ts",
     "src/journey/main.tsx",
+    "src/journey/playback-speed.ts",
     "src/journey/style.css",
     "src/journey/timeline.test.ts",
     "src/journey/timeline.ts",

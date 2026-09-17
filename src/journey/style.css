@@ -159,20 +159,16 @@ body {
   display: flex;
   align-items: center;
 }
-.flight-ui .camera-playback .ui-segmented {
-  background: transparent;
-  padding: 0;
-}
-.flight-ui .camera-playback .ui-segmented input:checked + span {
+.flight-ui .camera-playback .camera-speed {
+  font-size: 14px;
+  font-weight: 650;
+  font-variant-numeric: tabular-nums;
   color: var(--map-glass-accent);
   background: var(--map-glass-active);
   box-shadow:
     inset 0 1px 0 rgb(255 255 255 / 50%),
     0 1px 4px rgb(24 47 70 / 8%);
   border-radius: 50%;
-}
-.flight-ui .camera-playback .ui-segmented span {
-  color: var(--map-glass-muted);
 }
 .flight-ui .camera-buttons .ui-button[data-variant="default"] {
   background: var(--map-glass-active);

@@ -183,7 +183,7 @@ it("keeps the current travel position when speed changes", () => {
   const tour = start();
   advance(18000);
   const progress = state.progress;
-  tour.setSpeed(3);
+  tour.setSpeed(8);
   expect(state.progress).toBeCloseTo(progress, 2);
   tour.destroy();
 });
@@ -199,7 +199,7 @@ it("can switch flights while paused without leaving the camera behind", () => {
   tour.destroy();
 });
 
-it.each([2, 3])(
+it.each([2, 4, 8])(
   "runs approach, travel and arrival at %i times the base clock",
   (rate) => {
     const sample = (speed: number, duration: number) => {
@@ -233,7 +233,7 @@ it("changes speed in place during approach, travel, arrival and pause", () => {
     // publish immediately before comparing, bypassing the UI throttle
     tour.setSpeed(1);
     const before = { ...state, center: [...center], zoom };
-    tour.setSpeed(3);
+    tour.setSpeed(8);
     expect(state.phase).toBe(before.phase);
     expect(state.progress).toBe(before.progress);
     expect(center).toEqual(before.center);
@@ -250,7 +250,7 @@ it("changes speed in place during approach, travel, arrival and pause", () => {
 });
 it("ignores invalid speeds instead of freezing or reversing playback", () => {
   const tour = start();
-  for (const rate of [0, -1, Number.NaN, Infinity, 1.6]) tour.setSpeed(rate);
+  for (const rate of [0, -1, Number.NaN, Infinity, 1.6, 3]) tour.setSpeed(rate);
   advance(18000);
   expect(state.phase).toBe("travel");
   expect(state.progress).toBeGreaterThan(0.4);
@@ -259,8 +259,8 @@ it("ignores invalid speeds instead of freezing or reversing playback", () => {
 });
 it("keeps a faster playback paused while hidden and resumes without a leap", () => {
   const tour = start();
-  tour.setSpeed(3);
-  advance(4000);
+  tour.setSpeed(8);
+  advance(1800);
   doc.hidden = true;
   doc.dispatchEvent(new Event("visibilitychange"));
   const progress = state.progress;

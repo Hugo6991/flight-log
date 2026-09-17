@@ -1,4 +1,5 @@
 import * as maplibregl from "maplibre-gl";
+import { isPlaybackSpeed } from "./playback-speed";
 import type { Map, GeoJSONSource } from "maplibre-gl";
 import { km, type Flight, type Airport } from "../../shared/model";
 import {
@@ -239,7 +240,7 @@ export function createTour(
     },
     setSpeed(value: number) {
       // Change the clock rate, never the current timeline position.
-      if (value !== 1 && value !== 2 && value !== 3) return;
+      if (!isPlaybackSpeed(value)) return;
       speed = value;
       snapshot();
     },

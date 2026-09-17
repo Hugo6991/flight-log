@@ -6,6 +6,7 @@ import workerUrl from "maplibre-gl/dist/maplibre-gl-worker.mjs?worker&url";
 import "maplibre-gl/dist/maplibre-gl.css";
 import { createTour, type TourState } from "./controller";
 import JourneyControls from "./JourneyControls";
+import type { PlaybackSpeed } from "./playback-speed";
 import { Button } from "../components/ui/button";
 import { Card } from "../components/ui/card";
 maplibregl.setWorkerUrl(workerUrl);
@@ -33,13 +34,13 @@ export default function CameraMap({
     [error, setError] = useState(""),
     [attempt, setAttempt] = useState(0);
   const [earth, setEarth] = useState(true),
-    [speed, setSpeed] = useState("1");
+    [speed, setSpeed] = useState<PlaybackSpeed>(1);
   useEffect(() => {
     let disposed = false;
     setReady(false);
     setError("");
     setEarth(true);
-    setSpeed("1");
+    setSpeed(1);
     let map: LibreMap;
     try {
       map = new maplibregl.Map({
@@ -245,7 +246,7 @@ export default function CameraMap({
         onSelect={(index) => controller.current?.select(index)}
         onSpeed={(value) => {
           setSpeed(value);
-          controller.current?.setSpeed(Number(value));
+          controller.current?.setSpeed(value);
         }}
       />
       {!ready && !error && (
