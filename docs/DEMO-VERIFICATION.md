@@ -1,0 +1,63 @@
+# 五年示範驗證
+
+2026 年 9 月 17 日，在公開儲存庫的獨立分支驗證。測試使用空白本機 D1、乾淨 Chrome 瀏覽器及人工建立的匯入測試資料，沒有讀取個人旅行紀錄，也沒有部署私人版本。
+
+## 資料
+
+| 項目 | 結果 |
+| --- | --- |
+| 航段 | 120 段，沒有重複的日期、出發、抵達與班號組合 |
+| 日期 | 2021-09-17 至 2026-09-16，每個滾動年度 24 段、每季 6 段 |
+| 地理涵蓋 | 指定的 20 個國家／地區、六洲，土耳其只計一次 |
+| 旅程連續 | 119 次相鄰航段的抵達與下一次出發機場一致，出發日期至少相隔兩天 |
+| 主要基地 | 桃園與上海浦東合計出發 51 次 |
+| 班號來源 | 48 組有方向的班號與航線，每筆都有航空公司公開來源 |
+| 虛構標記 | 每筆保留 demo 來源與虛構備註，出發及抵達時間皆為空白 |
+| 重新產生 | 產生器重跑後 demo.json 內容一致 |
+
+來源查證只確認班號與航線的對應，部分依據停飛公告或可檢索的官方班表摘要。沒有宣稱虛構日期實際執飛，也未模擬疫情期間的入境規則。完整查證範圍及各航段來源見[資料說明](../data/example/README.md)。
+
+## 程式檢查
+
+使用 Node 24.18.0 執行下列檢查，全部通過：
+
+```sh
+npm run check
+npm test
+npm run build
+```
+
+測試共 13 個檔案、62 項，涵蓋資料格式、地理統計、載入優先序、儲存衝突與既有功能。建置仍有 MapLibre 檔案大小及 Zod 第三方註解提示，沒有型別或建置錯誤。
+
+## 實際瀏覽器操作
+
+共完成 17 組檢查，未出現未捕捉的頁面錯誤。桌面使用 1440 × 1000，手機使用 390 × 844，透過本機 Worker 執行正式建置。
+
+| 操作 | 結果 |
+| --- | --- |
+| 首次開啟 | 空白來源顯示 120 段，伺服器資料仍為空，瀏覽器不會偷偷寫入示範 |
+| 年度、國家與搜尋 | 桌面逐年核對 2021 至 2026；巴西篩選 4 段、EK261 搜尋 2 段；手機年度與班號搜尋亦通過 |
+| 整份取代 | 在舊篩選生效時匯入單筆自訂紀錄，示範全部移除、篩選重設；切換回放及復原正常 |
+| 無效匯入 | 顯示錯誤，原有 120 段不變 |
+| 清空混合資料 | 121 段只移除 120 段示範，自訂紀錄在重新整理後仍存在，復原可取回全部 |
+| 保留空白 | 清空純示範後，地圖及放映在重新整理後都保持空白；可復原 |
+| 公開來源錯誤 | 地圖與放映都顯示讀取錯誤，不補入示範 |
+| 來源優先序 | 非空公開來源優先於示範；已有瀏覽器紀錄時，即使公開來源失效仍可使用 |
+| 回放 | 桌面及手機能搜尋、切換至杜拜到聖保羅，3 倍速飛行進度增加，手機可暫停 |
+| 護照 | 桌面、手機都實際下載 PNG；純示範與混合資料的標記均保留在圖片內 |
+| JSON 備份 | 匯出 120 段，每筆仍有 demo 來源 |
+| 手機版面 | 地圖、清單、回放與護照沒有頁面水平溢出，收起回放卡片後仍有虛構標記 |
+
+自訂匯入測試同樣使用人工建立的假資料，不代表任何人的旅行紀錄。回放與地圖依賴外部圖資；本次有實際載入 WebGL 地圖並目視檢查截圖。擷取素材時另修正回放頁的圖資來源展開狀態，使第一次點擊就能顯示署名。
+
+## 展示畫面
+
+[桌面地圖](media/world-map.png) · [旅程回放](media/journey.png) · [實際 GIF 錄影](media/journey.gif) · [護照匯出](media/passport.png)
+
+![手機示範地圖](media/mobile-map.png)
+
+## English
+
+The public fixture passed all 62 automated tests, TypeScript checks and the production build. Seventeen browser checks covered first use, data replacement, clearing, undo and failed reads, plus desktop and mobile playback. Passport PNG downloads retained the fictional label, including mixed data. The browser tests used synthetic imports and a separate empty local database. No private installation was modified or deployed.
+
+Screenshots and the eight second recording come from the running application. Airline references establish flight number and route pairs only, not historical operations on the invented dates.

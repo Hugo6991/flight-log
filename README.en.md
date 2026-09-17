@@ -4,7 +4,7 @@ Turn your flight history into a personal travel map you can replay and keep
 
 [繁體中文](README.md) · [Import guide](docs/GMAIL-IMPORT.md) · [Deploy](docs/SELF-HOST.md)
 
-![Journey replay with synthetic flights](docs/media/journey.png)
+![Five years of fictional travel with 120 flights across 20 countries and regions](docs/media/world-map.png)
 
 ![A recording of the moving aircraft and following camera](docs/media/journey.gif)
 
@@ -25,7 +25,15 @@ npm run setup:local
 npm start
 ```
 
-Open http://127.0.0.1:4173. From the menu, choose the restore action and select `data/example/demo.json` to try fictional flights. The journey player is at `/journey/`. The first setup creates an empty local database and never reads your email
+Open http://127.0.0.1:4173 to explore 120 fictional flights across 20 countries and regions, covering six continents. Taipei and Shanghai are the main bases. The fixed period runs from 17 September 2021 through 16 September 2026, with 24 flights per rolling year and six per quarter
+
+Airline sources support the flight numbers and routes only. Travel dates and flown status are invented, so the sample does not establish historical operations or anyone’s travel history. Departure and arrival times are blank. See the [itinerary and source ledger](data/example/README.md)
+
+Choose `匯入自己的紀錄` to replace the entire sample with your JSON backup, or `清空示範` to remove the fictional rows. Clearing preserves any personal rows and stays cleared after a reload. The menu action `復原上次還原` restores the snapshot saved before the latest import or clear
+
+Existing browser records take precedence, including a deliberately empty history. A nonempty remote source is used next; an empty source displays the sample. Read errors remain visible. The journey player is at `/journey/`, and exported passport images retain the fictional data label
+
+The first setup creates an empty local database and never reads your email. The public repository contains the sample only; keep personal histories in your own browser or a separate private installation
 
 ## Add your history
 
@@ -54,4 +62,6 @@ npm run build
 
 See [CONTRIBUTING](CONTRIBUTING.md), [SECURITY](SECURITY.md), and [third party notices](THIRD_PARTY_NOTICES.md). Use synthetic data in issues, screenshots and tests
 
-MIT License. The license covers the project's original code, not personal travel records, map services or third party brands
+See the [demo verification report](docs/DEMO-VERIFICATION.md) for data checks and browser results, including mobile screenshots
+
+MIT License covers the original code and synthetic sample data. Personal travel records and airline source pages are excluded, as are map services and third party brands
