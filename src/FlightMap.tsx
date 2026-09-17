@@ -9,7 +9,7 @@ import {
   Plus,
   Minus,
   LocateFixed,
-  Globe2,
+  SlidersHorizontal,
   AlertCircle,
   RotateCcw,
   LoaderCircle,
@@ -18,6 +18,12 @@ import {
   Pause,
   X,
 } from "lucide-react";
+import {
+  Popover,
+  PopoverTrigger,
+  PopoverContent,
+} from "./components/ui/popover";
+import "./components/ui/ui.css";
 import type { FeatureCollection, MultiLineString, Point } from "geojson";
 import { type Flight, type Airport, km } from "../shared/model";
 import {
@@ -46,7 +52,7 @@ function padding(map?: LibreMap) {
   return window.innerWidth <= 760
     ? {
         top: 164,
-        bottom: 158,
+        bottom: 102,
         left: 28,
         right: 38,
       }
@@ -157,6 +163,15 @@ export default function FlightMap({
     [ready, setReady] = useState(false),
     [error, setError] = useState("");
   const [globe, setGlobe] = useState(true);
+  const [optionsOpen, setOptionsOpen] = useState(false);
+  useEffect(() => {
+    const media = window.matchMedia("(max-width: 760px)");
+    const closeDesktopOptions = () => {
+      if (!media.matches) setOptionsOpen(false);
+    };
+    media.addEventListener("change", closeDesktopOptions);
+    return () => media.removeEventListener("change", closeDesktopOptions);
+  }, []);
   const [earthFailed, setEarthFailed] = useState(false);
   const [phase, setPhase] = useState<ReplayPhase>("finished");
   const [progress, setProgress] = useState(0);
@@ -275,6 +290,11 @@ export default function FlightMap({
           zoom: Math.max(-1, Math.min(14, zoom)),
         }),
         attributionControl: { compact: true },
+        // Native handlers preserve one-finger inertia, pinch zoom and double tap.
+        dragPan: true,
+        touchZoomRotate: true,
+        doubleClickZoom: true,
+        cooperativeGestures: false,
         dragRotate: false,
         pitchWithRotate: false,
         touchPitch: false,
@@ -287,7 +307,7 @@ export default function FlightMap({
         .getCanvas()
         .setAttribute(
           "aria-label",
-          "旅行航線地圖；方向鍵移動，加減鍵縮放，航班也可由列表選取",
+          "旅行航線地圖；單指拖曳、雙指縮放、雙擊放大；方向鍵移動，加減鍵縮放，航班也可由列表選取",
         );
       map.on("error", (event) => {
         if ("sourceId" in event && event.sourceId === "earth-imagery") {
@@ -824,34 +844,7 @@ export default function FlightMap({
         </div>
       )}
       <div className="map-controls" aria-label="地圖控制">
-        <div className="map-region-controls map-glass">
-          <button
-            title="在平面地圖顯示全部航線"
-            aria-label="全部航線"
-            disabled={!ready}
-            onClick={() => {
-              if (globe) setGlobe(false);
-              else if (mapRef.current) fit(mapRef.current, latest.current.all);
-            }}
-          >
-            <Globe2 size={17} />
-            <span className="map-control-label">全部航線</span>
-          </button>
-          <button
-            title="查看亞洲"
-            disabled={!ready}
-            onClick={() =>
-              mapRef.current &&
-              fit(mapRef.current, [
-                [94, 3],
-                [146, 48],
-              ])
-            }
-          >
-            亞洲
-          </button>
-        </div>
-        <div className="map-projection-controls map-glass">
+        <div className="map-projection-controls map-desktop-control map-glass">
           <button
             aria-label="地球視角"
             aria-pressed={globe}
@@ -862,7 +855,7 @@ export default function FlightMap({
             <span>地球</span>
           </button>
         </div>
-        <div className="map-zoom-controls map-glass">
+        <div className="map-zoom-controls map-desktop-control map-glass">
           <button
             aria-label="放大地圖"
             disabled={!ready}
@@ -891,6 +884,64 @@ export default function FlightMap({
             <LocateFixed size={18} />
           </button>
         </div>
+        <Popover open={optionsOpen} onOpenChange={setOptionsOpen}>
+          <PopoverTrigger asChild>
+            <button
+              className="map-options-trigger map-glass"
+              aria-label="地圖選項"
+              disabled={!ready}
+            >
+              <SlidersHorizontal size={18} aria-hidden="true" />
+            </button>
+          </PopoverTrigger>
+          <PopoverContent
+            className="map-options-popover map-glass"
+            side="top"
+            aria-label="地圖選項"
+            onEscapeKeyDown={(event) => event.stopPropagation()}
+          >
+            <p>單指拖曳 · 雙指縮放 · 雙擊放大</p>
+            <div className="map-options-zoom">
+              <button
+                aria-label="放大地圖"
+                onClick={() =>
+                  mapRef.current?.zoomIn({ duration: reduced() ? 0 : 200 })
+                }
+              >
+                <Plus size={18} />
+                放大
+              </button>
+              <button
+                aria-label="縮小地圖"
+                onClick={() =>
+                  mapRef.current?.zoomOut({ duration: reduced() ? 0 : 200 })
+                }
+              >
+                <Minus size={18} />
+                縮小
+              </button>
+            </div>
+            <button
+              aria-pressed={globe}
+              onClick={() => {
+                setGlobe((value) => !value);
+                setOptionsOpen(false);
+              }}
+            >
+              <Orbit size={18} />
+              地球視角
+            </button>
+            <button
+              onClick={() => {
+                if (mapRef.current) fit(mapRef.current, latest.current.all);
+                setOptionsOpen(false);
+              }}
+            >
+              <LocateFixed size={18} />
+              回到全部航線
+            </button>
+          </PopoverContent>
+        </Popover>
       </div>
       <p className="map-caption">航線為機場間示意 · 距離採大圓距離估算</p>
     </div>

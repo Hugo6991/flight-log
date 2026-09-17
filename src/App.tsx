@@ -694,6 +694,18 @@ export default function App() {
                   <RotateCcw size={15} />
                   復原上次還原
                 </button>
+                <DemoNotice
+                  flights={flights}
+                  busy={busy}
+                  onImport={() => {
+                    input.current?.click();
+                    setMore(false);
+                  }}
+                  onClear={() => {
+                    setMore(false);
+                    void clearDemo();
+                  }}
+                />
                 <p>
                   {busy ? "儲存中…" : "已儲存於此瀏覽器。"}
                   <br />
@@ -704,12 +716,6 @@ export default function App() {
           </div>
         </div>
       </header>
-      <DemoNotice
-        flights={flights}
-        busy={busy}
-        onImport={() => input.current?.click()}
-        onClear={() => void clearDemo()}
-      />
       <input
         ref={input}
         type="file"

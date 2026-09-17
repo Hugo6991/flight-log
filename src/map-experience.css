@@ -1,4 +1,62 @@
 /* Map notices use the shared glass material. */
+.map-controls .map-options-trigger {
+  display: none;
+}
+.map-options-popover {
+  width: min(268px, calc(100vw - 24px));
+  padding: 12px;
+  border-radius: 22px;
+}
+.map-options-popover p {
+  margin: 0 0 10px;
+  font-size: 12px;
+  color: var(--map-glass-muted);
+  text-align: center;
+}
+.map-options-popover button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  min-height: 44px;
+  padding: 10px 12px;
+  border: 0;
+  border-radius: 12px;
+  background: transparent;
+  color: var(--map-glass-ink);
+  font: inherit;
+  font-size: 13px;
+  text-align: left;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+.map-options-zoom {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 4px;
+}
+.map-options-zoom button,
+.map-options-popover button[aria-pressed="true"] {
+  background: var(--map-glass-active);
+}
+.map-options-popover button:focus-visible {
+  outline: 2px solid var(--map-glass-accent);
+  outline-offset: -2px;
+}
+@media (max-width: 760px) {
+  .app-shell .map-controls .map-desktop-control {
+    display: none;
+  }
+  .app-shell .map-controls .map-options-trigger {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    height: 46px;
+    padding: 0;
+    border-radius: 50%;
+  }
+}
 .earth-notice {
   position: absolute;
   top: 155px;

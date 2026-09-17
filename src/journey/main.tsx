@@ -1,7 +1,7 @@
 import { StrictMode, useEffect, useMemo, useState } from "react";
 import { createRoot } from "react-dom/client";
 import { type Airport, type Flight } from "../../shared/model";
-import { loadFlightState, demoLabel } from "../demo";
+import { loadFlightState } from "../demo";
 import "../demo.css";
 import { applyHistoryUpdate } from "../../shared/history-update";
 import { playlist } from "./timeline";
@@ -53,20 +53,7 @@ function App() {
         <a href="/">返回旅行地圖</a>
       </div>
     );
-  return (
-    <>
-      <CameraMap flights={queue} airports={data.airports} />
-      {demoLabel(data.flights) && (
-        <a
-          className="camera-demo-label map-glass"
-          href="/"
-          aria-label={`${demoLabel(data.flights)}，返回地圖替換紀錄`}
-        >
-          {demoLabel(data.flights)}
-        </a>
-      )}
-    </>
-  );
+  return <CameraMap flights={queue} airports={data.airports} />;
 }
 const root = createRoot(document.getElementById("root")!);
 root.render(

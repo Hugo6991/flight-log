@@ -266,6 +266,10 @@
 .app-shell .map-controls {
   right: var(--chrome-inset);
   bottom: calc(32px + env(safe-area-inset-bottom));
+  pointer-events: none;
+}
+.app-shell .map-controls > * {
+  pointer-events: auto;
 }
 .app-shell .route-replay {
   left: var(--chrome-inset);
@@ -289,9 +293,6 @@
 .app-shell > .records-page {
   height: 100%;
   padding-top: 80px;
-}
-.app-shell.records-shell:has(.demo-notice) > .records-page {
-  padding-top: 120px;
 }
 .flight-modal.map-glass {
   --map-glass-surface: rgb(242 248 255 / 74%);
@@ -347,10 +348,10 @@
     font-size: 20px;
   }
   .app-shell .map-replay-entry {
-    left: auto;
-    right: 12px;
+    left: 12px;
+    right: auto;
     top: auto;
-    bottom: calc(88px + env(safe-area-inset-bottom));
+    bottom: calc(32px + env(safe-area-inset-bottom));
     padding-inline: 12px;
     gap: 6px;
   }
@@ -368,7 +369,6 @@
     min-height: 44px;
     min-width: 44px;
   }
-  .map-control-label,
   .map-projection-controls button > span {
     display: none;
   }
@@ -387,7 +387,7 @@
     right: 12px;
     width: auto;
     max-height: calc(
-      100% - 312px - env(safe-area-inset-top) - env(safe-area-inset-bottom)
+      100% - 256px - env(safe-area-inset-top) - env(safe-area-inset-bottom)
     );
     padding: 16px;
   }

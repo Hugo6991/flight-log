@@ -78,6 +78,17 @@ Cloudflare 與 Google 公開 DNS 均已解析新子網域。本機曾保留部�
 - Escape 關閉示範選單後保留航班卡片
 - TypeScript 檢查、62 項測試、正式建置及 Cloudflare 部署預檢通過
 
+## 手機手勢與畫面精簡
+
+2026 年 9 月 18 日移除全球與亞洲快捷按鈕，示範管理移到更多功能。手機底部只保留一個地圖選項入口，縮放、投影與重置在需要時才展開，回放入口移至左下同一列
+
+- 地圖明確啟用 MapLibre 原生拖曳、雙指縮放及雙擊放大，保持北向與無傾斜，避免手勢衝突
+- 390 × 844 與 320 × 740 視窗的主畫面沒有示範資訊或地區快捷按鈕，沒有橫向溢出
+- 在瀏覽器實測拖曳與雙擊放大、地圖選項、回放入口及 Escape 關閉選單後保留航班詳情
+- 清空功能移入主選單後，重新整理仍為空白，復原可恢復 120 段
+- TypeScript 檢查、62 項測試與正式建置通過，既有回放測試包含背景分頁與減少動態
+- 雙指縮放使用原生處理器，這輪瀏覽器工具未模擬多點觸控，仍需真機驗收
+
 ## English
 
 The public fixture passed all 62 automated tests, TypeScript checks and the production build. Seventeen browser checks covered first use, data replacement, clearing, undo and failed reads, plus desktop and mobile playback. Passport PNG downloads retained the fictional label, including mixed data. The browser tests used synthetic imports and a separate empty local database. No private installation was modified or deployed.
