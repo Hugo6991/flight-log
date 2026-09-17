@@ -1,3 +1,4 @@
+/// <reference types="node" />
 import { expect, it } from "vitest";
 import { browserMigrationResponse } from "./browser-migration";
 const source = "https://old.example.com";
