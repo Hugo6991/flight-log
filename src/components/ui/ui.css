@@ -1,0 +1,330 @@
+@import "../../tokens.css";
+
+/* Opt-in scope: new primitives cannot restyle existing screens or source studies. */
+.flight-ui {
+  --ui-foreground: var(--ink);
+  --ui-muted: #5b6b7d;
+  --ui-primary: #0669da;
+  --ui-primary-foreground: #fff;
+  --ui-surface: #fff;
+  --ui-glass: rgb(250 252 255 / 94%);
+  --ui-subtle: #edf2f7;
+  --ui-border: #dce4ed;
+  --ui-radius-control: 12px;
+  --ui-radius-card: 20px;
+  --ui-control-height: 44px;
+  --ui-space-1: 4px;
+  --ui-space-2: 8px;
+  --ui-space-3: 12px;
+  --ui-space-4: 16px;
+  --ui-space-5: 20px;
+  --ui-space-6: 24px;
+  --ui-enter: 240ms;
+  --ui-exit: 180ms;
+  color: var(--ui-foreground);
+  font:
+    16px/1.5 -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  font-variant-numeric: tabular-nums;
+}
+.flight-ui *,
+.flight-ui *::before,
+.flight-ui *::after {
+  box-sizing: border-box;
+}
+.flight-ui .ui-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--ui-space-2);
+  min-height: var(--ui-control-height);
+  padding: 0 var(--ui-space-4);
+  border: 1px solid transparent;
+  border-radius: var(--ui-radius-control);
+  background: var(--ui-subtle);
+  color: var(--ui-foreground);
+  font: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  touch-action: manipulation;
+  transition:
+    background-color 160ms ease,
+    color 160ms ease,
+    transform 120ms var(--ease-out);
+}
+.flight-ui .ui-button[data-variant="default"] {
+  background: var(--ui-primary);
+  color: var(--ui-primary-foreground);
+}
+.flight-ui .ui-button[data-variant="ghost"] {
+  background: transparent;
+  color: var(--ui-muted);
+}
+.flight-ui .ui-button[data-size="icon"] {
+  width: var(--ui-control-height);
+  min-width: var(--ui-control-height);
+  padding: 0;
+}
+.flight-ui .ui-button svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  pointer-events: none;
+}
+.flight-ui .ui-button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+.flight-ui .ui-button:not(:disabled):active {
+  transform: scale(0.97);
+}
+.flight-ui :is(button, a, select, summary):focus-visible {
+  outline: 3px solid var(--ui-primary);
+  outline-offset: 3px;
+}
+.flight-ui .ui-button[aria-expanded="true"] {
+  color: var(--ui-primary);
+  background: var(--blue-wash);
+}
+.flight-ui .ui-card {
+  border: 1px solid var(--ui-border);
+  border-radius: var(--ui-radius-card);
+  background: var(--ui-surface);
+  box-shadow: var(--shadow-small);
+  color: var(--ui-foreground);
+}
+.flight-ui .ui-card[data-material="glass"] {
+  background: var(--ui-glass);
+  border-color: rgb(255 255 255 / 70%);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  box-shadow: var(--shadow-overlay);
+}
+.flight-ui .ui-select {
+  position: relative;
+  display: inline-flex;
+  min-width: 0;
+}
+.flight-ui .ui-select select {
+  appearance: none;
+  width: 100%;
+  min-width: 0;
+  min-height: var(--ui-control-height);
+  padding: 0 36px 0 var(--ui-space-3);
+  border: 1px solid var(--ui-border);
+  border-radius: var(--ui-radius-control);
+  background: var(--ui-surface);
+  color: var(--ui-foreground);
+  font: inherit;
+  font-size: 14px;
+  cursor: pointer;
+}
+.flight-ui .ui-select select:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+.flight-ui .ui-select > svg {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: var(--ui-muted);
+}
+.flight-ui .ui-disclosure {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+  transition:
+    opacity var(--ui-enter) var(--ease-out),
+    transform var(--ui-enter) var(--ease-out),
+    visibility 0s;
+}
+.flight-ui .ui-disclosure[data-state="closed"] {
+  opacity: 0;
+  transform: translateY(8px);
+  visibility: hidden;
+  pointer-events: none;
+  transition-duration: var(--ui-exit), var(--ui-exit), 0s;
+  transition-delay: 0s, 0s, var(--ui-exit);
+}
+.flight-ui .ui-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+@media (hover: hover) and (pointer: fine) {
+  .flight-ui .ui-button:not(:disabled):hover {
+    background: #e1eaf4;
+  }
+  .flight-ui .ui-button[data-variant="default"]:not(:disabled):hover {
+    background: #055bbb;
+  }
+}
+.flight-ui[data-keyboard="true"] :is(.ui-disclosure, .ui-button) {
+  transition: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .flight-ui :is(.ui-disclosure, .ui-button) {
+    transition: none;
+  }
+  .flight-ui .ui-disclosure[data-state="closed"],
+  .flight-ui .ui-button:not(:disabled):active {
+    transform: none;
+  }
+}
+@media (prefers-reduced-transparency: reduce) {
+  .flight-ui .ui-card[data-material="glass"] {
+    background: var(--ui-surface);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+}
+
+/* Three or fewer discrete choices stay visible instead of hiding in a menu. */
+.flight-ui .ui-segmented {
+  display: flex;
+  flex-shrink: 0;
+  min-width: 0;
+  margin: 0;
+  padding: 3px;
+  gap: 0;
+  border: 0;
+  border-radius: var(--ui-radius-control);
+  background: var(--ui-subtle);
+}
+.flight-ui .ui-segmented label {
+  position: relative;
+  display: flex;
+  flex: 1;
+}
+.flight-ui .ui-segmented input {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+.flight-ui .ui-segmented span {
+  display: grid;
+  place-items: center;
+  flex: 1;
+  min-width: 44px;
+  min-height: 44px;
+  border-radius: 9px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ui-muted);
+}
+.flight-ui .ui-segmented input:checked + span {
+  color: var(--ui-primary);
+  background: var(--ui-surface);
+  box-shadow: 0 1px 3px rgb(28 48 74 / 12%);
+}
+.flight-ui .ui-segmented input:focus-visible + span {
+  outline: 2px solid var(--ui-primary);
+  outline-offset: 1px;
+}
+.flight-ui .ui-segmented:disabled {
+  opacity: 0.45;
+}
+.flight-ui .ui-segmented:disabled input {
+  cursor: not-allowed;
+}
+.flight-ui.ui-popover {
+  z-index: 50;
+  overflow: hidden;
+  max-height: var(--radix-popover-content-available-height);
+  border: 1px solid var(--ui-border);
+  border-radius: 16px;
+  background: var(--ui-surface);
+  box-shadow:
+    0 16px 48px rgb(12 32 58 / 20%),
+    0 2px 8px rgb(12 32 58 / 8%);
+  outline: none;
+}
+.flight-ui [cmdk-root] {
+  display: flex;
+  flex-direction: column;
+}
+.flight-ui .ui-command-search {
+  display: flex;
+  align-items: center;
+  gap: var(--ui-space-2);
+  padding: 0 var(--ui-space-3);
+  min-height: 52px;
+  border-bottom: 1px solid var(--ui-border);
+  color: var(--ui-muted);
+}
+.flight-ui .ui-command-search > svg {
+  flex-shrink: 0;
+}
+.flight-ui .ui-command-search .ui-button {
+  margin-right: -8px;
+}
+.flight-ui [cmdk-input] {
+  min-width: 0;
+  width: 100%;
+  height: 48px;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  border-radius: 0;
+  background: transparent;
+  color: var(--ui-foreground);
+  font: inherit;
+  font-size: 16px;
+}
+.flight-ui [cmdk-input]::placeholder {
+  color: var(--ui-muted);
+  font-size: 14px;
+}
+.flight-ui .ui-command-search:focus-within {
+  box-shadow: inset 0 -2px var(--ui-primary);
+}
+.flight-ui [cmdk-list] {
+  max-height: min(
+    320px,
+    calc(var(--radix-popover-content-available-height) - 54px)
+  );
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scroll-padding-block: 8px;
+  padding: var(--ui-space-1);
+}
+.flight-ui [cmdk-group-heading] {
+  padding: 10px 10px 4px;
+  color: var(--ui-muted);
+  font-size: 12px;
+  font-weight: 500;
+}
+.flight-ui [cmdk-item] {
+  padding: 8px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.flight-ui [cmdk-item][data-selected="true"] {
+  background: var(--blue-wash);
+}
+.flight-ui [cmdk-item][data-disabled="true"] {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+.flight-ui [cmdk-empty] {
+  padding: 28px 16px;
+  text-align: center;
+  color: var(--ui-muted);
+  font-size: 14px;
+}

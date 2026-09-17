@@ -1,0 +1,63 @@
+/* Earth-specific materials; the standard map retains light controls and labels. */
+.map-panel:has(.space-view) .journey-stats {
+  background: transparent;
+  border-color: transparent;
+  backdrop-filter: none;
+  box-shadow: none;
+  color: #f1f5ff;
+  width: min(470px, calc(100% - 48px));
+}
+.map-panel:has(.space-view) .journey-stats > div > span,
+.map-panel:has(.space-view) .journey-stats strong small {
+  color: #b8c9e1;
+}
+.map-panel:has(.space-view) .journey-stats strong {
+  text-shadow: 0 2px 12px #03091770;
+}
+.space-view .map-replay-entry {
+  background: #1d2e47e8;
+  color: #d9e8ff;
+  border: 1px solid #ffffff1c;
+  box-shadow: none;
+}
+.space-view .map-controls > div {
+  box-shadow: 0 6px 20px #0000002b;
+}
+.space-view .maplibregl-ctrl-attrib {
+  background: #ffffffde;
+}
+.earth-notice {
+  position: absolute;
+  top: 155px;
+  left: 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  border-radius: 12px;
+  background: #fff;
+  color: #344052;
+  font-size: 12px;
+  max-width: calc(100% - 48px);
+}
+.earth-notice button {
+  min-height: 36px;
+  color: #0868dc;
+  font-weight: 600;
+}
+@media (min-width: 761px) {
+  .has-selection .journey-stats {
+    display: none;
+  }
+}
+@media (max-width: 760px) {
+  .map-panel:has(.space-view) .journey-stats {
+    width: calc(100% - 24px);
+    padding: 9px 12px;
+  }
+  .earth-notice {
+    top: 144px;
+    left: 12px;
+    max-width: calc(100% - 24px);
+  }
+}

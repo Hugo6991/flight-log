@@ -1,0 +1,47 @@
+{
+  "name": "flight-log",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "tsc --noEmit && vite build",
+    "test": "vitest run",
+    "dev:worker": "wrangler dev --ip 127.0.0.1 --port 8787",
+    "db:local": "wrangler d1 migrations apply DB --local",
+    "deploy": "node scripts/check-deploy.mjs && npm run check && npm test && npm run build && wrangler deploy",
+    "typegen": "wrangler types",
+    "start": "node scripts/dev.mjs",
+    "setup:local": "npm run typegen && npm run build && npm run db:local",
+    "check": "tsc --noEmit && tsc --noEmit -p tsconfig.worker.json",
+    "import:prepare": "node scripts/prepare-import.mjs"
+  },
+  "dependencies": {
+    "@radix-ui/react-collapsible": "1.1.12",
+    "@radix-ui/react-popover": "1.1.15",
+    "cmdk": "1.1.1",
+    "d3-geo": "^3.1.1",
+    "lucide-react": "^0.468.0",
+    "maplibre-gl": "^6.10.0",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "zod": "^4.1.5"
+  },
+  "devDependencies": {
+    "@types/d3-geo": "^3.1.0",
+    "@types/node": "^24.3.0",
+    "@types/react": "^19.1.13",
+    "@types/react-dom": "^19.1.9",
+    "@vitejs/plugin-react": "^5.0.3",
+    "jsonc-parser": "^3.3.1",
+    "prettier": "^3.9.7",
+    "typescript": "^5.9.2",
+    "vite": "^7.1.5",
+    "vitest": "^4.1.11",
+    "wrangler": "latest"
+  },
+  "engines": {
+    "node": ">=24"
+  },
+  "license": "MIT"
+}

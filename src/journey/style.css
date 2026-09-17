@@ -1,0 +1,308 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  color: #203249;
+  font:
+    16px/1.5 -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  background: #091323;
+}
+.camera-study {
+  position: relative;
+  height: 100svh;
+  min-height: 320px;
+  overflow: hidden;
+}
+.camera-map {
+  position: absolute;
+  inset: 0;
+}
+.camera-ui {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.camera-header {
+  position: absolute;
+  top: max(20px, env(safe-area-inset-top));
+  left: max(24px, env(safe-area-inset-left));
+  right: max(24px, env(safe-area-inset-right));
+  display: flex;
+  align-items: center;
+  gap: var(--ui-space-3);
+}
+.camera-header > * {
+  pointer-events: auto;
+}
+.camera-header .camera-back {
+  background: var(--ui-glass);
+  box-shadow: var(--shadow-small);
+}
+.camera-title {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  color: #f4f9ff;
+  text-shadow: 0 1px 5px #001126;
+}
+.camera-title strong {
+  font-size: 16px;
+  font-weight: 600;
+}
+.camera-title span {
+  font-size: 12px;
+}
+.camera-study[data-earth="false"] .camera-title {
+  color: #203a56;
+  text-shadow: 0 1px 3px #fff;
+}
+.camera-toolbar {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  padding: var(--ui-space-1);
+  border-radius: 16px !important;
+}
+.camera-toolbar-divider {
+  height: 20px;
+  width: 1px;
+  margin: 0 var(--ui-space-1);
+  background: var(--ui-border);
+}
+.camera-console {
+  position: absolute;
+  bottom: calc(48px + env(safe-area-inset-bottom));
+  right: max(24px, env(safe-area-inset-right));
+  width: 352px;
+  max-height: calc(
+    100svh - 148px - env(safe-area-inset-top) - env(safe-area-inset-bottom)
+  );
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  pointer-events: auto;
+  border-radius: var(--ui-radius-card);
+}
+.camera-console-card {
+  padding: var(--ui-space-4) var(--ui-space-5) var(--ui-space-2);
+}
+.camera-card-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--ui-space-2);
+  margin-right: calc(-1 * var(--ui-space-2));
+}
+.camera-metadata {
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+  line-height: 1.6;
+  color: var(--ui-muted);
+}
+.camera-metadata > span:first-child {
+  color: var(--ui-foreground);
+  font-size: 14px;
+  font-weight: 500;
+}
+.camera-route {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: var(--ui-space-3) 0 var(--ui-space-5);
+  gap: var(--ui-space-4);
+}
+.camera-route > div:first-child,
+.camera-route > div:last-child {
+  display: flex;
+  flex-direction: column;
+}
+.camera-route > div:last-child {
+  text-align: right;
+}
+.camera-route strong {
+  font-size: 32px;
+  line-height: 1.2;
+  font-weight: 650;
+  letter-spacing: -0.8px;
+}
+.camera-route span {
+  margin-top: var(--ui-space-1);
+  font-size: 14px;
+  color: var(--ui-muted);
+}
+.camera-route-line {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: var(--ui-space-2);
+  color: var(--ui-primary);
+}
+.camera-route-line::before,
+.camera-route-line::after {
+  content: "";
+  height: 1px;
+  flex: 1;
+  background: var(--ui-border);
+}
+.camera-progress {
+  height: 3px;
+  background: var(--ui-border);
+  overflow: hidden;
+  border-radius: 4px;
+}
+.camera-progress > div {
+  height: 100%;
+  background: var(--ui-primary);
+  transform-origin: left;
+  transition: transform 120ms linear;
+}
+.camera-playback {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--ui-space-3);
+  margin-top: var(--ui-space-3);
+}
+.camera-buttons {
+  display: flex;
+  align-items: center;
+  gap: var(--ui-space-1);
+  margin-left: calc(-1 * var(--ui-space-2));
+}
+.camera-picker {
+  margin-top: var(--ui-space-3);
+  border-top: 1px solid var(--ui-border);
+  padding-top: var(--ui-space-1);
+}
+.flight-ui .camera-picker-trigger {
+  width: 100%;
+  justify-content: flex-start;
+  padding: 0 var(--ui-space-2);
+  font-weight: 500;
+}
+.camera-picker-count {
+  margin-left: auto;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 3px 7px;
+  background: var(--ui-subtle);
+  border-radius: 6px;
+  color: var(--ui-muted);
+}
+.camera-flight-menu {
+  width: max(332px, var(--radix-popover-trigger-width));
+  max-width: calc(100vw - 24px);
+}
+.camera-flight-option {
+  display: flex;
+  gap: var(--ui-space-3);
+  align-items: center;
+  min-height: 64px;
+}
+.camera-flight-option time {
+  width: 42px;
+  flex-shrink: 0;
+  font-size: 13px;
+  color: var(--ui-muted);
+}
+.camera-flight-option-main {
+  flex: 1;
+  min-width: 0;
+}
+.camera-flight-option-main strong {
+  display: flex;
+  align-items: center;
+  gap: var(--ui-space-2);
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.6;
+}
+.camera-flight-option-main strong svg {
+  color: var(--ui-muted);
+}
+.camera-flight-option-main > span {
+  display: block;
+  color: var(--ui-muted);
+  font-size: 12px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.camera-flight-check {
+  color: var(--ui-primary);
+  flex-shrink: 0;
+}
+.tour-plane svg {
+  display: block;
+  filter: drop-shadow(0 3px 4px #001a4870);
+}
+.camera-feedback {
+  position: absolute;
+  left: 50%;
+  top: 100px;
+  transform: translateX(-50%);
+  width: min(90%, 400px);
+  padding: 16px 20px;
+  text-align: center;
+  font-size: 14px;
+}
+.camera-feedback p {
+  margin: 0 0 8px;
+}
+.camera-empty {
+  padding: 32px;
+  color: #e8f2ff;
+}
+.camera-empty a {
+  color: #9fd1ff;
+}
+@media (max-width: 760px) {
+  .camera-header {
+    top: max(12px, env(safe-area-inset-top));
+    left: max(12px, env(safe-area-inset-left));
+    right: max(12px, env(safe-area-inset-right));
+    gap: var(--ui-space-2);
+  }
+  .camera-console {
+    left: max(12px, env(safe-area-inset-left));
+    right: max(12px, env(safe-area-inset-right));
+    width: auto;
+    bottom: calc(56px + env(safe-area-inset-bottom));
+  }
+  .camera-console-card {
+    padding: var(--ui-space-3) var(--ui-space-4) var(--ui-space-2);
+  }
+  .camera-route {
+    margin: var(--ui-space-2) 0 var(--ui-space-4);
+  }
+  .camera-route strong {
+    font-size: 28px;
+  }
+}
+@media (max-width: 350px) {
+  .camera-playback {
+    flex-wrap: wrap;
+  }
+  .camera-playback .ui-segmented {
+    flex: 0 0 100%;
+  }
+  .camera-playback .camera-buttons {
+    margin-inline: auto;
+  }
+
+  .camera-title span {
+    display: none;
+  }
+  .camera-title strong {
+    font-size: 14px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .camera-progress > div {
+    transition: none;
+  }
+}

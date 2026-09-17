@@ -1,0 +1,8 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "types": ["./worker-configuration.d.ts"]
+  },
+  "include": ["worker", "shared", "worker-configuration.d.ts"],
+  "exclude": ["shared/import-review.ts", "shared/import-review.test.ts"]
+}

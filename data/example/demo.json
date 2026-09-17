@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "flights": [
+    {
+      "id": "demo-1",
+      "date": "2020-01-10",
+      "from": "TPE",
+      "to": "NRT",
+      "flight": "",
+      "departure": "",
+      "arrival": "",
+      "status": "flown",
+      "note": "合成示範資料，並非真實旅行紀錄。",
+      "sources": [
+        {
+          "type": "demo",
+          "label": "合成示範資料"
+        }
+      ]
+    },
+    {
+      "id": "demo-2",
+      "date": "2020-01-15",
+      "from": "NRT",
+      "to": "ICN",
+      "flight": "",
+      "departure": "",
+      "arrival": "",
+      "status": "flown",
+      "note": "合成示範資料，並非真實旅行紀錄。",
+      "sources": [
+        {
+          "type": "demo",
+          "label": "合成示範資料"
+        }
+      ]
+    },
+    {
+      "id": "demo-3",
+      "date": "2020-01-20",
+      "from": "ICN",
+      "to": "TPE",
+      "flight": "",
+      "departure": "",
+      "arrival": "",
+      "status": "flown",
+      "note": "合成示範資料，並非真實旅行紀錄。",
+      "sources": [
+        {
+          "type": "demo",
+          "label": "合成示範資料"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+:root {
+  color-scheme: light;
+  --ink: #20252e;
+  --secondary: #687381;
+  --canvas: #f3f4f6;
+  --line: #e8eaee;
+  --blue: #0879f1;
+  --blue-wash: #edf4ff;
+  --shadow-small: 0 2px 5px #21334b0a, 0 6px 22px #21334b0f;
+  --shadow-overlay: 0 2px 5px #21334b08, 0 14px 45px #21334b24;
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-drawer: cubic-bezier(0.32, 0.72, 0, 1);
+}
