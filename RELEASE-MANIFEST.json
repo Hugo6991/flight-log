@@ -42,6 +42,7 @@
     "src/components/ui/card.tsx",
     "src/components/ui/collapsible.tsx",
     "src/components/ui/command.tsx",
+    "src/components/ui/map-glass.css",
     "src/components/ui/native-select.tsx",
     "src/components/ui/popover.tsx",
     "src/components/ui/segmented-control.tsx",

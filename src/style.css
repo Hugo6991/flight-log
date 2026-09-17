@@ -1,4 +1,5 @@
 @import url("./tokens.css");
+@import url("./components/ui/map-glass.css");
 * {
   box-sizing: border-box;
 }
@@ -2151,10 +2152,6 @@ input[type="checkbox"] {
     top: 136px;
     min-height: 44px;
     padding: 10px 14px;
-    border-radius: 12px;
-    background: #fffffff0;
-    box-shadow: var(--shadow-small);
-    color: #0868dc;
     font-size: 14px;
   }
   .sidebar-toggle[aria-expanded="true"] {

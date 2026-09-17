@@ -39,8 +39,7 @@ body {
   pointer-events: auto;
 }
 .camera-header .camera-back {
-  background: var(--ui-glass);
-  box-shadow: var(--shadow-small);
+  border-radius: 50%;
 }
 .camera-title {
   display: flex;
@@ -65,7 +64,7 @@ body {
   display: flex;
   align-items: center;
   padding: var(--ui-space-1);
-  border-radius: 16px !important;
+  border-radius: 28px;
 }
 .camera-toolbar-divider {
   height: 20px;
@@ -75,9 +74,9 @@ body {
 }
 .camera-console {
   position: absolute;
-  bottom: calc(48px + env(safe-area-inset-bottom));
+  bottom: calc(36px + env(safe-area-inset-bottom));
   right: max(24px, env(safe-area-inset-right));
-  width: 352px;
+  width: 320px;
   max-height: calc(
     100svh - 148px - env(safe-area-inset-top) - env(safe-area-inset-bottom)
   );
@@ -87,76 +86,66 @@ body {
   border-radius: var(--ui-radius-card);
 }
 .camera-console-card {
-  padding: var(--ui-space-4) var(--ui-space-5) var(--ui-space-2);
+  padding: var(--ui-space-2) var(--ui-space-3);
 }
 .camera-card-heading {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: var(--ui-space-2);
-  margin-right: calc(-1 * var(--ui-space-2));
+  gap: var(--ui-space-1);
 }
-.camera-metadata {
+.flight-ui .camera-picker-trigger {
+  flex: 1;
+  min-width: 0;
+  justify-content: space-between;
+  padding: 0 var(--ui-space-1);
+  text-align: left;
+  border-radius: 12px;
+}
+.flight-ui .camera-picker-trigger[aria-expanded="true"] {
+  background: var(--map-glass-active);
+}
+.camera-flight-summary {
+  min-width: 0;
   display: flex;
   flex-direction: column;
-  font-size: 12px;
-  line-height: 1.6;
-  color: var(--ui-muted);
-}
-.camera-metadata > span:first-child {
-  color: var(--ui-foreground);
-  font-size: 14px;
-  font-weight: 500;
+  gap: 2px;
 }
 .camera-route {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  margin: var(--ui-space-3) 0 var(--ui-space-5);
-  gap: var(--ui-space-4);
-}
-.camera-route > div:first-child,
-.camera-route > div:last-child {
-  display: flex;
-  flex-direction: column;
-}
-.camera-route > div:last-child {
-  text-align: right;
+  gap: var(--ui-space-2);
+  color: var(--map-glass-ink);
 }
 .camera-route strong {
-  font-size: 32px;
+  font-size: 18px;
   line-height: 1.2;
   font-weight: 650;
-  letter-spacing: -0.8px;
+  letter-spacing: -0.3px;
 }
-.camera-route span {
-  margin-top: var(--ui-space-1);
-  font-size: 14px;
-  color: var(--ui-muted);
+.flight-ui .camera-route svg {
+  width: 14px;
+  height: 14px;
+  color: var(--map-glass-muted);
 }
-.camera-route-line {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  gap: var(--ui-space-2);
-  color: var(--ui-primary);
-}
-.camera-route-line::before,
-.camera-route-line::after {
-  content: "";
-  height: 1px;
-  flex: 1;
-  background: var(--ui-border);
+.camera-metadata {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--map-glass-muted);
 }
 .camera-progress {
-  height: 3px;
-  background: var(--ui-border);
+  height: 2px;
+  margin: 6px var(--ui-space-1) 4px;
+  background: var(--map-glass-line);
   overflow: hidden;
   border-radius: 4px;
 }
 .camera-progress > div {
   height: 100%;
-  background: var(--ui-primary);
+  background: var(--map-glass-accent);
   transform-origin: left;
   transition: transform 120ms linear;
 }
@@ -164,34 +153,31 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: var(--ui-space-3);
-  margin-top: var(--ui-space-3);
+  gap: var(--ui-space-1);
 }
 .camera-buttons {
   display: flex;
   align-items: center;
-  gap: var(--ui-space-1);
-  margin-left: calc(-1 * var(--ui-space-2));
 }
-.camera-picker {
-  margin-top: var(--ui-space-3);
-  border-top: 1px solid var(--ui-border);
-  padding-top: var(--ui-space-1);
+.flight-ui .camera-playback .ui-segmented {
+  background: transparent;
+  padding: 0;
 }
-.flight-ui .camera-picker-trigger {
-  width: 100%;
-  justify-content: flex-start;
-  padding: 0 var(--ui-space-2);
-  font-weight: 500;
+.flight-ui .camera-playback .ui-segmented input:checked + span {
+  color: var(--map-glass-accent);
+  background: var(--map-glass-active);
+  box-shadow:
+    inset 0 1px 0 rgb(255 255 255 / 50%),
+    0 1px 4px rgb(24 47 70 / 8%);
+  border-radius: 50%;
 }
-.camera-picker-count {
-  margin-left: auto;
-  font-size: 12px;
-  font-weight: 500;
-  padding: 3px 7px;
-  background: var(--ui-subtle);
-  border-radius: 6px;
-  color: var(--ui-muted);
+.flight-ui .camera-playback .ui-segmented span {
+  color: var(--map-glass-muted);
+}
+.flight-ui .camera-buttons .ui-button[data-variant="default"] {
+  background: var(--map-glass-active);
+  color: var(--map-glass-accent);
+  border-radius: 50%;
 }
 .camera-flight-menu {
   width: max(332px, var(--radix-popover-trigger-width));
@@ -271,34 +257,24 @@ body {
     left: max(12px, env(safe-area-inset-left));
     right: max(12px, env(safe-area-inset-right));
     width: auto;
-    bottom: calc(56px + env(safe-area-inset-bottom));
-  }
-  .camera-console-card {
-    padding: var(--ui-space-3) var(--ui-space-4) var(--ui-space-2);
-  }
-  .camera-route {
-    margin: var(--ui-space-2) 0 var(--ui-space-4);
-  }
-  .camera-route strong {
-    font-size: 28px;
+    bottom: calc(36px + env(safe-area-inset-bottom));
   }
 }
 @media (max-width: 350px) {
-  .camera-playback {
-    flex-wrap: wrap;
+  .camera-header {
+    gap: 4px;
   }
-  .camera-playback .ui-segmented {
-    flex: 0 0 100%;
-  }
-  .camera-playback .camera-buttons {
-    margin-inline: auto;
-  }
-
   .camera-title span {
     display: none;
   }
   .camera-title strong {
     font-size: 14px;
+  }
+}
+@media (max-height: 480px) and (min-width: 540px) {
+  .camera-console {
+    left: auto;
+    width: 296px;
   }
 }
 @media (prefers-reduced-motion: reduce) {

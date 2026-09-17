@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import { ArrowRight, Check, ChevronsUpDown, Search, X } from "lucide-react";
 import type { Airport, Flight } from "../../shared/model";
 import { Button } from "../components/ui/button";
@@ -10,6 +10,7 @@ import {
 } from "../components/ui/popover";
 
 type Props = {
+  children: ReactNode;
   flights: Flight[];
   airports: Record<string, Airport>;
   currentId: string;
@@ -19,6 +20,7 @@ type Props = {
 };
 
 export default function FlightPicker({
+  children,
   flights,
   airports,
   currentId,
@@ -60,10 +62,9 @@ export default function FlightPicker({
           className="camera-picker-trigger"
           disabled={disabled}
           aria-label="切換航班"
+          title="搜尋與切換航班"
         >
-          <Search aria-hidden="true" />
-          <span>切換航班</span>
-          <span className="camera-picker-count">{flights.length}</span>
+          {children}
           <ChevronsUpDown aria-hidden="true" />
         </Button>
       </PopoverTrigger>

@@ -8,7 +8,7 @@ Turn your flight history into a personal travel map you can replay and keep
 
 ![A recording of the moving aircraft and following camera](docs/media/journey.gif)
 
-Replay completed flights with a camera that follows the aircraft. Choose 1×, 2× or 3×, search your history, or hide the controls. Browse a separate flight list and export a travel passport as an image
+Replay completed flights with a camera that follows the aircraft. Choose 1×, 2× or 3×, tap the route to search your history, or hide the compact glass controls. Browse a separate flight list and export a travel passport as an image
 
 The screenshots use fictional journeys. Routes estimate airport connections using great circles; they are not recorded flight tracks
 

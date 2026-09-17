@@ -1,0 +1,133 @@
+/* Shared map chrome: one translucent surface, no nested backdrop filters. */
+:root {
+  --map-glass-surface: rgb(242 248 255 / 66%);
+  --map-glass-ink: #172b43;
+  --map-glass-muted: #26374a;
+  --map-glass-accent: #033770;
+  --map-glass-line: rgb(34 65 99 / 14%);
+  --map-glass-active: rgb(255 255 255 / 52%);
+  --map-glass-shadow:
+    0 2px 4px rgb(12 35 60 / 5%), 0 8px 24px rgb(12 35 60 / 13%);
+}
+.map-glass {
+  --ui-foreground: var(--map-glass-ink);
+  --ui-muted: var(--map-glass-muted);
+  --ui-primary: var(--map-glass-accent);
+  --ui-border: var(--map-glass-line);
+}
+/* Specificity keeps the same material over both legacy and primitive controls. */
+.map-glass.map-glass,
+.map-panel .map-glass,
+.flight-ui .ui-card.map-glass[data-material="glass"],
+.flight-ui .ui-button.map-glass {
+  background:
+    linear-gradient(155deg, rgb(255 255 255 / 20%), rgb(255 255 255 / 5%) 65%),
+    var(--map-glass-surface);
+  border: 1px solid rgb(255 255 255 / 58%);
+  color: var(--map-glass-ink);
+  box-shadow:
+    inset 0 1px 0 rgb(255 255 255 / 42%),
+    var(--map-glass-shadow);
+  -webkit-backdrop-filter: blur(16px) saturate(145%);
+  backdrop-filter: blur(16px) saturate(145%);
+}
+.map-glass .ui-button[data-variant="ghost"] {
+  color: var(--map-glass-muted);
+}
+.map-glass.map-glass .ui-button[aria-expanded="true"] {
+  color: var(--map-glass-accent);
+  background: var(--map-glass-active);
+}
+.map-controls .map-glass {
+  border-radius: 24px;
+}
+.map-controls .map-glass button {
+  min-width: 44px;
+  min-height: 44px;
+  color: var(--map-glass-ink);
+  transition:
+    background-color 160ms ease,
+    transform 120ms var(--ease-out);
+}
+.map-controls .map-glass button + button {
+  border-color: var(--map-glass-line);
+}
+.map-controls .map-glass button[aria-pressed="true"],
+.route-replay.map-glass .icon-button {
+  background: var(--map-glass-active);
+  color: var(--map-glass-accent);
+}
+.map-replay-entry.map-glass {
+  border-radius: 24px;
+  color: var(--map-glass-accent);
+}
+.route-replay.map-glass .replay-title > span,
+.route-replay.map-glass .replay-close {
+  color: var(--map-glass-muted);
+}
+@media (hover: hover) and (pointer: fine) {
+  .map-glass .ui-button[data-variant="ghost"]:not(:disabled):hover,
+  .map-controls .map-glass button:not(:disabled):hover {
+    background-color: rgb(255 255 255 / 45%);
+  }
+}
+@media (hover: hover) and (pointer: fine) {
+  .map-replay-entry.map-glass:hover {
+    background-color: rgb(242 248 255 / 82%);
+  }
+}
+.map-controls .map-glass button:not(:disabled):active {
+  transform: scale(0.97);
+  transition-duration: 80ms;
+}
+@supports not (
+  (backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))
+) {
+  .map-glass.map-glass,
+  .map-panel .map-glass,
+  .flight-ui .ui-card.map-glass[data-material="glass"],
+  .flight-ui .ui-button.map-glass {
+    background: #f0f5fb;
+  }
+}
+@media (prefers-reduced-transparency: reduce), (prefers-contrast: more) {
+  .map-glass.map-glass,
+  .map-panel .map-glass,
+  .flight-ui .ui-card.map-glass[data-material="glass"],
+  .flight-ui .ui-button.map-glass {
+    background: #f0f5fb;
+    border-color: #8b9daf;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .map-controls .map-glass button {
+    transition: none;
+  }
+  .map-controls .map-glass button:not(:disabled):active {
+    transform: none;
+  }
+}
+
+/* Preserve the provider disclosure and attribution while matching map chrome. */
+:is(.camera-study, .map-panel) .maplibregl-ctrl-attrib {
+  background: var(--map-glass-surface) !important;
+  color: var(--map-glass-ink);
+  box-shadow:
+    inset 0 1px 0 rgb(255 255 255 / 42%),
+    var(--map-glass-shadow);
+  -webkit-backdrop-filter: blur(16px) saturate(145%);
+  backdrop-filter: blur(16px) saturate(145%);
+}
+.map-controls .map-glass button:focus-visible {
+  outline: 2px solid var(--map-glass-accent);
+  outline-offset: -4px;
+}
+@media (prefers-reduced-transparency: reduce), (prefers-contrast: more) {
+  :is(.camera-study, .map-panel) .maplibregl-ctrl-attrib {
+    background: #f0f5fb !important;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+}

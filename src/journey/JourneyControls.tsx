@@ -1,11 +1,11 @@
 import { useLayoutEffect, useRef, useState } from "react";
 import {
   ArrowLeft,
+  ArrowRight,
   Globe2,
   Map as MapIcon,
   PanelBottom,
   Pause,
-  Plane,
   Play,
   SkipBack,
   SkipForward,
@@ -95,7 +95,7 @@ export default function JourneyControls({
     >
       <header className="camera-header">
         <a
-          className="ui-button camera-back"
+          className="ui-button camera-back map-glass"
           data-size="icon"
           href="/"
           aria-label="返回旅行地圖"
@@ -111,7 +111,7 @@ export default function JourneyControls({
         </div>
         <Card
           material="glass"
-          className="camera-toolbar"
+          className="camera-toolbar map-glass"
           role="group"
           aria-label="地圖與放映控制"
         >
@@ -172,18 +172,37 @@ export default function JourneyControls({
       >
         <Card
           material="glass"
-          className="camera-console-card"
+          className="camera-console-card map-glass"
           role="region"
           aria-label="旅程播放控制"
         >
           <div className="camera-card-heading">
-            <div className="camera-metadata">
-              <span>{flight.date.replaceAll("-", ".")}</span>
-              <span>
-                {flight.flight || "班號待補"} · {tour.index + 1} /{" "}
-                {flights.length}
+            <FlightPicker
+              flights={flights}
+              airports={airports}
+              currentId={flight.id}
+              disabled={!ready}
+              visible={open}
+              onSelect={onSelect}
+            >
+              <span className="camera-flight-summary">
+                <span className="camera-route">
+                  <strong>{flight.from}</strong>
+                  <ArrowRight aria-hidden="true" />
+                  <strong>{flight.to}</strong>
+                </span>
+                <span className="camera-metadata">
+                  <time dateTime={flight.date}>
+                    {flight.date.replaceAll("-", ".")}
+                  </time>
+                  {flight.flight && <span> · {flight.flight}</span>}
+                </span>
               </span>
-            </div>
+              <span className="ui-sr-only">
+                {airports[flight.from].city} 至 {airports[flight.to].city}， 第{" "}
+                {tour.index + 1} 段，共 {flights.length} 段
+              </span>
+            </FlightPicker>
             <Button
               ref={close}
               variant="ghost"
@@ -194,19 +213,6 @@ export default function JourneyControls({
             >
               <X aria-hidden="true" />
             </Button>
-          </div>
-          <div className="camera-route">
-            <div>
-              <strong>{flight.from}</strong>
-              <span>{airports[flight.from].city}</span>
-            </div>
-            <div className="camera-route-line">
-              <Plane size={20} aria-hidden="true" />
-            </div>
-            <div>
-              <strong>{flight.to}</strong>
-              <span>{airports[flight.to].city}</span>
-            </div>
           </div>
           <div
             className="camera-progress"
@@ -269,16 +275,6 @@ export default function JourneyControls({
                 { value: "2", label: "2×", accessibleLabel: "2 倍速" },
                 { value: "3", label: "3×", accessibleLabel: "3 倍速" },
               ]}
-            />
-          </div>
-          <div className="camera-picker">
-            <FlightPicker
-              flights={flights}
-              airports={airports}
-              currentId={flight.id}
-              disabled={!ready}
-              visible={open}
-              onSelect={onSelect}
             />
           </div>
         </Card>

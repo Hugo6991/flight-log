@@ -751,13 +751,15 @@ export default function FlightMap({
         </div>
       )}
       {ready && !selectedFlight && onReplayLatest && (
-        <button className="map-replay-entry" onClick={onReplayLatest}>
+        <button className="map-replay-entry map-glass" onClick={onReplayLatest}>
           <Play size={16} /> 回放最近航班
         </button>
       )}
       {selectedFlight && (
         <div
-          className={"route-replay" + (!hasReplay ? " mobile-only-replay" : "")}
+          className={
+            "route-replay map-glass" + (!hasReplay ? " mobile-only-replay" : "")
+          }
           aria-label="航線回放"
         >
           <button
@@ -828,7 +830,7 @@ export default function FlightMap({
         </div>
       )}
       <div className="map-controls" aria-label="地圖控制">
-        <div className="map-region-controls">
+        <div className="map-region-controls map-glass">
           <button
             title="在平面地圖顯示全部航線"
             disabled={!ready}
@@ -854,7 +856,7 @@ export default function FlightMap({
             亞洲
           </button>
         </div>
-        <div className="map-projection-controls">
+        <div className="map-projection-controls map-glass">
           <button
             aria-label="地球視角"
             aria-pressed={globe}
@@ -865,7 +867,7 @@ export default function FlightMap({
             <span>地球</span>
           </button>
         </div>
-        <div className="map-zoom-controls">
+        <div className="map-zoom-controls map-glass">
           <button
             aria-label="放大地圖"
             disabled={!ready}

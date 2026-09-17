@@ -1,4 +1,4 @@
-/* Earth-specific materials; the standard map retains light controls and labels. */
+/* Earth-specific summary; map controls share the translucent map-glass material. */
 .map-panel:has(.space-view) .journey-stats {
   background: transparent;
   border-color: transparent;
@@ -13,15 +13,6 @@
 }
 .map-panel:has(.space-view) .journey-stats strong {
   text-shadow: 0 2px 12px #03091770;
-}
-.space-view .map-replay-entry {
-  background: #1d2e47e8;
-  color: #d9e8ff;
-  border: 1px solid #ffffff1c;
-  box-shadow: none;
-}
-.space-view .map-controls > div {
-  box-shadow: 0 6px 20px #0000002b;
 }
 .space-view .maplibregl-ctrl-attrib {
   background: #ffffffde;
