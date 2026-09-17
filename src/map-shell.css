@@ -1,0 +1,405 @@
+/* Floating chrome keeps the map continuous from edge to edge. */
+.app-shell {
+  position: relative;
+  --chrome-inset: 16px;
+  --chrome-top: calc(16px + env(safe-area-inset-top));
+  --panel-top: calc(84px + env(safe-area-inset-top));
+  --panel-width: 320px;
+}
+.app-shell > .topbar {
+  position: absolute;
+  top: var(--chrome-top);
+  left: max(var(--chrome-inset), env(safe-area-inset-left));
+  right: max(var(--chrome-inset), env(safe-area-inset-right));
+  height: 52px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  pointer-events: none;
+  gap: 16px;
+}
+.topbar > * {
+  pointer-events: auto;
+}
+.navigation-island {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 4px 8px;
+  border-radius: 28px;
+}
+.topbar .brand {
+  gap: 8px;
+  padding-right: 4px;
+  font-size: 17px;
+  letter-spacing: -0.5px;
+}
+.topbar .brand div > span {
+  display: none;
+}
+.topbar .brand-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  color: var(--map-glass-ink);
+  background: rgb(255 255 255 / 28%);
+  box-shadow: none;
+}
+.topbar .view-nav {
+  padding: 0;
+  background: transparent;
+  gap: 0;
+}
+.topbar .view-nav a {
+  min-height: 44px;
+  padding: 8px 12px;
+  border-radius: 24px;
+  color: var(--map-glass-muted);
+  font-size: 13px;
+}
+.topbar .view-nav a[aria-current="page"] {
+  background: var(--map-glass-active);
+  color: var(--map-glass-accent);
+  box-shadow: inset 0 1px 0 rgb(255 255 255 / 42%);
+}
+.topbar .header-actions {
+  gap: 0;
+  padding: 4px;
+  border-radius: 28px;
+}
+.topbar .header-actions > button,
+.topbar .more-wrap > button {
+  min-height: 44px;
+  height: 44px;
+  border: 0;
+  border-radius: 24px;
+  padding: 8px 12px;
+  background: transparent;
+  color: var(--map-glass-ink);
+  font-size: 13px;
+}
+.topbar .more-wrap > button {
+  width: 44px;
+  padding: 0;
+}
+.topbar .header-actions > .primary,
+.topbar .header-actions > button[aria-expanded="true"] {
+  background: var(--map-glass-active);
+  color: var(--map-glass-accent);
+}
+.app-shell > .workspace {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+.app-shell .more-menu {
+  top: 56px;
+  right: -4px;
+  max-height: calc(100dvh - 104px);
+  overscroll-behavior: contain;
+  overflow: auto;
+}
+.app-shell .map-panel .journey-stats {
+  top: auto;
+  bottom: calc(32px + env(safe-area-inset-bottom));
+  left: var(--chrome-inset);
+  width: 320px;
+  padding: 12px 16px;
+  gap: 16px;
+  grid-template-columns: 0.8fr 1.5fr 1fr;
+  border-radius: 24px;
+}
+.app-shell .journey-stats strong {
+  font-size: 23px;
+  letter-spacing: -0.7px;
+  color: var(--map-glass-ink);
+}
+.app-shell .journey-stats > div > span,
+.app-shell .journey-stats strong small {
+  color: var(--map-glass-muted);
+  font-size: 11px;
+}
+.app-shell .map-replay-entry {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  top: auto;
+  bottom: calc(116px + env(safe-area-inset-bottom));
+  left: var(--chrome-inset);
+  min-height: 44px;
+  padding: 8px 14px;
+  font-size: 12px;
+  font-weight: 600;
+}
+.app-shell .flight-detail,
+.app-shell .flight-sidebar {
+  top: var(--panel-top);
+  right: var(--chrome-inset);
+  width: var(--panel-width);
+  border-radius: 24px;
+  --map-glass-surface: rgb(242 248 255 / 62%);
+  --secondary: var(--map-glass-muted);
+  --blue: var(--map-glass-accent);
+  --line: var(--map-glass-line);
+}
+.app-shell .flight-detail {
+  padding: 16px;
+  max-height: calc(100% - var(--panel-top) - 112px);
+  overscroll-behavior: contain;
+}
+.app-shell .detail-close {
+  width: 44px;
+  height: 44px;
+  top: 6px;
+  right: 6px;
+  background: transparent;
+  color: var(--map-glass-muted);
+}
+.app-shell .detail-route {
+  margin: 16px 0 12px;
+}
+.app-shell .detail-route strong {
+  font-size: 28px;
+  letter-spacing: -0.8px;
+}
+.app-shell .detail-route span {
+  font-size: 12px;
+  color: var(--map-glass-muted);
+}
+.app-shell .detail-route > svg {
+  width: 20px;
+  color: var(--map-glass-muted);
+}
+.app-shell .detail-meta {
+  font-size: 11px;
+  gap: 8px;
+  color: var(--map-glass-muted);
+}
+.detail-disclosure {
+  margin-top: 12px;
+  border-top: 1px solid var(--map-glass-line);
+}
+.detail-disclosure > summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  min-height: 44px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  color: var(--map-glass-accent);
+}
+.detail-disclosure > summary::-webkit-details-marker {
+  display: none;
+}
+.detail-disclosure[open] > summary svg {
+  transform: rotate(180deg);
+}
+.app-shell .detail-note {
+  background: rgb(255 255 255 / 20%);
+  color: var(--map-glass-muted);
+  max-height: none;
+  margin-top: 8px;
+}
+.app-shell .detail-times {
+  margin-top: 4px;
+}
+.app-shell .detail-actions {
+  margin-top: 8px;
+}
+.app-shell .detail-actions :is(.secondary, .primary, .icon-button) {
+  min-height: 44px;
+  min-width: 44px;
+  background: var(--map-glass-active);
+  border: 0;
+}
+.app-shell .detail-actions .icon-button {
+  background: transparent;
+}
+.app-shell .detail-related {
+  min-height: 44px;
+  padding-top: 0;
+}
+.app-shell .status-badge {
+  background: rgb(255 255 255 / 34%);
+}
+.app-shell .flight-sidebar {
+  bottom: calc(100px + env(safe-area-inset-bottom));
+}
+.app-shell .sidebar-heading {
+  padding: 12px 12px 8px;
+}
+.app-shell .sidebar-heading h2 {
+  font-size: 20px;
+}
+.app-shell .sidebar-heading :is(.icon-button, .select-mode) {
+  width: 44px;
+  height: 44px;
+}
+.app-shell .filter-tabs {
+  padding-inline: 12px;
+}
+.app-shell .filter-tabs button {
+  font-size: 12px;
+  min-height: 44px;
+}
+.app-shell .flight-sidebar :is(.search-box, .sidebar-heading h2 > span) {
+  background: rgb(255 255 255 / 28%);
+}
+.app-shell .flight-card {
+  background: rgb(255 255 255 / 18%);
+  border-color: var(--map-glass-line);
+}
+.app-shell .flight-card.selected {
+  background: var(--map-glass-active);
+}
+.app-shell .card-route strong {
+  font-size: 24px;
+}
+.app-shell .card-route > div > span,
+.app-shell .card-top,
+.app-shell .month-label {
+  color: var(--map-glass-muted);
+}
+.app-shell .map-controls {
+  right: var(--chrome-inset);
+  bottom: calc(32px + env(safe-area-inset-bottom));
+}
+.app-shell .route-replay {
+  left: var(--chrome-inset);
+  bottom: calc(32px + env(safe-area-inset-bottom));
+  padding: 8px 10px 8px 16px;
+  gap: 12px;
+  border-radius: 24px;
+}
+.app-shell .route-replay .icon-button {
+  min-width: 44px;
+  min-height: 44px;
+  border-radius: 50%;
+}
+.app-shell .map-loading,
+.app-shell .map-error,
+.app-shell .earth-notice {
+  top: calc(136px + env(safe-area-inset-top));
+  max-width: min(400px, calc(100% - 32px));
+  left: var(--chrome-inset);
+}
+.app-shell > .records-page {
+  height: 100%;
+  padding-top: 80px;
+}
+.app-shell.records-shell:has(.demo-notice) > .records-page {
+  padding-top: 120px;
+}
+.flight-modal.map-glass {
+  --map-glass-surface: rgb(242 248 255 / 74%);
+}
+.flight-modal::backdrop {
+  background: rgb(8 24 42 / 24%);
+  backdrop-filter: blur(4px);
+}
+.flight-modal :is(input, select, textarea) {
+  background: rgb(255 255 255 / 42%);
+}
+@media (hover: hover) and (pointer: fine) {
+  .topbar .header-actions > button:hover,
+  .topbar .more-wrap > button:hover {
+    background: var(--map-glass-active);
+  }
+}
+@media (min-width: 761px) and (max-width: 1050px) {
+  .topbar .header-actions > button > span {
+    display: none;
+  }
+  .topbar .header-actions > button {
+    width: 44px;
+    padding: 0;
+  }
+}
+@media (max-width: 760px) {
+  .app-shell {
+    --chrome-inset: 12px;
+    --chrome-top: calc(12px + env(safe-area-inset-top));
+  }
+  .navigation-island {
+    padding: 4px 12px 4px 4px;
+  }
+  .topbar .brand {
+    font-size: 16px;
+  }
+  .topbar .header-actions {
+    height: 52px;
+  }
+  .topbar .more-wrap > button {
+    width: 44px;
+  }
+  .app-shell .map-panel .journey-stats {
+    top: calc(80px + env(safe-area-inset-top));
+    bottom: auto;
+    width: calc(100% - 24px);
+    padding: 10px 16px;
+    border-radius: 20px;
+    gap: 12px;
+  }
+  .app-shell .journey-stats strong {
+    font-size: 20px;
+  }
+  .app-shell .map-replay-entry {
+    left: auto;
+    right: 12px;
+    top: auto;
+    bottom: calc(88px + env(safe-area-inset-bottom));
+    padding-inline: 12px;
+    gap: 6px;
+  }
+  .app-shell .map-controls {
+    left: 12px;
+    right: 12px;
+    width: auto;
+    bottom: calc(32px + env(safe-area-inset-bottom));
+    flex-wrap: nowrap;
+    gap: 6px;
+    justify-content: flex-end;
+  }
+  .app-shell .map-controls button {
+    padding: 8px;
+    min-height: 44px;
+    min-width: 44px;
+  }
+  .map-control-label,
+  .map-projection-controls button > span {
+    display: none;
+  }
+  .app-shell .route-replay {
+    top: calc(80px + env(safe-area-inset-top));
+    bottom: auto;
+    left: 12px;
+    right: 12px;
+    gap: 4px;
+    padding: 8px;
+    border-radius: 20px;
+  }
+  .app-shell .flight-detail {
+    top: calc(164px + env(safe-area-inset-top));
+    left: 12px;
+    right: 12px;
+    width: auto;
+    max-height: calc(
+      100% - 312px - env(safe-area-inset-top) - env(safe-area-inset-bottom)
+    );
+    padding: 16px;
+  }
+  .app-shell .map-error,
+  .app-shell .map-loading,
+  .app-shell .earth-notice {
+    top: calc(160px + env(safe-area-inset-top));
+  }
+}
+@media (max-height: 520px) and (min-width: 540px) {
+  .app-shell .flight-detail {
+    top: 80px;
+    max-height: calc(100% - 160px);
+  }
+}

@@ -45,10 +45,8 @@ function panelVisible(map?: LibreMap) {
 function padding(map?: LibreMap) {
   return window.innerWidth <= 760
     ? {
-        top: map?.getContainer().parentElement?.querySelector(".route-replay")
-          ? 100
-          : 108,
-        bottom: 150,
+        top: 164,
+        bottom: 158,
         left: 28,
         right: 38,
       }
@@ -56,7 +54,7 @@ function padding(map?: LibreMap) {
         top: 116,
         bottom: 118,
         left: 40,
-        right: panelVisible(map) ? (window.innerWidth <= 950 ? 428 : 478) : 40,
+        right: panelVisible(map) ? 368 : 40,
       };
 }
 function fit(map: LibreMap, points: Coordinate[], animate = true) {
@@ -69,14 +67,10 @@ function fit(map: LibreMap, points: Coordinate[], animate = true) {
       window.innerWidth <= 760
         ? { ...padding(map), left: 0, right: 0 }
         : {
-            top: 100,
-            bottom: 80,
+            top: 120,
+            bottom: 120,
             left: 24,
-            right: panelVisible(map)
-              ? window.innerWidth <= 950
-                ? 400
-                : 440
-              : 24,
+            right: panelVisible(map) ? 368 : 24,
           };
     map.setPadding(pad);
     const routeSelected = !!map
@@ -733,12 +727,12 @@ export default function FlightMap({
     >
       <div className="map-surface" ref={container} data-testid="flight-map" />
       {!ready && !error && (
-        <div className="map-loading" role="status">
+        <div className="map-loading map-glass" role="status">
           <LoaderCircle size={16} className="spin" /> 正在載入地圖
         </div>
       )}
       {error && (
-        <div className="map-error" role="status">
+        <div className="map-error map-glass" role="status">
           <AlertCircle size={18} />
           <span>{error}</span>
           <button
@@ -824,7 +818,7 @@ export default function FlightMap({
         </div>
       )}
       {earthFailed && globe && (
-        <div className="earth-notice" role="status">
+        <div className="earth-notice map-glass" role="status">
           地表影像暫時無法載入，已顯示基本地圖{" "}
           <button onClick={() => setAttempt((n) => n + 1)}>重試</button>
         </div>
@@ -833,6 +827,7 @@ export default function FlightMap({
         <div className="map-region-controls map-glass">
           <button
             title="在平面地圖顯示全部航線"
+            aria-label="全部航線"
             disabled={!ready}
             onClick={() => {
               if (globe) setGlobe(false);
@@ -840,7 +835,7 @@ export default function FlightMap({
             }}
           >
             <Globe2 size={17} />
-            全部航線
+            <span className="map-control-label">全部航線</span>
           </button>
           <button
             title="查看亞洲"

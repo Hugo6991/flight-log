@@ -64,6 +64,20 @@ npm run build
 
 Cloudflare 與 Google 公開 DNS 均已解析新子網域。本機曾保留部署前的不存在紀錄快取，因此這次瀏覽器驗證使用公開 DNS 已確認的位址，仍正常驗證 HTTPS 憑證，沒有略過 TLS 檢查。
 
+## Liquid Glass 介面驗證
+
+2026 年 9 月 18 日更新地圖介面，地圖延伸至視窗邊緣，導覽、統計、航班卡片與示範提示改為浮動玻璃面板。航班卡片預設收合備註與操作，展開後保留完整原文及來源
+
+本機瀏覽器以空白來源與虛構資料驗證以下項目
+
+- 1280 × 720 桌面地圖填滿視窗，預設航班卡片約為 320 × 215px
+- 390 × 844 與 320 × 740 手機視窗沒有橫向溢出，控制列、回放與航班卡片可操作
+- 航班搜尋、展開備註、編輯視窗、護照與飛行紀錄頁正常開啟
+- 放映可暫停、開啟航班卡片並搜尋 NZ78
+- 清空示範後重新整理保持空白，復原後恢復 120 段
+- Escape 關閉示範選單後保留航班卡片
+- TypeScript 檢查、62 項測試、正式建置及 Cloudflare 部署預檢通過
+
 ## English
 
 The public fixture passed all 62 automated tests, TypeScript checks and the production build. Seventeen browser checks covered first use, data replacement, clearing, undo and failed reads, plus desktop and mobile playback. Passport PNG downloads retained the fictional label, including mixed data. The browser tests used synthetic imports and a separate empty local database. No private installation was modified or deployed.

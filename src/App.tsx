@@ -150,7 +150,13 @@ export default function App() {
   const selectionTrigger = useRef<HTMLButtonElement | null>(null);
   useEffect(() => {
     const escape = (event: KeyboardEvent) => {
-      if (event.key === "Escape" && !editing && !passport && !more) {
+      if (
+        event.key === "Escape" &&
+        !event.defaultPrevented &&
+        !editing &&
+        !passport &&
+        !more
+      ) {
         if (mobile && mobileDetail) setMobileDetail(null);
         else setSelected(null);
       }
@@ -503,43 +509,45 @@ export default function App() {
       }
     >
       <header className="topbar">
-        <a className="brand" href="/" aria-label="Flight Log 首頁">
-          <span className="brand-icon">
-            <Plane size={21} />
-          </span>
-          <div>
-            Flight Log<span>我的飛行紀錄</span>
-          </div>
-        </a>
-        <nav className="view-nav" aria-label="主要頁面">
-          <a
-            href="/"
-            aria-current={page === "map" ? "page" : undefined}
-            onClick={(e) => {
-              if (!e.metaKey && !e.ctrlKey && !e.shiftKey && !e.altKey) {
-                e.preventDefault();
-                navigate("map");
-              }
-            }}
-          >
-            <MapIcon size={16} />
-            <span>地圖</span>
+        <div className="navigation-island map-glass">
+          <a className="brand" href="/" aria-label="Flight Log 首頁">
+            <span className="brand-icon">
+              <Plane size={21} />
+            </span>
+            <div>
+              Flight Log<span>我的飛行紀錄</span>
+            </div>
           </a>
-          <a
-            href="/records"
-            aria-current={page === "records" ? "page" : undefined}
-            onClick={(e) => {
-              if (!e.metaKey && !e.ctrlKey && !e.shiftKey && !e.altKey) {
-                e.preventDefault();
-                navigate("records");
-              }
-            }}
-          >
-            <List size={16} />
-            <span>飛行紀錄</span>
-          </a>
-        </nav>
-        <div className="header-actions">
+          <nav className="view-nav" aria-label="主要頁面">
+            <a
+              href="/"
+              aria-current={page === "map" ? "page" : undefined}
+              onClick={(e) => {
+                if (!e.metaKey && !e.ctrlKey && !e.shiftKey && !e.altKey) {
+                  e.preventDefault();
+                  navigate("map");
+                }
+              }}
+            >
+              <MapIcon size={16} />
+              <span>地圖</span>
+            </a>
+            <a
+              href="/records"
+              aria-current={page === "records" ? "page" : undefined}
+              onClick={(e) => {
+                if (!e.metaKey && !e.ctrlKey && !e.shiftKey && !e.altKey) {
+                  e.preventDefault();
+                  navigate("records");
+                }
+              }}
+            >
+              <List size={16} />
+              <span>飛行紀錄</span>
+            </a>
+          </nav>
+        </div>
+        <div className="header-actions map-glass">
           {page === "map" && (
             <button
               ref={sidebarToggle}
@@ -567,9 +575,15 @@ export default function App() {
             <BookOpen size={16} />
             <span>飛行護照</span>
           </button>
-          <button className="primary" disabled={busy} onClick={add}>
+          <button
+            className="primary"
+            disabled={busy}
+            onClick={add}
+            aria-label="補登航班"
+            title="補登航班"
+          >
             <Plus size={16} />
-            補登航班
+            <span>補登航班</span>
           </button>
           <div className="more-wrap">
             <button
@@ -583,7 +597,7 @@ export default function App() {
               <Menu size={19} />
             </button>
             {more && (
-              <div className="more-menu" id="site-menu">
+              <div className="more-menu map-glass" id="site-menu">
                 <nav className="mobile-menu-pages" aria-label="手機主要頁面">
                   <a
                     href="/"
@@ -809,7 +823,7 @@ export default function App() {
                 }}
               />
             </Suspense>
-            <div className="journey-stats">
+            <div className="journey-stats map-glass">
               <div>
                 <span>已搭乘</span>
                 <strong>
@@ -834,7 +848,9 @@ export default function App() {
             </div>
             {detailFlight && (
               <div
-                className={"flight-detail" + (detail.open ? " is-open" : "")}
+                className={
+                  "flight-detail map-glass" + (detail.open ? " is-open" : "")
+                }
                 id="flight-detail"
                 aria-label="航班詳情"
                 inert={!detail.open}
@@ -883,109 +899,118 @@ export default function App() {
                       : ""}
                   </span>
                 </div>
-                <div className="detail-times">
-                  <span>出發 {detailFlight.departure || "—"}</span>
-                  <ArrowRight size={14} />
-                  <span>抵達 {detailFlight.arrival || "—"}</span>
-                </div>
-                {detailFlight.note && (
-                  <p className="detail-note">
-                    {detailFlight.note.replace(/^；/, "")}
-                  </p>
-                )}
-                <div className="sources">
-                  {detailFlight.sources.map((s, i) => (
-                    <span key={i}>
-                      {s.url && /^https:\/\//.test(s.url) ? (
-                        <a href={s.url} target="_blank" rel="noreferrer">
-                          {s.label}
-                          <ArrowUpRight size={12} />
-                        </a>
-                      ) : (
-                        s.label
-                      )}
-                    </span>
-                  ))}
-                </div>
-                <button
-                  className="detail-related"
-                  onClick={() => {
-                    if (mobile) {
-                      navigate("records");
-                      setRecordRoute(routeKey(detailFlight));
-                      return;
-                    }
-                    setQuery("");
-                    setCountry("all");
-                    setYear("all");
-                    setTab(
-                      ["cancelled", "removed"].includes(detailFlight.status)
-                        ? "excluded"
-                        : detailFlight.status === "upcoming"
-                          ? "upcoming"
-                          : "history",
-                    );
-                    setSidebarOpen(true);
-                    setRouteFilter(routeKey(detailFlight));
-                    setSelected(null);
-                    setExpanded(true);
-                  }}
-                >
-                  查看同航線紀錄 <ChevronRight size={15} />
-                </button>
-                <div className="detail-actions">
-                  {detailFlight.status === "unverified" && (
-                    <button
-                      disabled={busy}
-                      className="primary"
-                      onClick={() => void status([detailFlight.id], "flown")}
-                    >
-                      <Check size={15} />
-                      確認已搭乘
-                    </button>
+                <details className="detail-disclosure" key={detailFlight.id}>
+                  <summary>
+                    航班備註與操作 <ChevronDown size={16} aria-hidden="true" />
+                  </summary>
+                  {(detailFlight.departure || detailFlight.arrival) && (
+                    <div className="detail-times">
+                      <span>出發 {detailFlight.departure || "—"}</span>
+                      <ArrowRight size={14} />
+                      <span>抵達 {detailFlight.arrival || "—"}</span>
+                    </div>
                   )}
-                  {["removed", "cancelled"].includes(detailFlight.status) && (
+                  {detailFlight.note && (
+                    <p className="detail-note">
+                      {detailFlight.note.replace(/^；/, "")}
+                    </p>
+                  )}
+                  <div className="sources">
+                    {detailFlight.sources.map((s, i) => (
+                      <span key={i}>
+                        {s.url && /^https:\/\//.test(s.url) ? (
+                          <a href={s.url} target="_blank" rel="noreferrer">
+                            {s.label}
+                            <ArrowUpRight size={12} />
+                          </a>
+                        ) : (
+                          s.label
+                        )}
+                      </span>
+                    ))}
+                  </div>
+                  <button
+                    className="detail-related"
+                    onClick={() => {
+                      if (mobile) {
+                        navigate("records");
+                        setRecordRoute(routeKey(detailFlight));
+                        return;
+                      }
+                      setQuery("");
+                      setCountry("all");
+                      setYear("all");
+                      setTab(
+                        ["cancelled", "removed"].includes(detailFlight.status)
+                          ? "excluded"
+                          : detailFlight.status === "upcoming"
+                            ? "upcoming"
+                            : "history",
+                      );
+                      setSidebarOpen(true);
+                      setRouteFilter(routeKey(detailFlight));
+                      setSelected(null);
+                      setExpanded(true);
+                    }}
+                  >
+                    查看同航線紀錄 <ChevronRight size={15} />
+                  </button>
+                  <div className="detail-actions">
+                    {detailFlight.status === "unverified" && (
+                      <button
+                        disabled={busy}
+                        className="primary"
+                        onClick={() => void status([detailFlight.id], "flown")}
+                      >
+                        <Check size={15} />
+                        確認已搭乘
+                      </button>
+                    )}
+                    {["removed", "cancelled"].includes(detailFlight.status) && (
+                      <button
+                        className="secondary"
+                        disabled={busy}
+                        onClick={() =>
+                          void status(
+                            [detailFlight.id],
+                            detailFlight.date > today()
+                              ? "upcoming"
+                              : "unverified",
+                          )
+                        }
+                      >
+                        <RotateCcw size={15} />
+                        恢復待核對
+                      </button>
+                    )}
                     <button
                       className="secondary"
                       disabled={busy}
-                      onClick={() =>
-                        void status(
-                          [detailFlight.id],
-                          detailFlight.date > today()
-                            ? "upcoming"
-                            : "unverified",
-                        )
-                      }
+                      onClick={() => setEditing({ ...detailFlight })}
                     >
-                      <RotateCcw size={15} />
-                      恢復待核對
+                      <Pencil size={15} />
+                      編輯
                     </button>
-                  )}
-                  <button
-                    className="secondary"
-                    disabled={busy}
-                    onClick={() => setEditing({ ...detailFlight })}
-                  >
-                    <Pencil size={15} />
-                    編輯
-                  </button>
-                  {detailFlight.status !== "removed" && (
-                    <button
-                      className="icon-button danger"
-                      disabled={busy}
-                      onClick={() => void status([detailFlight.id], "removed")}
-                      title="移至已排除，可隨時恢復"
-                      aria-label="移除這段航班"
-                    >
-                      <Trash2 size={16} />
-                    </button>
-                  )}
-                </div>
+                    {detailFlight.status !== "removed" && (
+                      <button
+                        className="icon-button danger"
+                        disabled={busy}
+                        onClick={() =>
+                          void status([detailFlight.id], "removed")
+                        }
+                        title="移至已排除，可隨時恢復"
+                        aria-label="移除這段航班"
+                      >
+                        <Trash2 size={16} />
+                      </button>
+                    )}
+                  </div>
+                </details>
               </div>
             )}
           </section>
           <aside
-            className="flight-sidebar"
+            className="flight-sidebar map-glass"
             id="flight-sidebar"
             aria-label="航班紀錄"
             inert={!!selected}
@@ -1425,7 +1450,7 @@ function FlightForm({
   }
   return (
     <dialog
-      className="flight-modal"
+      className="flight-modal map-glass"
       ref={ref}
       onCancel={(e) => {
         e.preventDefault();
