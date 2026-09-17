@@ -1,0 +1,482 @@
+[
+  {
+    "from_airport": "TPE",
+    "to_airport": "PVG",
+    "flight": "BR712",
+    "airline": "EVA Air",
+    "source_url": "https://booking.evaair.com/flyeva/eva/b2c/flight-status-erc.aspx?ACTCODE=&Orderby=&REASON=&airport=TPE%2FTSA%2FKHH&cmstitle=erc-note1&date=20260710-20260713&lang=&reqtime=",
+    "source_kind": "official_disruption_notice",
+    "checked_on": "2026-09-17",
+    "verified_scope": "Flight number and directed airport pair only; no verification of any synthetic travel date"
+  },
+  {
+    "from_airport": "PVG",
+    "to_airport": "TPE",
+    "flight": "BR711",
+    "airline": "EVA Air",
+    "source_url": "https://booking.evaair.com/flyeva/eva/b2c/flight-status-erc.aspx?ACTCODE=&Orderby=&REASON=&airport=TPE%2FTSA%2FKHH&cmstitle=erc-note1&date=20260710-20260713&lang=&reqtime=",
+    "source_kind": "official_disruption_notice",
+    "checked_on": "2026-09-17",
+    "verified_scope": "Flight number and directed airport pair only; no verification of any synthetic travel date"
+  },
+  {
+    "from_airport": "TPE",
+    "to_airport": "NRT",
+    "flight": "BR196",
+    "airline": "EVA Air",
+    "source_url": "https://booking.evaair.com/flyeva/eva/b2c/flight-status-erc.aspx?ACTCODE=&Orderby=&REASON=&airport=TPE%2FTSA%2FKHH&cmstitle=erc-note1&date=20260710-20260713&lang=&reqtime=",
+    "source_kind": "official_disruption_notice",
+    "checked_on": "2026-09-17",
+    "verified_scope": "Flight number and directed airport pair only; no verification of any synthetic travel date"
+  },
+  {
+    "from_airport": "NRT",
+    "to_airport": "TPE",
+    "flight": "BR195",
+    "airline": "EVA Air",
+    "source_url": "https://booking.evaair.com/flyeva/eva/b2c/flight-status-erc.aspx?ACTCODE=&Orderby=&airport=FUK%2FMYJ%2FKIX%2FNGO%2FKMQ%2FHND%2FNRT%2FSDJ%2FAOJ&cmstitle=erc-note1&date=20191011-20191013&lang=zh-tw&reqtime=",
+    "source_kind": "official_disruption_notice",
+    "checked_on": "2026-09-17",
+    "verified_scope": "Flight number and directed airport pair only; no verification of any synthetic travel date"
+  },
+  {
+    "from_airport": "TPE",
+    "to_airport": "ICN",
+    "flight": "BR160",
+    "airline": "EVA Air",
+    "source_url": "https://booking.evaair.com/flyeva/eva/b2c/flight-status-erc.aspx?ACTCODE=&Orderby=&REASON=&airport=TPE%2FTSA%2FKHH&cmstitle=erc-note1&date=20260710-20260713&lang=&reqtime=",
+    "source_kind": "official_schedule_or_disruption_notice",
+    "checked_on": "2026-09-17",
+    "verified_scope": "Flight number and directed airport pair only; no verification of any synthetic travel date"
+  },
+  {
+    "from_airport": "ICN",
+    "to_airport": "TPE",
+    "flight": "BR159",
+    "airline": "EVA Air",
+    "source_url": "https://www.evaair.com/images/zhtw/evaair-timetable_tcm27-51481.pdf",
+    "source_kind": "official_schedule_or_disruption_notice",
+    "checked_on": "2026-09-17",
+    "verified_scope": "Flight number and directed airport pair only; no verification of any synthetic travel date"
+  },
+  {
+    "from_airport": "TPE",
+    "to_airport": "SIN",
+    "flight": "BR225",
+    "airline": "EVA Air",
+    "source_url": "https://flights.evaair.com/zh-tw/premium-economy-class-flights-from-taipei-to-singapore",
+    "source_kind": "official_schedule",
+    "checked_on": "2026-09-17",
+    "verified_scope": "Flight number and directed airport pair only; no verification of any synthetic travel date"
+  },
+  {
+    "from_airport": "SIN",
+    "to_airport": "TPE",
+    "flight": "BR226",
+    "airline": "EVA Air",
+    "source_url": "https://flights.evaair.com/zh-tw/premium-economy-class-flights-from-taipei-to-singapore",
+    "source_kind": "official_schedule",
+    "checked_on": "2026-09-17",
+    "verified_scope": "Flight number and directed airport pair only; no verification of any synthetic travel date"
+  },
+  {
+    "from_airport": "TPE",
+    "to_airport": "KUL",
+    "flight": "BR227",
+    "airline": "EVA Air",
+    "source_url": "https://booking.evaair.com/flyeva/eva/b2c/flight-status-erc.aspx?ACTCODE=&Orderby=&REASON=&airport=TPE%2FTSA%2FKHH&cmstitle=erc-note2&date=20260710-20260713&lang=sc-cn&reqtime=",
+    "source_kind": "official_disruption_notice",
+    "checked_on": "2026-09-17",
+    "verified_scope": "Flight number and directed airport pair only; no verification of any synthetic travel date"
+  },
+  {
+    "from_airport": "KUL",
+    "to_airport": "TPE",
+    "flight": "BR228",
+    "airline": "EVA Air",
+    "source_url": "https://booking.evaair.com/flyeva/eva/b2c/flight-status-erc.aspx?ACTCODE=&Orderby=&REASON=&airport=TPE%2FTSA%2FKHH&cmstitle=erc-note2&date=20260710-20260713&lang=sc-cn&reqtime=",
+    "source_kind": "official_disruption_notice",
+    "checked_on": "2026-09-17",
+    "verified_scope": "Flight number and directed airport pair only; no verification of any synthetic travel date"
+  },
+  {
+    "from_airport": "TPE",
+    "to_airport": "BKK",
+    "flight": "BR211",
+    "airline": "EVA Air",
+    "source_url": "https://booking.evaair.com/flyeva/eva/b2c/flight-status-erc.aspx?ACTCODE=&Orderby=&REASON=&airport=TPE%2FTSA%2FKHH&cmstitle=erc-note2&date=20260710-20260713&lang=sc-cn&reqtime=",
+    "source_kind": "official_disruption_notice",
+    "checked_on": "2026-09-17",
+    "verified_scope": "Flight number and directed airport pair only; no verification of any synthetic travel date"
+  },
+  {
+    "from_airport": "BKK",
+    "to_airport": "TPE",
+    "flight": "BR212",
+    "airline": "EVA Air",
+    "source_url": "https://booking.evaair.com/flyeva/eva/b2c/flight-status-erc.aspx?ACTCODE=&Orderby=&REASON=&airport=TPE%2FTSA%2FKHH&cmstitle=erc-note2&date=20260710-20260713&lang=sc-cn&reqtime=",
+    "source_kind": "official_disruption_notice",
+    "checked_on": "2026-09-17",
+    "verified_scope": "Flight number and directed airport pair only; no verification of any synthetic travel date"
+  },
+  {
+    "from_airport": "TPE",
+    "to_airport": "SGN",
+    "flight": "BR391",
+    "airline": "EVA Air",
+    "source_url": "https://booking.evaair.com/flyeva/eva/b2c/flight-status-erc.aspx?ACTCODE=&Orderby=&REASON=&airport=TPE%2FTSA%2FKHH&cmstitle=erc-note2&date=20260710-20260713&lang=sc-cn&reqtime=",
+    "source_kind": "official_disruption_notice",
+    "checked_on": "2026-09-17",
+    "verified_scope": "Flight number and directed airport pair only; no verification of any synthetic travel date"
+  },
+  {
+    "from_airport": "SGN",
+    "to_airport": "TPE",
+    "flight": "BR392",
+    "airline": "EVA Air",
+    "source_url": "https://booking.evaair.com/flyeva/eva/b2c/flight-status-erc.aspx?ACTCODE=&Orderby=&REASON=&airport=TPE%2FTSA%2FKHH&cmstitle=erc-note1&date=20260710-20260713&lang=&reqtime=",
+    "source_kind": "official_disruption_notice",
+    "checked_on": "2026-09-17",
+    "verified_scope": "Flight number and directed airport pair only; no verification of any synthetic travel date"
+  },
+  {
+    "from_airport": "TPE",
+    "to_airport": "DPS",
+    "flight": "BR255",
+    "airline": "EVA Air",
+    "source_url": "https://booking.evaair.com/flyeva/eva/b2c/flight-status-erc.aspx?ACTCODE=&Orderby=&REASON=&airport=TPE%2FTSA%2FKHH&cmstitle=erc-note1&date=20260710-20260713&lang=&reqtime=",
+    "source_kind": "official_disruption_notice",
+    "checked_on": "2026-09-17",
+    "verified_scope": "Flight number and directed airport pair only; no verification of any synthetic travel date"
+  },
+  {
+    "from_airport": "DPS",
+    "to_airport": "TPE",
+    "flight": "BR256",
+    "airline": "EVA Air",
+    "source_url": "https://booking.evaair.com/flyeva/eva/b2c/flight-status-erc.aspx?ACTCODE=&Orderby=&REASON=&airport=TPE%2FTSA%2FKHH&cmstitle=erc-note2&date=20260710-20260713&lang=sc-cn&reqtime=",
+    "source_kind": "official_disruption_notice",
+    "checked_on": "2026-09-17",
+    "verified_scope": "Flight number and directed airport pair only; no verification of any synthetic travel date"
+  },
+  {
+    "from_airport": "TPE",
+    "to_airport": "YVR",
+    "flight": "BR10",
+    "airline": "EVA Air",
+    "source_url": "https://booking.evaair.com/flyeva/eva/b2c/flight-status-erc.aspx?ACTCODE=&Orderby=&REASON=&airport=YVR&cmstitle=erc-note1&date=20221221-20221226&lang=en-US&reqtime=",
+    "source_kind": "official_disruption_notice",
+    "checked_on": "2026-09-17",
+    "verified_scope": "Flight number and directed airport pair only; no verification of any synthetic travel date"
+  },
+  {
+    "from_airport": "YVR",
+    "to_airport": "TPE",
+    "flight": "BR9",
+    "airline": "EVA Air",
+    "source_url": "https://booking.evaair.com/flyeva/eva/b2c/flight-status-erc.aspx?ACTCODE=&Orderby=&REASON=&airport=YVR&cmstitle=erc-note1&date=20221221-20221226&lang=en-US&reqtime=",
+    "source_kind": "official_disruption_notice",
+    "checked_on": "2026-09-17",
+    "verified_scope": "Flight number and directed airport pair only; no verification of any synthetic travel date"
+  },
+  {
+    "from_airport": "TPE",
+    "to_airport": "JFK",
+    "flight": "BR32",
+    "airline": "EVA Air",
+    "source_url": "https://booking.evaair.com/flyeva/eva/b2c/flight-status-erc.aspx?ACTCODE=&Orderby=&REASON=&airport=JFK%2FDFW&cmstitle=erc-note1&date=20260123-20260126&lang=en-US&reqtime=",
+    "source_kind": "official_disruption_notice",
+    "checked_on": "2026-09-17",
+    "verified_scope": "Flight number and directed airport pair only; no verification of any synthetic travel date"
+  },
+  {
+    "from_airport": "JFK",
+    "to_airport": "TPE",
+    "flight": "BR31",
+    "airline": "EVA Air",
+    "source_url": "https://booking.evaair.com/flyeva/eva/b2c/flight-status-erc.aspx?ACTCODE=&Orderby=&REASON=&airport=JFK%2FDFW&cmstitle=erc-note1&date=20260123-20260126&lang=en-US&reqtime=",
+    "source_kind": "official_disruption_notice",
+    "checked_on": "2026-09-17",
+    "verified_scope": "Flight number and directed airport pair only; no verification of any synthetic travel date"
+  },
+  {
+    "from_airport": "TPE",
+    "to_airport": "AKL",
+    "flight": "NZ78",
+    "airline": "Air New Zealand",
+    "source_url": "https://www.airnewzealand.tw/flight-deals-to-new-zealand",
+    "source_kind": "official_schedule",
+    "checked_on": "2026-09-17",
+    "verified_scope": "Flight number and directed airport pair only; no verification of any synthetic travel date"
+  },
+  {
+    "from_airport": "AKL",
+    "to_airport": "TPE",
+    "flight": "NZ77",
+    "airline": "Air New Zealand",
+    "source_url": "https://www.airnewzealand.tw/flight-deals-to-new-zealand",
+    "source_kind": "official_schedule",
+    "checked_on": "2026-09-17",
+    "verified_scope": "Flight number and directed airport pair only; no verification of any synthetic travel date"
+  },
+  {
+    "from_airport": "PVG",
+    "to_airport": "SIN",
+    "flight": "SQ833",
+    "airline": "Singapore Airlines",
+    "source_url": "https://www.singaporeair.com/zh_CN/cn/plan-travel/local-promotions/cn-exCN/",
+    "source_kind": "official_schedule",
+    "checked_on": "2026-09-17",
+    "verified_scope": "Flight number and directed airport pair only; no verification of any synthetic travel date"
+  },
+  {
+    "from_airport": "SIN",
+    "to_airport": "PVG",
+    "flight": "SQ830",
+    "airline": "Singapore Airlines",
+    "source_url": "https://www.singaporeair.com/zh_CN/cn/plan-travel/local-promotions/cn-exCN/",
+    "source_kind": "official_schedule",
+    "checked_on": "2026-09-17",
+    "verified_scope": "Flight number and directed airport pair only; no verification of any synthetic travel date"
+  },
+  {
+    "from_airport": "SIN",
+    "to_airport": "KUL",
+    "flight": "SQ106",
+    "airline": "Singapore Airlines",
+    "source_url": "https://www.singaporeair.com/saar5/pdf/media-centre/200322SoutheastAsiaFlightCanxTable.pdf",
+    "source_kind": "official_disruption_notice",
+    "checked_on": "2026-09-17",
+    "verified_scope": "Flight number and directed airport pair only; no verification of any synthetic travel date"
+  },
+  {
+    "from_airport": "KUL",
+    "to_airport": "SIN",
+    "flight": "SQ107",
+    "airline": "Singapore Airlines",
+    "source_url": "https://www.singaporeair.com/saar5/pdf/media-centre/200322SoutheastAsiaFlightCanxTable.pdf",
+    "source_kind": "official_disruption_notice",
+    "checked_on": "2026-09-17",
+    "verified_scope": "Flight number and directed airport pair only; no verification of any synthetic travel date"
+  },
+  {
+    "from_airport": "SIN",
+    "to_airport": "SYD",
+    "flight": "SQ231",
+    "airline": "Singapore Airlines",
+    "source_url": "https://www.singaporeair.com/en_UK/tw/corporate/newsroom/press-release/2026/january---march-2026/Singapore_Airlines_WSI/",
+    "source_kind": "official_schedule",
+    "checked_on": "2026-09-17",
+    "verified_scope": "Flight number and directed airport pair only; no verification of any synthetic travel date"
+  },
+  {
+    "from_airport": "SYD",
+    "to_airport": "SIN",
+    "flight": "SQ222",
+    "airline": "Singapore Airlines",
+    "source_url": "https://www.singaporeair.com/en_UK/tw/corporate/newsroom/press-release/2026/january---march-2026/Singapore_Airlines_WSI/",
+    "source_kind": "official_schedule",
+    "checked_on": "2026-09-17",
+    "verified_scope": "Flight number and directed airport pair only; no verification of any synthetic travel date"
+  },
+  {
+    "from_airport": "SIN",
+    "to_airport": "AKL",
+    "flight": "SQ285",
+    "airline": "Singapore Airlines",
+    "source_url": "https://agent360.singaporeair.com/content/dam/agent360/web-assets/pdf/local/nz/SQxNZ_Trade_Brochure_SQ_small.pdf",
+    "source_kind": "official_schedule",
+    "checked_on": "2026-09-17",
+    "verified_scope": "Flight number and directed airport pair only; no verification of any synthetic travel date"
+  },
+  {
+    "from_airport": "AKL",
+    "to_airport": "SIN",
+    "flight": "SQ286",
+    "airline": "Singapore Airlines",
+    "source_url": "https://agent360.singaporeair.com/content/dam/agent360/web-assets/pdf/local/nz/SQxNZ_Trade_Brochure_SQ_small.pdf",
+    "source_kind": "official_schedule",
+    "checked_on": "2026-09-17",
+    "verified_scope": "Flight number and directed airport pair only; no verification of any synthetic travel date"
+  },
+  {
+    "from_airport": "SIN",
+    "to_airport": "BKK",
+    "flight": "SQ706",
+    "airline": "Singapore Airlines",
+    "source_url": "https://www.singaporeair.com/saar5/pdf/media-centre/NE-0822_AnnexeB.pdf",
+    "source_kind": "official_schedule",
+    "checked_on": "2026-09-17",
+    "verified_scope": "Flight number and directed airport pair only; no verification of any synthetic travel date"
+  },
+  {
+    "from_airport": "BKK",
+    "to_airport": "SIN",
+    "flight": "SQ705",
+    "airline": "Singapore Airlines",
+    "source_url": "https://www.singaporeair.com/saar5/pdf/media-centre/NE-0822_AnnexeB.pdf",
+    "source_kind": "official_schedule",
+    "checked_on": "2026-09-17",
+    "verified_scope": "Flight number and directed airport pair only; no verification of any synthetic travel date"
+  },
+  {
+    "from_airport": "DXB",
+    "to_airport": "PVG",
+    "flight": "EK302",
+    "airline": "Emirates",
+    "source_url": "https://www.emirates.com/cn/chinese/destinations/dxb/pvg/flights-from-dubai-to-shanghai/",
+    "source_kind": "official_schedule",
+    "checked_on": "2026-09-17",
+    "verified_scope": "Flight number and directed airport pair only; no verification of any synthetic travel date"
+  },
+  {
+    "from_airport": "PVG",
+    "to_airport": "DXB",
+    "flight": "EK303",
+    "airline": "Emirates",
+    "source_url": "https://www.emirates.com/cn/chinese/destinations/dxb/pvg/flights-from-dubai-to-shanghai/",
+    "source_kind": "official_schedule",
+    "checked_on": "2026-09-17",
+    "verified_scope": "Flight number and directed airport pair only; no verification of any synthetic travel date"
+  },
+  {
+    "from_airport": "DXB",
+    "to_airport": "TPE",
+    "flight": "EK366",
+    "airline": "Emirates",
+    "source_url": "https://www.emirates.com/tw/chinese/destinations/dxb/tpe/flights-from-dubai-to-taipei/",
+    "source_kind": "official_schedule",
+    "checked_on": "2026-09-17",
+    "verified_scope": "Flight number and directed airport pair only; no verification of any synthetic travel date"
+  },
+  {
+    "from_airport": "TPE",
+    "to_airport": "DXB",
+    "flight": "EK367",
+    "airline": "Emirates",
+    "source_url": "https://www.emirates.com/tw/chinese/destinations/dxb/tpe/flights-from-dubai-to-taipei/",
+    "source_kind": "official_schedule",
+    "checked_on": "2026-09-17",
+    "verified_scope": "Flight number and directed airport pair only; no verification of any synthetic travel date"
+  },
+  {
+    "from_airport": "DXB",
+    "to_airport": "LHR",
+    "flight": "EK1",
+    "airline": "Emirates",
+    "source_url": "https://www.emirates.com/english/destinations/dxb/lhr/flights-from-dubai-to-london-heathrow/",
+    "source_kind": "official_schedule",
+    "checked_on": "2026-09-17",
+    "verified_scope": "Flight number and directed airport pair only; no verification of any synthetic travel date"
+  },
+  {
+    "from_airport": "LHR",
+    "to_airport": "DXB",
+    "flight": "EK2",
+    "airline": "Emirates",
+    "source_url": "https://www.emirates.com/english/destinations/dxb/lhr/flights-from-dubai-to-london-heathrow/",
+    "source_kind": "official_schedule",
+    "checked_on": "2026-09-17",
+    "verified_scope": "Flight number and directed airport pair only; no verification of any synthetic travel date"
+  },
+  {
+    "from_airport": "DXB",
+    "to_airport": "CDG",
+    "flight": "EK73",
+    "airline": "Emirates",
+    "source_url": "https://www.emirates.com/english/destinations/dxb/cdg/flights-from-dubai-to-paris/",
+    "source_kind": "official_schedule",
+    "checked_on": "2026-09-17",
+    "verified_scope": "Flight number and directed airport pair only; no verification of any synthetic travel date"
+  },
+  {
+    "from_airport": "CDG",
+    "to_airport": "DXB",
+    "flight": "EK74",
+    "airline": "Emirates",
+    "source_url": "https://www.emirates.com/english/destinations/dxb/cdg/flights-from-dubai-to-paris/",
+    "source_kind": "official_schedule",
+    "checked_on": "2026-09-17",
+    "verified_scope": "Flight number and directed airport pair only; no verification of any synthetic travel date"
+  },
+  {
+    "from_airport": "DXB",
+    "to_airport": "FRA",
+    "flight": "EK45",
+    "airline": "Emirates",
+    "source_url": "https://www.emirates.com/english/destinations/dxb/fra/flights-from-dubai-to-frankfurt/",
+    "source_kind": "official_schedule",
+    "checked_on": "2026-09-17",
+    "verified_scope": "Flight number and directed airport pair only; no verification of any synthetic travel date"
+  },
+  {
+    "from_airport": "FRA",
+    "to_airport": "DXB",
+    "flight": "EK46",
+    "airline": "Emirates",
+    "source_url": "https://www.emirates.com/english/destinations/dxb/fra/flights-from-dubai-to-frankfurt/",
+    "source_kind": "official_schedule",
+    "checked_on": "2026-09-17",
+    "verified_scope": "Flight number and directed airport pair only; no verification of any synthetic travel date"
+  },
+  {
+    "from_airport": "DXB",
+    "to_airport": "JNB",
+    "flight": "EK761",
+    "airline": "Emirates",
+    "source_url": "https://www.emirates.com/english/destinations/dxb/jnb/flights-from-dubai-to-johannesburg/",
+    "source_kind": "official_schedule",
+    "checked_on": "2026-09-17",
+    "verified_scope": "Flight number and directed airport pair only; no verification of any synthetic travel date"
+  },
+  {
+    "from_airport": "JNB",
+    "to_airport": "DXB",
+    "flight": "EK762",
+    "airline": "Emirates",
+    "source_url": "https://www.emirates.com/english/destinations/dxb/jnb/flights-from-dubai-to-johannesburg/",
+    "source_kind": "official_schedule",
+    "checked_on": "2026-09-17",
+    "verified_scope": "Flight number and directed airport pair only; no verification of any synthetic travel date"
+  },
+  {
+    "from_airport": "DXB",
+    "to_airport": "GRU",
+    "flight": "EK261",
+    "airline": "Emirates",
+    "source_url": "https://www.emirates.com/br/portuguese/destinations/gru/dxb/flights-from-sao-paulo-to-dubai/",
+    "source_kind": "official_schedule",
+    "checked_on": "2026-09-17",
+    "verified_scope": "Flight number and directed airport pair only; no verification of any synthetic travel date"
+  },
+  {
+    "from_airport": "GRU",
+    "to_airport": "DXB",
+    "flight": "EK262",
+    "airline": "Emirates",
+    "source_url": "https://www.emirates.com/br/portuguese/destinations/gru/dxb/flights-from-sao-paulo-to-dubai/",
+    "source_kind": "official_schedule",
+    "checked_on": "2026-09-17",
+    "verified_scope": "Flight number and directed airport pair only; no verification of any synthetic travel date"
+  },
+  {
+    "from_airport": "DXB",
+    "to_airport": "IST",
+    "flight": "EK123",
+    "airline": "Emirates",
+    "source_url": "https://www.emirates.com/media-centre/emirates-announces-start-of-scheduled-daily-a380-service-to-istanbul/",
+    "source_kind": "official_route_announcement",
+    "checked_on": "2026-09-17",
+    "verified_scope": "Flight number and directed airport pair only; no verification of any synthetic travel date"
+  },
+  {
+    "from_airport": "IST",
+    "to_airport": "DXB",
+    "flight": "EK124",
+    "airline": "Emirates",
+    "source_url": "https://www.emirates.com/media-centre/emirates-announces-start-of-scheduled-daily-a380-service-to-istanbul/",
+    "source_kind": "official_route_announcement",
+    "checked_on": "2026-09-17",
+    "verified_scope": "Flight number and directed airport pair only; no verification of any synthetic travel date"
+  }
+]

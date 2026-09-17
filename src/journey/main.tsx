@@ -1,7 +1,8 @@
 import { StrictMode, useEffect, useMemo, useState } from "react";
 import { createRoot } from "react-dom/client";
-import { stateSchema, type Airport, type Flight } from "../../shared/model";
-import { readSaved } from "../storage";
+import { type Airport, type Flight } from "../../shared/model";
+import { loadFlightState, demoLabel } from "../demo";
+import "../demo.css";
 import { applyHistoryUpdate } from "../../shared/history-update";
 import { playlist } from "./timeline";
 import CameraMap from "./CameraMap";
@@ -21,14 +22,11 @@ function App() {
     };
     async function load() {
       try {
-        const saved = readSaved();
-        const [state, airports] = await Promise.all([
-          saved
-            ? Promise.resolve(saved.state)
-            : get("/api/state").then(stateSchema.parse),
+        const [loaded, airports] = await Promise.all([
+          loadFlightState(() => get("/api/state")),
           get("/airports.json"),
         ]);
-        const updated = await applyHistoryUpdate(state);
+        const updated = await applyHistoryUpdate(loaded.state);
         if (!controller.signal.aborted)
           setData({ flights: updated.flights, airports });
       } catch (reason) {
@@ -55,7 +53,16 @@ function App() {
         <a href="/">返回旅行地圖</a>
       </div>
     );
-  return <CameraMap flights={queue} airports={data.airports} />;
+  return (
+    <>
+      <CameraMap flights={queue} airports={data.airports} />
+      {demoLabel(data.flights) && (
+        <a className="camera-demo-label" href="/">
+          {demoLabel(data.flights)} · 可替換自己的紀錄
+        </a>
+      )}
+    </>
+  );
 }
 const root = createRoot(document.getElementById("root")!);
 root.render(

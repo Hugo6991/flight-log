@@ -175,10 +175,11 @@ export default function CameraMap({
           "text-halo-width": 1.4,
         },
       });
-      map
+      const attribution = map
         .getContainer()
-        .querySelector(".maplibregl-ctrl-attrib")
-        ?.removeAttribute("open");
+        .querySelector(".maplibregl-ctrl-attrib");
+      attribution?.classList.remove("maplibregl-compact-show");
+      attribution?.removeAttribute("open");
       map
         .getContainer()
         .querySelector(".maplibregl-ctrl-attrib-button")

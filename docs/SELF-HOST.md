@@ -11,14 +11,14 @@ npx wrangler login
 npx wrangler d1 create my-flight-log
 ```
 
-`login` 在瀏覽器完成你自己的登入。把 create 回傳的 database_id、database_name 填進 `wrangler.jsonc`，binding 必須維持 `DB`。將 Worker 的 `name` 改成你想要的名稱，例如 `my-flight-log`。範本沒有作者帳號、網域或 database ID。
+`login` 在瀏覽器完成你自己的登入。把 create 回傳的 database_id、database_name 填進 `wrangler.jsonc`，binding 必須維持 `DB`。將 Worker 的 `name` 改成你想要的名稱，例如 `my-flight-log`。預設部署設定沒有作者帳號、網域或 database ID。
 
 ```sh
 npx wrangler d1 migrations apply my-flight-log --remote
 npm run deploy
 ```
 
-預設 `workers_dev: true`，Wrangler 會印出你自己的 `<worker>.<account-subdomain>.workers.dev` URL。首次使用 workers.dev 若要求設定子網域，依 Cloudflare 指示完成。這時公開來源為空，可只在自己的瀏覽器還原備份；網址開給別人不會看見你本機匯入的行程。
+預設 `workers_dev: true`，Wrangler 會印出你自己的 `<worker>.<account-subdomain>.workers.dev` URL。首次使用 workers.dev 若要求設定子網域，依 Cloudflare 指示完成。這時公開來源為空，首次開啟會顯示內建的五年虛構旅程。你可只在自己的瀏覽器還原備份；其他訪客看到的仍是示範，不會看見你本機匯入的行程。選「清空示範」後，此瀏覽器會保持空白，直到自行補登或還原備份。
 
 ## 3. 選擇是否公開初始行程
 

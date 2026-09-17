@@ -2,9 +2,11 @@
 
 把歷年航班變成可以回放、收藏與分享的旅行地圖
 
-[開始使用](#先在本機跑起來) · [整理 Gmail](docs/GMAIL-IMPORT.md) · [部署自己的網址](docs/SELF-HOST.md) · [English](README.en.md)
+[線上示範](https://flight-log.vibeencode.dev/) · [旅程放映](https://flight-log.vibeencode.dev/journey/) · [開始使用](#先在本機跑起來) · [English](README.en.md)
 
-![Flight Log 旅程放映，合成示範航班](docs/media/journey.png)
+免安裝即可瀏覽五年、120 段虛構航班。公開示範站與私人版本分開，所有旅行紀錄都是假資料；匯入或編輯只保存在目前瀏覽器，不會上傳到示範站或影響其他訪客
+
+![Flight Log 五年虛構示範，120 段航班與 20 個國家／地區](docs/media/world-map.png)
 
 ![飛機與鏡頭同步回放的實際操作](docs/media/journey.gif)
 
@@ -18,7 +20,7 @@
 
 ## 四個步驟
 
-1. **下載 GitHub 專案／範本 ZIP。** Node 24，執行下方指令即可先看到空地圖。
+1. **下載 GitHub 專案／範本 ZIP。** Node 24，執行下方指令即可先看到五年虛構旅程。
 2. **連結自己的 Gmail。** 在支援 Gmail 的 AI 助手中授權，再使用 [Gmail 匯入流程](docs/GMAIL-IMPORT.md) 中的完整提示詞整理 Trip.com 訂單。網站本身不持有 Gmail 權限；目前沒有內建 Google 登入按鈕。
 3. **匯入整理結果。** 本機校驗、去重、排除取消、確認搭乘，從網頁備份功能導入。[資料格式](docs/IMPORT-FORMAT.md)
 4. **建立自己的網址。** 部署到自己 Cloudflare 帳號的 workers.dev，或接上自己的子網域。[部署步驟](docs/SELF-HOST.md)
@@ -38,7 +40,11 @@ npm start
 
 開啟 http://127.0.0.1:4173 。兩個服務都只監聽本機。setup:local 建立空資料庫，不需要你的郵件或部署帳號。關閉終端機可停止服務。
 
-試用示範：在網頁「更多功能 → 還原備份到此瀏覽器」選 `data/example/demo.json`。這些紀錄明確標示為示範，與作者旅行無關。匯入自己的資料前先匯出備份；還原是整份取代，可復原上次還原。
+首次開啟會直接顯示 120 段虛構航班，涵蓋 20 個國家／地區與六洲，以桃園、上海為主要基地。日期固定在 2021 年 9 月 17 日至 2026 年 9 月 16 日，每個年度區間 24 段、每季 6 段。班號與航線有航空公司公開來源，搭乘日期與狀態全部虛構，與作者的旅行紀錄無關。[完整行程與來源](data/example/README.md)
+
+畫面上方選「匯入自己的紀錄」即可用自己的 JSON 整份取代，或選「清空示範」從空白開始。清空後重新整理仍保持空白；混合資料只移除示範航班。匯入和清空前保留一份復原備份，可從「更多功能 → 復原上次還原」取回。匯入自己的資料前仍建議先匯出備份
+
+地圖、飛行清單、旅程放映與護照圖片都會標示虛構資料。已有瀏覽器紀錄時直接使用既有資料，不會自動加入示範；遠端讀取失敗會顯示錯誤。要重新載入示範，可還原 `data/example/demo.json`
 
 ## 資料放哪裡
 
@@ -61,15 +67,18 @@ npm run build
 
 功能更動附測試和手機／桌面檢查；只使用合成資料建立 issue、PR、截圖。不要把郵件、訂位代碼、姓名或 credentials 貼到 issue。
 
+本次示範的[驗證結果與畫面](docs/DEMO-VERIFICATION.md)包含資料完整性、替換與復原、桌面及手機操作
+
 - [參與開發](CONTRIBUTING.md)
 - [安全與私人資料](SECURITY.md)
 - [操作與資料限制](docs/IMPORT-FORMAT.md)
 - [部署與備份](docs/SELF-HOST.md)
+- [公開示範站維護](docs/PUBLIC-DEMO.md)
 - [Gmail 搜尋和整理提示詞](docs/GMAIL-IMPORT.md)
 - [元件／設計參考](docs/DESIGN-REFERENCES.md)
 - [第三方資料與授權](THIRD_PARTY_NOTICES.md)
 
-MIT License。程式授權不包含你的郵件、個人旅行紀錄、第三方地圖服務或 Flighty 品牌。
+MIT License。原創程式與合成示範資料均可依 MIT 使用及修改；授權不包含你的郵件、個人旅行紀錄、航空公司來源頁面、第三方地圖服務或 Flighty 品牌。
 
 
 ## 功能邊界與下一步

@@ -46,7 +46,9 @@ import {
   touchesCountry,
 } from "./flight-records";
 const FlightMap = lazy(() => import("./FlightMap"));
-import { readSaved, writeSaved, BEFORE_RESTORE_KEY } from "./storage";
+import { writeSaved, BEFORE_RESTORE_KEY } from "./storage";
+import { loadFlightState, isDemoFlight } from "./demo";
+import DemoNotice from "./DemoNotice";
 const statusLabels = {
   unverified: "待核對",
   flown: "已搭乘",
@@ -85,6 +87,7 @@ export default function App() {
   );
   const [mobileDetail, setMobileDetail] = useState<string | null>(null);
   const [recordRoute, setRecordRoute] = useState<string | null>(null);
+  const [recordsVersion, setRecordsVersion] = useState(0);
   useEffect(() => {
     const media = window.matchMedia("(max-width: 760px)");
     const update = () => setMobile(media.matches);
@@ -161,22 +164,23 @@ export default function App() {
     let disposed = false;
     async function load() {
       try {
-        const [data, a] = await Promise.all([
-          fetch("/api/state").then(async (r) => {
-            if (!r.ok) throw new Error("無法讀取航班紀錄，請重新整理。");
-            return r.json();
-          }),
+        const [loaded, a] = await Promise.all([
+          loadFlightState(() =>
+            fetch("/api/state").then(async (r) => {
+              if (!r.ok) throw new Error("無法讀取航班紀錄，請重新整理。");
+              return r.json();
+            }),
+          ),
           fetch("/airports.json").then((r) => {
             if (!r.ok) throw new Error("無法讀取機場資料，請重新整理。");
             return r.json();
           }),
         ]);
-        const saved = readSaved();
-        const original = saved?.state ?? stateSchema.parse(data);
+        const original = loaded.state;
         const updated = await applyHistoryUpdate(original);
         if (disposed) return;
-        let rev = saved?.revision ?? 0;
-        if (saved && updated !== original) {
+        let rev = loaded.revision;
+        if (loaded.source === "browser" && updated !== original) {
           localStorage.setItem(
             "flight-log.before-data-update.v1",
             JSON.stringify(original),
@@ -390,11 +394,12 @@ export default function App() {
           flights,
         }),
       );
-      await save(
+      const restored = await save(
         { ...parsed, flights: parsed.flights.map(normalStatus) }.flights,
         "已從備份還原 " + parsed.flights.length + " 段航班",
         parsed.data_revision ?? DATA_REVISION,
       );
+      if (restored) resetAfterReplacement();
     } catch (e) {
       setError(
         e instanceof Error && e.message.includes("2 MB")
@@ -403,6 +408,45 @@ export default function App() {
       );
     } finally {
       if (input.current) input.current.value = "";
+    }
+  }
+  function resetAfterReplacement() {
+    setRecordsVersion((value) => value + 1);
+    setSelected(null);
+    setMobileDetail(null);
+    setRecordRoute(null);
+    setRouteFilter(null);
+    setCountry("all");
+    setYear("all");
+    setQuery("");
+    setTab("flown");
+    setChecked(new Set());
+    setMore(false);
+  }
+  async function clearDemo() {
+    if (busy) return;
+    try {
+      localStorage.setItem(
+        BEFORE_RESTORE_KEY,
+        JSON.stringify({
+          schema_version: 1,
+          data_revision: dataRevision,
+          flights,
+        }),
+      );
+      if (
+        await save(
+          flights.filter((f) => !isDemoFlight(f)),
+          "已清空示範，可從更多功能復原",
+        )
+      )
+        resetAfterReplacement();
+    } catch (reason) {
+      setError(
+        reason instanceof Error
+          ? reason.message
+          : "無法保存復原備份，示範資料尚未清空",
+      );
     }
   }
   async function undoRestore() {
@@ -422,7 +466,7 @@ export default function App() {
           state.data_revision ?? DATA_REVISION,
         )
       )
-        setMore(false);
+        resetAfterReplacement();
     } catch {
       setError("無法讀取還原前的備份，請選擇你匯出的檔案。");
     }
@@ -646,6 +690,12 @@ export default function App() {
           </div>
         </div>
       </header>
+      <DemoNotice
+        flights={flights}
+        busy={busy}
+        onImport={() => input.current?.click()}
+        onClear={() => void clearDemo()}
+      />
       <input
         ref={input}
         type="file"
@@ -684,7 +734,7 @@ export default function App() {
       )}
       {page === "records" ? (
         <FlightRecords
-          key={recordRoute ?? "all"}
+          key={`${recordsVersion}:${recordRoute ?? "all"}`}
           flights={flights}
           airports={airports}
           initialRoute={recordRoute}

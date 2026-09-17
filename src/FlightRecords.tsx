@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 import { routeKey } from "./map-geometry";
 import { km, type Airport, type Flight } from "../shared/model";
+import { isDemoFlight } from "./demo";
 import {
   countryOptions,
   matchesSearch,
@@ -257,11 +258,13 @@ export default function FlightRecords({
                       {f.flight || "班號待補"}
                     </strong>
                     <small>
-                      {f.sources.some((s) => s.type === "gmail")
-                        ? "有航班郵件"
-                        : f.sources.some((s) => s.type === "trip_export")
-                          ? "訂單匯出"
-                          : "手動紀錄"}
+                      {isDemoFlight(f)
+                        ? "虛構示範資料"
+                        : f.sources.some((s) => s.type === "gmail")
+                          ? "有航班郵件"
+                          : f.sources.some((s) => s.type === "trip_export")
+                            ? "訂單匯出"
+                            : "手動紀錄"}
                     </small>
                   </td>
                   <td className="record-times">

@@ -33,3 +33,9 @@ npm run import:prepare -- data/local/flights.reviewed.json
 第一次在網頁用「更多功能 → 還原備份到此瀏覽器」選 `flights.json`。核對後可匯出新備份；輸出檔案仍應只存在本機。瀏覽器還原是整份取代，非自動合併。
 
 若要發布你的飛行紀錄，請依 SELF-HOST.md 將已核對資料準備成新輸出資料夾，再匯入遠端。SQL 僅初始化空來源，絕不覆蓋非空資料庫。既有遠端資料更新需先備份並另行審核。
+
+## 開源示範資料
+
+`data/example/demo.json` 是虛構旅程，與個人匯入資料分開。每筆有 `sources.type = "demo"`，`route_reference` 則只引用公開班號與航線。示範的 `flown` 是用於回放與統計的模擬狀態，不構成搭乘證據。詳見[行程與來源](../data/example/README.md)
+
+自己的紀錄請依實際證據使用上述狀態，不要把示範日期或示範班號當成個人資料來源。網頁還原會整份取代示範；個人檔案放在已忽略的 `data/local/`，不要提交到公開儲存庫

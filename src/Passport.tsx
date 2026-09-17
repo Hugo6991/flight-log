@@ -11,6 +11,7 @@ import type { Flight, Airport } from "../shared/model";
 import { passportSummary } from "./travel-summary";
 import { countryName } from "./flight-records";
 import { passportArt, savePassportImage } from "./passport-art";
+import { demoLabel } from "./demo";
 import "./passport.css";
 const fmt = (n: number) => Math.round(n).toLocaleString("zh-TW");
 const flag = (code: string) =>
@@ -56,6 +57,7 @@ export default function Passport({
     [collection, airports],
   );
   const period = year === "all" ? "ALL TIME" : year;
+  const dataLabel = demoLabel(collection);
   useEffect(() => {
     const node = dialog.current!;
     node.showModal();
@@ -101,7 +103,7 @@ export default function Passport({
       <header className="passport-header">
         <div>
           <h2 id="passport-title">我的飛行護照</h2>
-          <span>你的航線與飛行紀錄</span>
+          <span>{dataLabel || "你的航線與飛行紀錄"}</span>
         </div>
         <button
           autoFocus
@@ -247,7 +249,8 @@ export default function Passport({
                   MY FLIGHT PASSPORT
                 </text>
                 <text x="28" y="430" fill="#4d4d77" fontSize="17">
-                  {year === "all" ? "累計飛行紀錄" : `${year} 年飛行紀錄`}
+                  {dataLabel ||
+                    (year === "all" ? "累計飛行紀錄" : `${year} 年飛行紀錄`)}
                 </text>
                 <text
                   x="26"

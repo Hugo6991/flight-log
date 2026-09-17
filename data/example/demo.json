@@ -2,53 +2,2642 @@
   "schema_version": 1,
   "flights": [
     {
-      "id": "demo-1",
-      "date": "2020-01-10",
+      "id": "demo-journey-01-1",
+      "date": "2021-09-17",
+      "flight": "BR712",
+      "from": "TPE",
+      "to": "PVG",
+      "departure": "",
+      "arrival": "",
+      "status": "flown",
+      "note": "虛構示範資料，並非任何人的真實旅行紀錄。上海與日韓往返。日期與搭乘狀態皆為模擬，班號僅參考公開航線，不代表當日執飛；未模擬疫情入境限制。Fictional journey; dates and flown status are synthetic, not historical operations.",
+      "sources": [
+        {
+          "type": "demo",
+          "label": "虛構示範資料 · 上海與日韓往返"
+        },
+        {
+          "type": "route_reference",
+          "label": "EVA Air · 僅核對班號與航線 · 2026-09-17",
+          "url": "https://booking.evaair.com/flyeva/eva/b2c/flight-status-erc.aspx?ACTCODE=&Orderby=&REASON=&airport=TPE%2FTSA%2FKHH&cmstitle=erc-note1&date=20260710-20260713&lang=&reqtime="
+        }
+      ]
+    },
+    {
+      "id": "demo-journey-01-2",
+      "date": "2021-10-02",
+      "flight": "BR711",
+      "from": "PVG",
+      "to": "TPE",
+      "departure": "",
+      "arrival": "",
+      "status": "flown",
+      "note": "虛構示範資料，並非任何人的真實旅行紀錄。上海與日韓往返。日期與搭乘狀態皆為模擬，班號僅參考公開航線，不代表當日執飛；未模擬疫情入境限制。Fictional journey; dates and flown status are synthetic, not historical operations.",
+      "sources": [
+        {
+          "type": "demo",
+          "label": "虛構示範資料 · 上海與日韓往返"
+        },
+        {
+          "type": "route_reference",
+          "label": "EVA Air · 僅核對班號與航線 · 2026-09-17",
+          "url": "https://booking.evaair.com/flyeva/eva/b2c/flight-status-erc.aspx?ACTCODE=&Orderby=&REASON=&airport=TPE%2FTSA%2FKHH&cmstitle=erc-note1&date=20260710-20260713&lang=&reqtime="
+        }
+      ]
+    },
+    {
+      "id": "demo-journey-01-3",
+      "date": "2021-10-22",
+      "flight": "BR196",
       "from": "TPE",
       "to": "NRT",
-      "flight": "",
       "departure": "",
       "arrival": "",
       "status": "flown",
-      "note": "合成示範資料，並非真實旅行紀錄。",
+      "note": "虛構示範資料，並非任何人的真實旅行紀錄。上海與日韓往返。日期與搭乘狀態皆為模擬，班號僅參考公開航線，不代表當日執飛；未模擬疫情入境限制。Fictional journey; dates and flown status are synthetic, not historical operations.",
       "sources": [
         {
           "type": "demo",
-          "label": "合成示範資料"
+          "label": "虛構示範資料 · 上海與日韓往返"
+        },
+        {
+          "type": "route_reference",
+          "label": "EVA Air · 僅核對班號與航線 · 2026-09-17",
+          "url": "https://booking.evaair.com/flyeva/eva/b2c/flight-status-erc.aspx?ACTCODE=&Orderby=&REASON=&airport=TPE%2FTSA%2FKHH&cmstitle=erc-note1&date=20260710-20260713&lang=&reqtime="
         }
       ]
     },
     {
-      "id": "demo-2",
-      "date": "2020-01-15",
+      "id": "demo-journey-01-4",
+      "date": "2021-10-29",
+      "flight": "BR195",
       "from": "NRT",
-      "to": "ICN",
-      "flight": "",
+      "to": "TPE",
       "departure": "",
       "arrival": "",
       "status": "flown",
-      "note": "合成示範資料，並非真實旅行紀錄。",
+      "note": "虛構示範資料，並非任何人的真實旅行紀錄。上海與日韓往返。日期與搭乘狀態皆為模擬，班號僅參考公開航線，不代表當日執飛；未模擬疫情入境限制。Fictional journey; dates and flown status are synthetic, not historical operations.",
       "sources": [
         {
           "type": "demo",
-          "label": "合成示範資料"
+          "label": "虛構示範資料 · 上海與日韓往返"
+        },
+        {
+          "type": "route_reference",
+          "label": "EVA Air · 僅核對班號與航線 · 2026-09-17",
+          "url": "https://booking.evaair.com/flyeva/eva/b2c/flight-status-erc.aspx?ACTCODE=&Orderby=&airport=FUK%2FMYJ%2FKIX%2FNGO%2FKMQ%2FHND%2FNRT%2FSDJ%2FAOJ&cmstitle=erc-note1&date=20191011-20191013&lang=zh-tw&reqtime="
         }
       ]
     },
     {
-      "id": "demo-3",
-      "date": "2020-01-20",
+      "id": "demo-journey-01-5",
+      "date": "2021-11-19",
+      "flight": "BR160",
+      "from": "TPE",
+      "to": "ICN",
+      "departure": "",
+      "arrival": "",
+      "status": "flown",
+      "note": "虛構示範資料，並非任何人的真實旅行紀錄。上海與日韓往返。日期與搭乘狀態皆為模擬，班號僅參考公開航線，不代表當日執飛；未模擬疫情入境限制。Fictional journey; dates and flown status are synthetic, not historical operations.",
+      "sources": [
+        {
+          "type": "demo",
+          "label": "虛構示範資料 · 上海與日韓往返"
+        },
+        {
+          "type": "route_reference",
+          "label": "EVA Air · 僅核對班號與航線 · 2026-09-17",
+          "url": "https://booking.evaair.com/flyeva/eva/b2c/flight-status-erc.aspx?ACTCODE=&Orderby=&REASON=&airport=TPE%2FTSA%2FKHH&cmstitle=erc-note1&date=20260710-20260713&lang=&reqtime="
+        }
+      ]
+    },
+    {
+      "id": "demo-journey-01-6",
+      "date": "2021-11-26",
+      "flight": "BR159",
       "from": "ICN",
       "to": "TPE",
-      "flight": "",
       "departure": "",
       "arrival": "",
       "status": "flown",
-      "note": "合成示範資料，並非真實旅行紀錄。",
+      "note": "虛構示範資料，並非任何人的真實旅行紀錄。上海與日韓往返。日期與搭乘狀態皆為模擬，班號僅參考公開航線，不代表當日執飛；未模擬疫情入境限制。Fictional journey; dates and flown status are synthetic, not historical operations.",
       "sources": [
         {
           "type": "demo",
-          "label": "合成示範資料"
+          "label": "虛構示範資料 · 上海與日韓往返"
+        },
+        {
+          "type": "route_reference",
+          "label": "EVA Air · 僅核對班號與航線 · 2026-09-17",
+          "url": "https://www.evaair.com/images/zhtw/evaair-timetable_tcm27-51481.pdf"
+        }
+      ]
+    },
+    {
+      "id": "demo-journey-02-1",
+      "date": "2021-12-25",
+      "flight": "BR225",
+      "from": "TPE",
+      "to": "SIN",
+      "departure": "",
+      "arrival": "",
+      "status": "flown",
+      "note": "虛構示範資料，並非任何人的真實旅行紀錄。新馬停留與曼谷往返。日期與搭乘狀態皆為模擬，班號僅參考公開航線，不代表當日執飛；未模擬疫情入境限制。Fictional journey; dates and flown status are synthetic, not historical operations.",
+      "sources": [
+        {
+          "type": "demo",
+          "label": "虛構示範資料 · 新馬停留與曼谷往返"
+        },
+        {
+          "type": "route_reference",
+          "label": "EVA Air · 僅核對班號與航線 · 2026-09-17",
+          "url": "https://flights.evaair.com/zh-tw/premium-economy-class-flights-from-taipei-to-singapore"
+        }
+      ]
+    },
+    {
+      "id": "demo-journey-02-2",
+      "date": "2022-01-01",
+      "flight": "SQ106",
+      "from": "SIN",
+      "to": "KUL",
+      "departure": "",
+      "arrival": "",
+      "status": "flown",
+      "note": "虛構示範資料，並非任何人的真實旅行紀錄。新馬停留與曼谷往返。日期與搭乘狀態皆為模擬，班號僅參考公開航線，不代表當日執飛；未模擬疫情入境限制。Fictional journey; dates and flown status are synthetic, not historical operations.",
+      "sources": [
+        {
+          "type": "demo",
+          "label": "虛構示範資料 · 新馬停留與曼谷往返"
+        },
+        {
+          "type": "route_reference",
+          "label": "Singapore Airlines · 僅核對班號與航線 · 2026-09-17",
+          "url": "https://www.singaporeair.com/saar5/pdf/media-centre/200322SoutheastAsiaFlightCanxTable.pdf"
+        }
+      ]
+    },
+    {
+      "id": "demo-journey-02-3",
+      "date": "2022-01-21",
+      "flight": "SQ107",
+      "from": "KUL",
+      "to": "SIN",
+      "departure": "",
+      "arrival": "",
+      "status": "flown",
+      "note": "虛構示範資料，並非任何人的真實旅行紀錄。新馬停留與曼谷往返。日期與搭乘狀態皆為模擬，班號僅參考公開航線，不代表當日執飛；未模擬疫情入境限制。Fictional journey; dates and flown status are synthetic, not historical operations.",
+      "sources": [
+        {
+          "type": "demo",
+          "label": "虛構示範資料 · 新馬停留與曼谷往返"
+        },
+        {
+          "type": "route_reference",
+          "label": "Singapore Airlines · 僅核對班號與航線 · 2026-09-17",
+          "url": "https://www.singaporeair.com/saar5/pdf/media-centre/200322SoutheastAsiaFlightCanxTable.pdf"
+        }
+      ]
+    },
+    {
+      "id": "demo-journey-02-4",
+      "date": "2022-01-28",
+      "flight": "BR226",
+      "from": "SIN",
+      "to": "TPE",
+      "departure": "",
+      "arrival": "",
+      "status": "flown",
+      "note": "虛構示範資料，並非任何人的真實旅行紀錄。新馬停留與曼谷往返。日期與搭乘狀態皆為模擬，班號僅參考公開航線，不代表當日執飛；未模擬疫情入境限制。Fictional journey; dates and flown status are synthetic, not historical operations.",
+      "sources": [
+        {
+          "type": "demo",
+          "label": "虛構示範資料 · 新馬停留與曼谷往返"
+        },
+        {
+          "type": "route_reference",
+          "label": "EVA Air · 僅核對班號與航線 · 2026-09-17",
+          "url": "https://flights.evaair.com/zh-tw/premium-economy-class-flights-from-taipei-to-singapore"
+        }
+      ]
+    },
+    {
+      "id": "demo-journey-02-5",
+      "date": "2022-02-18",
+      "flight": "BR211",
+      "from": "TPE",
+      "to": "BKK",
+      "departure": "",
+      "arrival": "",
+      "status": "flown",
+      "note": "虛構示範資料，並非任何人的真實旅行紀錄。新馬停留與曼谷往返。日期與搭乘狀態皆為模擬，班號僅參考公開航線，不代表當日執飛；未模擬疫情入境限制。Fictional journey; dates and flown status are synthetic, not historical operations.",
+      "sources": [
+        {
+          "type": "demo",
+          "label": "虛構示範資料 · 新馬停留與曼谷往返"
+        },
+        {
+          "type": "route_reference",
+          "label": "EVA Air · 僅核對班號與航線 · 2026-09-17",
+          "url": "https://booking.evaair.com/flyeva/eva/b2c/flight-status-erc.aspx?ACTCODE=&Orderby=&REASON=&airport=TPE%2FTSA%2FKHH&cmstitle=erc-note2&date=20260710-20260713&lang=sc-cn&reqtime="
+        }
+      ]
+    },
+    {
+      "id": "demo-journey-02-6",
+      "date": "2022-02-25",
+      "flight": "BR212",
+      "from": "BKK",
+      "to": "TPE",
+      "departure": "",
+      "arrival": "",
+      "status": "flown",
+      "note": "虛構示範資料，並非任何人的真實旅行紀錄。新馬停留與曼谷往返。日期與搭乘狀態皆為模擬，班號僅參考公開航線，不代表當日執飛；未模擬疫情入境限制。Fictional journey; dates and flown status are synthetic, not historical operations.",
+      "sources": [
+        {
+          "type": "demo",
+          "label": "虛構示範資料 · 新馬停留與曼谷往返"
+        },
+        {
+          "type": "route_reference",
+          "label": "EVA Air · 僅核對班號與航線 · 2026-09-17",
+          "url": "https://booking.evaair.com/flyeva/eva/b2c/flight-status-erc.aspx?ACTCODE=&Orderby=&REASON=&airport=TPE%2FTSA%2FKHH&cmstitle=erc-note2&date=20260710-20260713&lang=sc-cn&reqtime="
+        }
+      ]
+    },
+    {
+      "id": "demo-journey-03-1",
+      "date": "2022-03-29",
+      "flight": "BR712",
+      "from": "TPE",
+      "to": "PVG",
+      "departure": "",
+      "arrival": "",
+      "status": "flown",
+      "note": "虛構示範資料，並非任何人的真實旅行紀錄。上海出發經杜拜赴倫敦。日期與搭乘狀態皆為模擬，班號僅參考公開航線，不代表當日執飛；未模擬疫情入境限制。Fictional journey; dates and flown status are synthetic, not historical operations.",
+      "sources": [
+        {
+          "type": "demo",
+          "label": "虛構示範資料 · 上海出發經杜拜赴倫敦"
+        },
+        {
+          "type": "route_reference",
+          "label": "EVA Air · 僅核對班號與航線 · 2026-09-17",
+          "url": "https://booking.evaair.com/flyeva/eva/b2c/flight-status-erc.aspx?ACTCODE=&Orderby=&REASON=&airport=TPE%2FTSA%2FKHH&cmstitle=erc-note1&date=20260710-20260713&lang=&reqtime="
+        }
+      ]
+    },
+    {
+      "id": "demo-journey-03-2",
+      "date": "2022-04-05",
+      "flight": "EK303",
+      "from": "PVG",
+      "to": "DXB",
+      "departure": "",
+      "arrival": "",
+      "status": "flown",
+      "note": "虛構示範資料，並非任何人的真實旅行紀錄。上海出發經杜拜赴倫敦。日期與搭乘狀態皆為模擬，班號僅參考公開航線，不代表當日執飛；未模擬疫情入境限制。Fictional journey; dates and flown status are synthetic, not historical operations.",
+      "sources": [
+        {
+          "type": "demo",
+          "label": "虛構示範資料 · 上海出發經杜拜赴倫敦"
+        },
+        {
+          "type": "route_reference",
+          "label": "Emirates · 僅核對班號與航線 · 2026-09-17",
+          "url": "https://www.emirates.com/cn/chinese/destinations/dxb/pvg/flights-from-dubai-to-shanghai/"
+        }
+      ]
+    },
+    {
+      "id": "demo-journey-03-3",
+      "date": "2022-04-08",
+      "flight": "EK1",
+      "from": "DXB",
+      "to": "LHR",
+      "departure": "",
+      "arrival": "",
+      "status": "flown",
+      "note": "虛構示範資料，並非任何人的真實旅行紀錄。上海出發經杜拜赴倫敦。日期與搭乘狀態皆為模擬，班號僅參考公開航線，不代表當日執飛；未模擬疫情入境限制。Fictional journey; dates and flown status are synthetic, not historical operations.",
+      "sources": [
+        {
+          "type": "demo",
+          "label": "虛構示範資料 · 上海出發經杜拜赴倫敦"
+        },
+        {
+          "type": "route_reference",
+          "label": "Emirates · 僅核對班號與航線 · 2026-09-17",
+          "url": "https://www.emirates.com/english/destinations/dxb/lhr/flights-from-dubai-to-london-heathrow/"
+        }
+      ]
+    },
+    {
+      "id": "demo-journey-03-4",
+      "date": "2022-04-22",
+      "flight": "EK2",
+      "from": "LHR",
+      "to": "DXB",
+      "departure": "",
+      "arrival": "",
+      "status": "flown",
+      "note": "虛構示範資料，並非任何人的真實旅行紀錄。上海出發經杜拜赴倫敦。日期與搭乘狀態皆為模擬，班號僅參考公開航線，不代表當日執飛；未模擬疫情入境限制。Fictional journey; dates and flown status are synthetic, not historical operations.",
+      "sources": [
+        {
+          "type": "demo",
+          "label": "虛構示範資料 · 上海出發經杜拜赴倫敦"
+        },
+        {
+          "type": "route_reference",
+          "label": "Emirates · 僅核對班號與航線 · 2026-09-17",
+          "url": "https://www.emirates.com/english/destinations/dxb/lhr/flights-from-dubai-to-london-heathrow/"
+        }
+      ]
+    },
+    {
+      "id": "demo-journey-03-5",
+      "date": "2022-04-25",
+      "flight": "EK302",
+      "from": "DXB",
+      "to": "PVG",
+      "departure": "",
+      "arrival": "",
+      "status": "flown",
+      "note": "虛構示範資料，並非任何人的真實旅行紀錄。上海出發經杜拜赴倫敦。日期與搭乘狀態皆為模擬，班號僅參考公開航線，不代表當日執飛；未模擬疫情入境限制。Fictional journey; dates and flown status are synthetic, not historical operations.",
+      "sources": [
+        {
+          "type": "demo",
+          "label": "虛構示範資料 · 上海出發經杜拜赴倫敦"
+        },
+        {
+          "type": "route_reference",
+          "label": "Emirates · 僅核對班號與航線 · 2026-09-17",
+          "url": "https://www.emirates.com/cn/chinese/destinations/dxb/pvg/flights-from-dubai-to-shanghai/"
+        }
+      ]
+    },
+    {
+      "id": "demo-journey-03-6",
+      "date": "2022-05-04",
+      "flight": "BR711",
+      "from": "PVG",
+      "to": "TPE",
+      "departure": "",
+      "arrival": "",
+      "status": "flown",
+      "note": "虛構示範資料，並非任何人的真實旅行紀錄。上海出發經杜拜赴倫敦。日期與搭乘狀態皆為模擬，班號僅參考公開航線，不代表當日執飛；未模擬疫情入境限制。Fictional journey; dates and flown status are synthetic, not historical operations.",
+      "sources": [
+        {
+          "type": "demo",
+          "label": "虛構示範資料 · 上海出發經杜拜赴倫敦"
+        },
+        {
+          "type": "route_reference",
+          "label": "EVA Air · 僅核對班號與航線 · 2026-09-17",
+          "url": "https://booking.evaair.com/flyeva/eva/b2c/flight-status-erc.aspx?ACTCODE=&Orderby=&REASON=&airport=TPE%2FTSA%2FKHH&cmstitle=erc-note1&date=20260710-20260713&lang=&reqtime="
+        }
+      ]
+    },
+    {
+      "id": "demo-journey-04-1",
+      "date": "2022-06-25",
+      "flight": "BR391",
+      "from": "TPE",
+      "to": "SGN",
+      "departure": "",
+      "arrival": "",
+      "status": "flown",
+      "note": "虛構示範資料，並非任何人的真實旅行紀錄。越南與峇里島假期。日期與搭乘狀態皆為模擬，班號僅參考公開航線，不代表當日執飛；未模擬疫情入境限制。Fictional journey; dates and flown status are synthetic, not historical operations.",
+      "sources": [
+        {
+          "type": "demo",
+          "label": "虛構示範資料 · 越南與峇里島假期"
+        },
+        {
+          "type": "route_reference",
+          "label": "EVA Air · 僅核對班號與航線 · 2026-09-17",
+          "url": "https://booking.evaair.com/flyeva/eva/b2c/flight-status-erc.aspx?ACTCODE=&Orderby=&REASON=&airport=TPE%2FTSA%2FKHH&cmstitle=erc-note2&date=20260710-20260713&lang=sc-cn&reqtime="
+        }
+      ]
+    },
+    {
+      "id": "demo-journey-04-2",
+      "date": "2022-07-02",
+      "flight": "BR392",
+      "from": "SGN",
+      "to": "TPE",
+      "departure": "",
+      "arrival": "",
+      "status": "flown",
+      "note": "虛構示範資料，並非任何人的真實旅行紀錄。越南與峇里島假期。日期與搭乘狀態皆為模擬，班號僅參考公開航線，不代表當日執飛；未模擬疫情入境限制。Fictional journey; dates and flown status are synthetic, not historical operations.",
+      "sources": [
+        {
+          "type": "demo",
+          "label": "虛構示範資料 · 越南與峇里島假期"
+        },
+        {
+          "type": "route_reference",
+          "label": "EVA Air · 僅核對班號與航線 · 2026-09-17",
+          "url": "https://booking.evaair.com/flyeva/eva/b2c/flight-status-erc.aspx?ACTCODE=&Orderby=&REASON=&airport=TPE%2FTSA%2FKHH&cmstitle=erc-note1&date=20260710-20260713&lang=&reqtime="
+        }
+      ]
+    },
+    {
+      "id": "demo-journey-04-3",
+      "date": "2022-07-22",
+      "flight": "BR255",
+      "from": "TPE",
+      "to": "DPS",
+      "departure": "",
+      "arrival": "",
+      "status": "flown",
+      "note": "虛構示範資料，並非任何人的真實旅行紀錄。越南與峇里島假期。日期與搭乘狀態皆為模擬，班號僅參考公開航線，不代表當日執飛；未模擬疫情入境限制。Fictional journey; dates and flown status are synthetic, not historical operations.",
+      "sources": [
+        {
+          "type": "demo",
+          "label": "虛構示範資料 · 越南與峇里島假期"
+        },
+        {
+          "type": "route_reference",
+          "label": "EVA Air · 僅核對班號與航線 · 2026-09-17",
+          "url": "https://booking.evaair.com/flyeva/eva/b2c/flight-status-erc.aspx?ACTCODE=&Orderby=&REASON=&airport=TPE%2FTSA%2FKHH&cmstitle=erc-note1&date=20260710-20260713&lang=&reqtime="
+        }
+      ]
+    },
+    {
+      "id": "demo-journey-04-4",
+      "date": "2022-07-29",
+      "flight": "BR256",
+      "from": "DPS",
+      "to": "TPE",
+      "departure": "",
+      "arrival": "",
+      "status": "flown",
+      "note": "虛構示範資料，並非任何人的真實旅行紀錄。越南與峇里島假期。日期與搭乘狀態皆為模擬，班號僅參考公開航線，不代表當日執飛；未模擬疫情入境限制。Fictional journey; dates and flown status are synthetic, not historical operations.",
+      "sources": [
+        {
+          "type": "demo",
+          "label": "虛構示範資料 · 越南與峇里島假期"
+        },
+        {
+          "type": "route_reference",
+          "label": "EVA Air · 僅核對班號與航線 · 2026-09-17",
+          "url": "https://booking.evaair.com/flyeva/eva/b2c/flight-status-erc.aspx?ACTCODE=&Orderby=&REASON=&airport=TPE%2FTSA%2FKHH&cmstitle=erc-note2&date=20260710-20260713&lang=sc-cn&reqtime="
+        }
+      ]
+    },
+    {
+      "id": "demo-journey-04-5",
+      "date": "2022-08-19",
+      "flight": "BR225",
+      "from": "TPE",
+      "to": "SIN",
+      "departure": "",
+      "arrival": "",
+      "status": "flown",
+      "note": "虛構示範資料，並非任何人的真實旅行紀錄。越南與峇里島假期。日期與搭乘狀態皆為模擬，班號僅參考公開航線，不代表當日執飛；未模擬疫情入境限制。Fictional journey; dates and flown status are synthetic, not historical operations.",
+      "sources": [
+        {
+          "type": "demo",
+          "label": "虛構示範資料 · 越南與峇里島假期"
+        },
+        {
+          "type": "route_reference",
+          "label": "EVA Air · 僅核對班號與航線 · 2026-09-17",
+          "url": "https://flights.evaair.com/zh-tw/premium-economy-class-flights-from-taipei-to-singapore"
+        }
+      ]
+    },
+    {
+      "id": "demo-journey-04-6",
+      "date": "2022-08-26",
+      "flight": "BR226",
+      "from": "SIN",
+      "to": "TPE",
+      "departure": "",
+      "arrival": "",
+      "status": "flown",
+      "note": "虛構示範資料，並非任何人的真實旅行紀錄。越南與峇里島假期。日期與搭乘狀態皆為模擬，班號僅參考公開航線，不代表當日執飛；未模擬疫情入境限制。Fictional journey; dates and flown status are synthetic, not historical operations.",
+      "sources": [
+        {
+          "type": "demo",
+          "label": "虛構示範資料 · 越南與峇里島假期"
+        },
+        {
+          "type": "route_reference",
+          "label": "EVA Air · 僅核對班號與航線 · 2026-09-17",
+          "url": "https://flights.evaair.com/zh-tw/premium-economy-class-flights-from-taipei-to-singapore"
+        }
+      ]
+    },
+    {
+      "id": "demo-journey-05-1",
+      "date": "2022-09-29",
+      "flight": "BR712",
+      "from": "TPE",
+      "to": "PVG",
+      "departure": "",
+      "arrival": "",
+      "status": "flown",
+      "note": "虛構示範資料，並非任何人的真實旅行紀錄。上海出發經新加坡赴雪梨。日期與搭乘狀態皆為模擬，班號僅參考公開航線，不代表當日執飛；未模擬疫情入境限制。Fictional journey; dates and flown status are synthetic, not historical operations.",
+      "sources": [
+        {
+          "type": "demo",
+          "label": "虛構示範資料 · 上海出發經新加坡赴雪梨"
+        },
+        {
+          "type": "route_reference",
+          "label": "EVA Air · 僅核對班號與航線 · 2026-09-17",
+          "url": "https://booking.evaair.com/flyeva/eva/b2c/flight-status-erc.aspx?ACTCODE=&Orderby=&REASON=&airport=TPE%2FTSA%2FKHH&cmstitle=erc-note1&date=20260710-20260713&lang=&reqtime="
+        }
+      ]
+    },
+    {
+      "id": "demo-journey-05-2",
+      "date": "2022-10-06",
+      "flight": "SQ833",
+      "from": "PVG",
+      "to": "SIN",
+      "departure": "",
+      "arrival": "",
+      "status": "flown",
+      "note": "虛構示範資料，並非任何人的真實旅行紀錄。上海出發經新加坡赴雪梨。日期與搭乘狀態皆為模擬，班號僅參考公開航線，不代表當日執飛；未模擬疫情入境限制。Fictional journey; dates and flown status are synthetic, not historical operations.",
+      "sources": [
+        {
+          "type": "demo",
+          "label": "虛構示範資料 · 上海出發經新加坡赴雪梨"
+        },
+        {
+          "type": "route_reference",
+          "label": "Singapore Airlines · 僅核對班號與航線 · 2026-09-17",
+          "url": "https://www.singaporeair.com/zh_CN/cn/plan-travel/local-promotions/cn-exCN/"
+        }
+      ]
+    },
+    {
+      "id": "demo-journey-05-3",
+      "date": "2022-10-09",
+      "flight": "SQ231",
+      "from": "SIN",
+      "to": "SYD",
+      "departure": "",
+      "arrival": "",
+      "status": "flown",
+      "note": "虛構示範資料，並非任何人的真實旅行紀錄。上海出發經新加坡赴雪梨。日期與搭乘狀態皆為模擬，班號僅參考公開航線，不代表當日執飛；未模擬疫情入境限制。Fictional journey; dates and flown status are synthetic, not historical operations.",
+      "sources": [
+        {
+          "type": "demo",
+          "label": "虛構示範資料 · 上海出發經新加坡赴雪梨"
+        },
+        {
+          "type": "route_reference",
+          "label": "Singapore Airlines · 僅核對班號與航線 · 2026-09-17",
+          "url": "https://www.singaporeair.com/en_UK/tw/corporate/newsroom/press-release/2026/january---march-2026/Singapore_Airlines_WSI/"
+        }
+      ]
+    },
+    {
+      "id": "demo-journey-05-4",
+      "date": "2022-10-23",
+      "flight": "SQ222",
+      "from": "SYD",
+      "to": "SIN",
+      "departure": "",
+      "arrival": "",
+      "status": "flown",
+      "note": "虛構示範資料，並非任何人的真實旅行紀錄。上海出發經新加坡赴雪梨。日期與搭乘狀態皆為模擬，班號僅參考公開航線，不代表當日執飛；未模擬疫情入境限制。Fictional journey; dates and flown status are synthetic, not historical operations.",
+      "sources": [
+        {
+          "type": "demo",
+          "label": "虛構示範資料 · 上海出發經新加坡赴雪梨"
+        },
+        {
+          "type": "route_reference",
+          "label": "Singapore Airlines · 僅核對班號與航線 · 2026-09-17",
+          "url": "https://www.singaporeair.com/en_UK/tw/corporate/newsroom/press-release/2026/january---march-2026/Singapore_Airlines_WSI/"
+        }
+      ]
+    },
+    {
+      "id": "demo-journey-05-5",
+      "date": "2022-10-26",
+      "flight": "SQ830",
+      "from": "SIN",
+      "to": "PVG",
+      "departure": "",
+      "arrival": "",
+      "status": "flown",
+      "note": "虛構示範資料，並非任何人的真實旅行紀錄。上海出發經新加坡赴雪梨。日期與搭乘狀態皆為模擬，班號僅參考公開航線，不代表當日執飛；未模擬疫情入境限制。Fictional journey; dates and flown status are synthetic, not historical operations.",
+      "sources": [
+        {
+          "type": "demo",
+          "label": "虛構示範資料 · 上海出發經新加坡赴雪梨"
+        },
+        {
+          "type": "route_reference",
+          "label": "Singapore Airlines · 僅核對班號與航線 · 2026-09-17",
+          "url": "https://www.singaporeair.com/zh_CN/cn/plan-travel/local-promotions/cn-exCN/"
+        }
+      ]
+    },
+    {
+      "id": "demo-journey-05-6",
+      "date": "2022-11-04",
+      "flight": "BR711",
+      "from": "PVG",
+      "to": "TPE",
+      "departure": "",
+      "arrival": "",
+      "status": "flown",
+      "note": "虛構示範資料，並非任何人的真實旅行紀錄。上海出發經新加坡赴雪梨。日期與搭乘狀態皆為模擬，班號僅參考公開航線，不代表當日執飛；未模擬疫情入境限制。Fictional journey; dates and flown status are synthetic, not historical operations.",
+      "sources": [
+        {
+          "type": "demo",
+          "label": "虛構示範資料 · 上海出發經新加坡赴雪梨"
+        },
+        {
+          "type": "route_reference",
+          "label": "EVA Air · 僅核對班號與航線 · 2026-09-17",
+          "url": "https://booking.evaair.com/flyeva/eva/b2c/flight-status-erc.aspx?ACTCODE=&Orderby=&REASON=&airport=TPE%2FTSA%2FKHH&cmstitle=erc-note1&date=20260710-20260713&lang=&reqtime="
+        }
+      ]
+    },
+    {
+      "id": "demo-journey-06-1",
+      "date": "2022-12-29",
+      "flight": "NZ78",
+      "from": "TPE",
+      "to": "AKL",
+      "departure": "",
+      "arrival": "",
+      "status": "flown",
+      "note": "虛構示範資料，並非任何人的真實旅行紀錄。奧克蘭與雪梨串聯。日期與搭乘狀態皆為模擬，班號僅參考公開航線，不代表當日執飛；未模擬疫情入境限制。Fictional journey; dates and flown status are synthetic, not historical operations.",
+      "sources": [
+        {
+          "type": "demo",
+          "label": "虛構示範資料 · 奧克蘭與雪梨串聯"
+        },
+        {
+          "type": "route_reference",
+          "label": "Air New Zealand · 僅核對班號與航線 · 2026-09-17",
+          "url": "https://www.airnewzealand.tw/flight-deals-to-new-zealand"
+        }
+      ]
+    },
+    {
+      "id": "demo-journey-06-2",
+      "date": "2023-01-05",
+      "flight": "SQ286",
+      "from": "AKL",
+      "to": "SIN",
+      "departure": "",
+      "arrival": "",
+      "status": "flown",
+      "note": "虛構示範資料，並非任何人的真實旅行紀錄。奧克蘭與雪梨串聯。日期與搭乘狀態皆為模擬，班號僅參考公開航線，不代表當日執飛；未模擬疫情入境限制。Fictional journey; dates and flown status are synthetic, not historical operations.",
+      "sources": [
+        {
+          "type": "demo",
+          "label": "虛構示範資料 · 奧克蘭與雪梨串聯"
+        },
+        {
+          "type": "route_reference",
+          "label": "Singapore Airlines · 僅核對班號與航線 · 2026-09-17",
+          "url": "https://agent360.singaporeair.com/content/dam/agent360/web-assets/pdf/local/nz/SQxNZ_Trade_Brochure_SQ_small.pdf"
+        }
+      ]
+    },
+    {
+      "id": "demo-journey-06-3",
+      "date": "2023-01-08",
+      "flight": "SQ231",
+      "from": "SIN",
+      "to": "SYD",
+      "departure": "",
+      "arrival": "",
+      "status": "flown",
+      "note": "虛構示範資料，並非任何人的真實旅行紀錄。奧克蘭與雪梨串聯。日期與搭乘狀態皆為模擬，班號僅參考公開航線，不代表當日執飛；未模擬疫情入境限制。Fictional journey; dates and flown status are synthetic, not historical operations.",
+      "sources": [
+        {
+          "type": "demo",
+          "label": "虛構示範資料 · 奧克蘭與雪梨串聯"
+        },
+        {
+          "type": "route_reference",
+          "label": "Singapore Airlines · 僅核對班號與航線 · 2026-09-17",
+          "url": "https://www.singaporeair.com/en_UK/tw/corporate/newsroom/press-release/2026/january---march-2026/Singapore_Airlines_WSI/"
+        }
+      ]
+    },
+    {
+      "id": "demo-journey-06-4",
+      "date": "2023-01-22",
+      "flight": "SQ222",
+      "from": "SYD",
+      "to": "SIN",
+      "departure": "",
+      "arrival": "",
+      "status": "flown",
+      "note": "虛構示範資料，並非任何人的真實旅行紀錄。奧克蘭與雪梨串聯。日期與搭乘狀態皆為模擬，班號僅參考公開航線，不代表當日執飛；未模擬疫情入境限制。Fictional journey; dates and flown status are synthetic, not historical operations.",
+      "sources": [
+        {
+          "type": "demo",
+          "label": "虛構示範資料 · 奧克蘭與雪梨串聯"
+        },
+        {
+          "type": "route_reference",
+          "label": "Singapore Airlines · 僅核對班號與航線 · 2026-09-17",
+          "url": "https://www.singaporeair.com/en_UK/tw/corporate/newsroom/press-release/2026/january---march-2026/Singapore_Airlines_WSI/"
+        }
+      ]
+    },
+    {
+      "id": "demo-journey-06-5",
+      "date": "2023-01-25",
+      "flight": "SQ830",
+      "from": "SIN",
+      "to": "PVG",
+      "departure": "",
+      "arrival": "",
+      "status": "flown",
+      "note": "虛構示範資料，並非任何人的真實旅行紀錄。奧克蘭與雪梨串聯。日期與搭乘狀態皆為模擬，班號僅參考公開航線，不代表當日執飛；未模擬疫情入境限制。Fictional journey; dates and flown status are synthetic, not historical operations.",
+      "sources": [
+        {
+          "type": "demo",
+          "label": "虛構示範資料 · 奧克蘭與雪梨串聯"
+        },
+        {
+          "type": "route_reference",
+          "label": "Singapore Airlines · 僅核對班號與航線 · 2026-09-17",
+          "url": "https://www.singaporeair.com/zh_CN/cn/plan-travel/local-promotions/cn-exCN/"
+        }
+      ]
+    },
+    {
+      "id": "demo-journey-06-6",
+      "date": "2023-02-03",
+      "flight": "BR711",
+      "from": "PVG",
+      "to": "TPE",
+      "departure": "",
+      "arrival": "",
+      "status": "flown",
+      "note": "虛構示範資料，並非任何人的真實旅行紀錄。奧克蘭與雪梨串聯。日期與搭乘狀態皆為模擬，班號僅參考公開航線，不代表當日執飛；未模擬疫情入境限制。Fictional journey; dates and flown status are synthetic, not historical operations.",
+      "sources": [
+        {
+          "type": "demo",
+          "label": "虛構示範資料 · 奧克蘭與雪梨串聯"
+        },
+        {
+          "type": "route_reference",
+          "label": "EVA Air · 僅核對班號與航線 · 2026-09-17",
+          "url": "https://booking.evaair.com/flyeva/eva/b2c/flight-status-erc.aspx?ACTCODE=&Orderby=&REASON=&airport=TPE%2FTSA%2FKHH&cmstitle=erc-note1&date=20260710-20260713&lang=&reqtime="
+        }
+      ]
+    },
+    {
+      "id": "demo-journey-07-1",
+      "date": "2023-03-29",
+      "flight": "EK367",
+      "from": "TPE",
+      "to": "DXB",
+      "departure": "",
+      "arrival": "",
+      "status": "flown",
+      "note": "虛構示範資料，並非任何人的真實旅行紀錄。巴黎與法蘭克福串聯。日期與搭乘狀態皆為模擬，班號僅參考公開航線，不代表當日執飛；未模擬疫情入境限制。Fictional journey; dates and flown status are synthetic, not historical operations.",
+      "sources": [
+        {
+          "type": "demo",
+          "label": "虛構示範資料 · 巴黎與法蘭克福串聯"
+        },
+        {
+          "type": "route_reference",
+          "label": "Emirates · 僅核對班號與航線 · 2026-09-17",
+          "url": "https://www.emirates.com/tw/chinese/destinations/dxb/tpe/flights-from-dubai-to-taipei/"
+        }
+      ]
+    },
+    {
+      "id": "demo-journey-07-2",
+      "date": "2023-04-05",
+      "flight": "EK73",
+      "from": "DXB",
+      "to": "CDG",
+      "departure": "",
+      "arrival": "",
+      "status": "flown",
+      "note": "虛構示範資料，並非任何人的真實旅行紀錄。巴黎與法蘭克福串聯。日期與搭乘狀態皆為模擬，班號僅參考公開航線，不代表當日執飛；未模擬疫情入境限制。Fictional journey; dates and flown status are synthetic, not historical operations.",
+      "sources": [
+        {
+          "type": "demo",
+          "label": "虛構示範資料 · 巴黎與法蘭克福串聯"
+        },
+        {
+          "type": "route_reference",
+          "label": "Emirates · 僅核對班號與航線 · 2026-09-17",
+          "url": "https://www.emirates.com/english/destinations/dxb/cdg/flights-from-dubai-to-paris/"
+        }
+      ]
+    },
+    {
+      "id": "demo-journey-07-3",
+      "date": "2023-04-08",
+      "flight": "EK74",
+      "from": "CDG",
+      "to": "DXB",
+      "departure": "",
+      "arrival": "",
+      "status": "flown",
+      "note": "虛構示範資料，並非任何人的真實旅行紀錄。巴黎與法蘭克福串聯。日期與搭乘狀態皆為模擬，班號僅參考公開航線，不代表當日執飛；未模擬疫情入境限制。Fictional journey; dates and flown status are synthetic, not historical operations.",
+      "sources": [
+        {
+          "type": "demo",
+          "label": "虛構示範資料 · 巴黎與法蘭克福串聯"
+        },
+        {
+          "type": "route_reference",
+          "label": "Emirates · 僅核對班號與航線 · 2026-09-17",
+          "url": "https://www.emirates.com/english/destinations/dxb/cdg/flights-from-dubai-to-paris/"
+        }
+      ]
+    },
+    {
+      "id": "demo-journey-07-4",
+      "date": "2023-04-22",
+      "flight": "EK45",
+      "from": "DXB",
+      "to": "FRA",
+      "departure": "",
+      "arrival": "",
+      "status": "flown",
+      "note": "虛構示範資料，並非任何人的真實旅行紀錄。巴黎與法蘭克福串聯。日期與搭乘狀態皆為模擬，班號僅參考公開航線，不代表當日執飛；未模擬疫情入境限制。Fictional journey; dates and flown status are synthetic, not historical operations.",
+      "sources": [
+        {
+          "type": "demo",
+          "label": "虛構示範資料 · 巴黎與法蘭克福串聯"
+        },
+        {
+          "type": "route_reference",
+          "label": "Emirates · 僅核對班號與航線 · 2026-09-17",
+          "url": "https://www.emirates.com/english/destinations/dxb/fra/flights-from-dubai-to-frankfurt/"
+        }
+      ]
+    },
+    {
+      "id": "demo-journey-07-5",
+      "date": "2023-04-25",
+      "flight": "EK46",
+      "from": "FRA",
+      "to": "DXB",
+      "departure": "",
+      "arrival": "",
+      "status": "flown",
+      "note": "虛構示範資料，並非任何人的真實旅行紀錄。巴黎與法蘭克福串聯。日期與搭乘狀態皆為模擬，班號僅參考公開航線，不代表當日執飛；未模擬疫情入境限制。Fictional journey; dates and flown status are synthetic, not historical operations.",
+      "sources": [
+        {
+          "type": "demo",
+          "label": "虛構示範資料 · 巴黎與法蘭克福串聯"
+        },
+        {
+          "type": "route_reference",
+          "label": "Emirates · 僅核對班號與航線 · 2026-09-17",
+          "url": "https://www.emirates.com/english/destinations/dxb/fra/flights-from-dubai-to-frankfurt/"
+        }
+      ]
+    },
+    {
+      "id": "demo-journey-07-6",
+      "date": "2023-05-04",
+      "flight": "EK366",
+      "from": "DXB",
+      "to": "TPE",
+      "departure": "",
+      "arrival": "",
+      "status": "flown",
+      "note": "虛構示範資料，並非任何人的真實旅行紀錄。巴黎與法蘭克福串聯。日期與搭乘狀態皆為模擬，班號僅參考公開航線，不代表當日執飛；未模擬疫情入境限制。Fictional journey; dates and flown status are synthetic, not historical operations.",
+      "sources": [
+        {
+          "type": "demo",
+          "label": "虛構示範資料 · 巴黎與法蘭克福串聯"
+        },
+        {
+          "type": "route_reference",
+          "label": "Emirates · 僅核對班號與航線 · 2026-09-17",
+          "url": "https://www.emirates.com/tw/chinese/destinations/dxb/tpe/flights-from-dubai-to-taipei/"
+        }
+      ]
+    },
+    {
+      "id": "demo-journey-08-1",
+      "date": "2023-06-25",
+      "flight": "BR10",
+      "from": "TPE",
+      "to": "YVR",
+      "departure": "",
+      "arrival": "",
+      "status": "flown",
+      "note": "虛構示範資料，並非任何人的真實旅行紀錄。溫哥華與紐約往返。日期與搭乘狀態皆為模擬，班號僅參考公開航線，不代表當日執飛；未模擬疫情入境限制。Fictional journey; dates and flown status are synthetic, not historical operations.",
+      "sources": [
+        {
+          "type": "demo",
+          "label": "虛構示範資料 · 溫哥華與紐約往返"
+        },
+        {
+          "type": "route_reference",
+          "label": "EVA Air · 僅核對班號與航線 · 2026-09-17",
+          "url": "https://booking.evaair.com/flyeva/eva/b2c/flight-status-erc.aspx?ACTCODE=&Orderby=&REASON=&airport=YVR&cmstitle=erc-note1&date=20221221-20221226&lang=en-US&reqtime="
+        }
+      ]
+    },
+    {
+      "id": "demo-journey-08-2",
+      "date": "2023-07-02",
+      "flight": "BR9",
+      "from": "YVR",
+      "to": "TPE",
+      "departure": "",
+      "arrival": "",
+      "status": "flown",
+      "note": "虛構示範資料，並非任何人的真實旅行紀錄。溫哥華與紐約往返。日期與搭乘狀態皆為模擬，班號僅參考公開航線，不代表當日執飛；未模擬疫情入境限制。Fictional journey; dates and flown status are synthetic, not historical operations.",
+      "sources": [
+        {
+          "type": "demo",
+          "label": "虛構示範資料 · 溫哥華與紐約往返"
+        },
+        {
+          "type": "route_reference",
+          "label": "EVA Air · 僅核對班號與航線 · 2026-09-17",
+          "url": "https://booking.evaair.com/flyeva/eva/b2c/flight-status-erc.aspx?ACTCODE=&Orderby=&REASON=&airport=YVR&cmstitle=erc-note1&date=20221221-20221226&lang=en-US&reqtime="
+        }
+      ]
+    },
+    {
+      "id": "demo-journey-08-3",
+      "date": "2023-07-22",
+      "flight": "BR32",
+      "from": "TPE",
+      "to": "JFK",
+      "departure": "",
+      "arrival": "",
+      "status": "flown",
+      "note": "虛構示範資料，並非任何人的真實旅行紀錄。溫哥華與紐約往返。日期與搭乘狀態皆為模擬，班號僅參考公開航線，不代表當日執飛；未模擬疫情入境限制。Fictional journey; dates and flown status are synthetic, not historical operations.",
+      "sources": [
+        {
+          "type": "demo",
+          "label": "虛構示範資料 · 溫哥華與紐約往返"
+        },
+        {
+          "type": "route_reference",
+          "label": "EVA Air · 僅核對班號與航線 · 2026-09-17",
+          "url": "https://booking.evaair.com/flyeva/eva/b2c/flight-status-erc.aspx?ACTCODE=&Orderby=&REASON=&airport=JFK%2FDFW&cmstitle=erc-note1&date=20260123-20260126&lang=en-US&reqtime="
+        }
+      ]
+    },
+    {
+      "id": "demo-journey-08-4",
+      "date": "2023-07-29",
+      "flight": "BR31",
+      "from": "JFK",
+      "to": "TPE",
+      "departure": "",
+      "arrival": "",
+      "status": "flown",
+      "note": "虛構示範資料，並非任何人的真實旅行紀錄。溫哥華與紐約往返。日期與搭乘狀態皆為模擬，班號僅參考公開航線，不代表當日執飛；未模擬疫情入境限制。Fictional journey; dates and flown status are synthetic, not historical operations.",
+      "sources": [
+        {
+          "type": "demo",
+          "label": "虛構示範資料 · 溫哥華與紐約往返"
+        },
+        {
+          "type": "route_reference",
+          "label": "EVA Air · 僅核對班號與航線 · 2026-09-17",
+          "url": "https://booking.evaair.com/flyeva/eva/b2c/flight-status-erc.aspx?ACTCODE=&Orderby=&REASON=&airport=JFK%2FDFW&cmstitle=erc-note1&date=20260123-20260126&lang=en-US&reqtime="
+        }
+      ]
+    },
+    {
+      "id": "demo-journey-08-5",
+      "date": "2023-08-19",
+      "flight": "BR712",
+      "from": "TPE",
+      "to": "PVG",
+      "departure": "",
+      "arrival": "",
+      "status": "flown",
+      "note": "虛構示範資料，並非任何人的真實旅行紀錄。溫哥華與紐約往返。日期與搭乘狀態皆為模擬，班號僅參考公開航線，不代表當日執飛；未模擬疫情入境限制。Fictional journey; dates and flown status are synthetic, not historical operations.",
+      "sources": [
+        {
+          "type": "demo",
+          "label": "虛構示範資料 · 溫哥華與紐約往返"
+        },
+        {
+          "type": "route_reference",
+          "label": "EVA Air · 僅核對班號與航線 · 2026-09-17",
+          "url": "https://booking.evaair.com/flyeva/eva/b2c/flight-status-erc.aspx?ACTCODE=&Orderby=&REASON=&airport=TPE%2FTSA%2FKHH&cmstitle=erc-note1&date=20260710-20260713&lang=&reqtime="
+        }
+      ]
+    },
+    {
+      "id": "demo-journey-08-6",
+      "date": "2023-08-26",
+      "flight": "BR711",
+      "from": "PVG",
+      "to": "TPE",
+      "departure": "",
+      "arrival": "",
+      "status": "flown",
+      "note": "虛構示範資料，並非任何人的真實旅行紀錄。溫哥華與紐約往返。日期與搭乘狀態皆為模擬，班號僅參考公開航線，不代表當日執飛；未模擬疫情入境限制。Fictional journey; dates and flown status are synthetic, not historical operations.",
+      "sources": [
+        {
+          "type": "demo",
+          "label": "虛構示範資料 · 溫哥華與紐約往返"
+        },
+        {
+          "type": "route_reference",
+          "label": "EVA Air · 僅核對班號與航線 · 2026-09-17",
+          "url": "https://booking.evaair.com/flyeva/eva/b2c/flight-status-erc.aspx?ACTCODE=&Orderby=&REASON=&airport=TPE%2FTSA%2FKHH&cmstitle=erc-note1&date=20260710-20260713&lang=&reqtime="
+        }
+      ]
+    },
+    {
+      "id": "demo-journey-09-1",
+      "date": "2023-09-29",
+      "flight": "BR712",
+      "from": "TPE",
+      "to": "PVG",
+      "departure": "",
+      "arrival": "",
+      "status": "flown",
+      "note": "虛構示範資料，並非任何人的真實旅行紀錄。上海出發經杜拜赴南非。日期與搭乘狀態皆為模擬，班號僅參考公開航線，不代表當日執飛；未模擬疫情入境限制。Fictional journey; dates and flown status are synthetic, not historical operations.",
+      "sources": [
+        {
+          "type": "demo",
+          "label": "虛構示範資料 · 上海出發經杜拜赴南非"
+        },
+        {
+          "type": "route_reference",
+          "label": "EVA Air · 僅核對班號與航線 · 2026-09-17",
+          "url": "https://booking.evaair.com/flyeva/eva/b2c/flight-status-erc.aspx?ACTCODE=&Orderby=&REASON=&airport=TPE%2FTSA%2FKHH&cmstitle=erc-note1&date=20260710-20260713&lang=&reqtime="
+        }
+      ]
+    },
+    {
+      "id": "demo-journey-09-2",
+      "date": "2023-10-06",
+      "flight": "EK303",
+      "from": "PVG",
+      "to": "DXB",
+      "departure": "",
+      "arrival": "",
+      "status": "flown",
+      "note": "虛構示範資料，並非任何人的真實旅行紀錄。上海出發經杜拜赴南非。日期與搭乘狀態皆為模擬，班號僅參考公開航線，不代表當日執飛；未模擬疫情入境限制。Fictional journey; dates and flown status are synthetic, not historical operations.",
+      "sources": [
+        {
+          "type": "demo",
+          "label": "虛構示範資料 · 上海出發經杜拜赴南非"
+        },
+        {
+          "type": "route_reference",
+          "label": "Emirates · 僅核對班號與航線 · 2026-09-17",
+          "url": "https://www.emirates.com/cn/chinese/destinations/dxb/pvg/flights-from-dubai-to-shanghai/"
+        }
+      ]
+    },
+    {
+      "id": "demo-journey-09-3",
+      "date": "2023-10-09",
+      "flight": "EK761",
+      "from": "DXB",
+      "to": "JNB",
+      "departure": "",
+      "arrival": "",
+      "status": "flown",
+      "note": "虛構示範資料，並非任何人的真實旅行紀錄。上海出發經杜拜赴南非。日期與搭乘狀態皆為模擬，班號僅參考公開航線，不代表當日執飛；未模擬疫情入境限制。Fictional journey; dates and flown status are synthetic, not historical operations.",
+      "sources": [
+        {
+          "type": "demo",
+          "label": "虛構示範資料 · 上海出發經杜拜赴南非"
+        },
+        {
+          "type": "route_reference",
+          "label": "Emirates · 僅核對班號與航線 · 2026-09-17",
+          "url": "https://www.emirates.com/english/destinations/dxb/jnb/flights-from-dubai-to-johannesburg/"
+        }
+      ]
+    },
+    {
+      "id": "demo-journey-09-4",
+      "date": "2023-10-23",
+      "flight": "EK762",
+      "from": "JNB",
+      "to": "DXB",
+      "departure": "",
+      "arrival": "",
+      "status": "flown",
+      "note": "虛構示範資料，並非任何人的真實旅行紀錄。上海出發經杜拜赴南非。日期與搭乘狀態皆為模擬，班號僅參考公開航線，不代表當日執飛；未模擬疫情入境限制。Fictional journey; dates and flown status are synthetic, not historical operations.",
+      "sources": [
+        {
+          "type": "demo",
+          "label": "虛構示範資料 · 上海出發經杜拜赴南非"
+        },
+        {
+          "type": "route_reference",
+          "label": "Emirates · 僅核對班號與航線 · 2026-09-17",
+          "url": "https://www.emirates.com/english/destinations/dxb/jnb/flights-from-dubai-to-johannesburg/"
+        }
+      ]
+    },
+    {
+      "id": "demo-journey-09-5",
+      "date": "2023-10-26",
+      "flight": "EK302",
+      "from": "DXB",
+      "to": "PVG",
+      "departure": "",
+      "arrival": "",
+      "status": "flown",
+      "note": "虛構示範資料，並非任何人的真實旅行紀錄。上海出發經杜拜赴南非。日期與搭乘狀態皆為模擬，班號僅參考公開航線，不代表當日執飛；未模擬疫情入境限制。Fictional journey; dates and flown status are synthetic, not historical operations.",
+      "sources": [
+        {
+          "type": "demo",
+          "label": "虛構示範資料 · 上海出發經杜拜赴南非"
+        },
+        {
+          "type": "route_reference",
+          "label": "Emirates · 僅核對班號與航線 · 2026-09-17",
+          "url": "https://www.emirates.com/cn/chinese/destinations/dxb/pvg/flights-from-dubai-to-shanghai/"
+        }
+      ]
+    },
+    {
+      "id": "demo-journey-09-6",
+      "date": "2023-11-04",
+      "flight": "BR711",
+      "from": "PVG",
+      "to": "TPE",
+      "departure": "",
+      "arrival": "",
+      "status": "flown",
+      "note": "虛構示範資料，並非任何人的真實旅行紀錄。上海出發經杜拜赴南非。日期與搭乘狀態皆為模擬，班號僅參考公開航線，不代表當日執飛；未模擬疫情入境限制。Fictional journey; dates and flown status are synthetic, not historical operations.",
+      "sources": [
+        {
+          "type": "demo",
+          "label": "虛構示範資料 · 上海出發經杜拜赴南非"
+        },
+        {
+          "type": "route_reference",
+          "label": "EVA Air · 僅核對班號與航線 · 2026-09-17",
+          "url": "https://booking.evaair.com/flyeva/eva/b2c/flight-status-erc.aspx?ACTCODE=&Orderby=&REASON=&airport=TPE%2FTSA%2FKHH&cmstitle=erc-note1&date=20260710-20260713&lang=&reqtime="
+        }
+      ]
+    },
+    {
+      "id": "demo-journey-10-1",
+      "date": "2023-12-29",
+      "flight": "EK367",
+      "from": "TPE",
+      "to": "DXB",
+      "departure": "",
+      "arrival": "",
+      "status": "flown",
+      "note": "虛構示範資料，並非任何人的真實旅行紀錄。聖保羅長程與東京往返。日期與搭乘狀態皆為模擬，班號僅參考公開航線，不代表當日執飛；未模擬疫情入境限制。Fictional journey; dates and flown status are synthetic, not historical operations.",
+      "sources": [
+        {
+          "type": "demo",
+          "label": "虛構示範資料 · 聖保羅長程與東京往返"
+        },
+        {
+          "type": "route_reference",
+          "label": "Emirates · 僅核對班號與航線 · 2026-09-17",
+          "url": "https://www.emirates.com/tw/chinese/destinations/dxb/tpe/flights-from-dubai-to-taipei/"
+        }
+      ]
+    },
+    {
+      "id": "demo-journey-10-2",
+      "date": "2024-01-05",
+      "flight": "EK261",
+      "from": "DXB",
+      "to": "GRU",
+      "departure": "",
+      "arrival": "",
+      "status": "flown",
+      "note": "虛構示範資料，並非任何人的真實旅行紀錄。聖保羅長程與東京往返。日期與搭乘狀態皆為模擬，班號僅參考公開航線，不代表當日執飛；未模擬疫情入境限制。Fictional journey; dates and flown status are synthetic, not historical operations.",
+      "sources": [
+        {
+          "type": "demo",
+          "label": "虛構示範資料 · 聖保羅長程與東京往返"
+        },
+        {
+          "type": "route_reference",
+          "label": "Emirates · 僅核對班號與航線 · 2026-09-17",
+          "url": "https://www.emirates.com/br/portuguese/destinations/gru/dxb/flights-from-sao-paulo-to-dubai/"
+        }
+      ]
+    },
+    {
+      "id": "demo-journey-10-3",
+      "date": "2024-01-08",
+      "flight": "EK262",
+      "from": "GRU",
+      "to": "DXB",
+      "departure": "",
+      "arrival": "",
+      "status": "flown",
+      "note": "虛構示範資料，並非任何人的真實旅行紀錄。聖保羅長程與東京往返。日期與搭乘狀態皆為模擬，班號僅參考公開航線，不代表當日執飛；未模擬疫情入境限制。Fictional journey; dates and flown status are synthetic, not historical operations.",
+      "sources": [
+        {
+          "type": "demo",
+          "label": "虛構示範資料 · 聖保羅長程與東京往返"
+        },
+        {
+          "type": "route_reference",
+          "label": "Emirates · 僅核對班號與航線 · 2026-09-17",
+          "url": "https://www.emirates.com/br/portuguese/destinations/gru/dxb/flights-from-sao-paulo-to-dubai/"
+        }
+      ]
+    },
+    {
+      "id": "demo-journey-10-4",
+      "date": "2024-01-22",
+      "flight": "EK366",
+      "from": "DXB",
+      "to": "TPE",
+      "departure": "",
+      "arrival": "",
+      "status": "flown",
+      "note": "虛構示範資料，並非任何人的真實旅行紀錄。聖保羅長程與東京往返。日期與搭乘狀態皆為模擬，班號僅參考公開航線，不代表當日執飛；未模擬疫情入境限制。Fictional journey; dates and flown status are synthetic, not historical operations.",
+      "sources": [
+        {
+          "type": "demo",
+          "label": "虛構示範資料 · 聖保羅長程與東京往返"
+        },
+        {
+          "type": "route_reference",
+          "label": "Emirates · 僅核對班號與航線 · 2026-09-17",
+          "url": "https://www.emirates.com/tw/chinese/destinations/dxb/tpe/flights-from-dubai-to-taipei/"
+        }
+      ]
+    },
+    {
+      "id": "demo-journey-10-5",
+      "date": "2024-01-25",
+      "flight": "BR196",
+      "from": "TPE",
+      "to": "NRT",
+      "departure": "",
+      "arrival": "",
+      "status": "flown",
+      "note": "虛構示範資料，並非任何人的真實旅行紀錄。聖保羅長程與東京往返。日期與搭乘狀態皆為模擬，班號僅參考公開航線，不代表當日執飛；未模擬疫情入境限制。Fictional journey; dates and flown status are synthetic, not historical operations.",
+      "sources": [
+        {
+          "type": "demo",
+          "label": "虛構示範資料 · 聖保羅長程與東京往返"
+        },
+        {
+          "type": "route_reference",
+          "label": "EVA Air · 僅核對班號與航線 · 2026-09-17",
+          "url": "https://booking.evaair.com/flyeva/eva/b2c/flight-status-erc.aspx?ACTCODE=&Orderby=&REASON=&airport=TPE%2FTSA%2FKHH&cmstitle=erc-note1&date=20260710-20260713&lang=&reqtime="
+        }
+      ]
+    },
+    {
+      "id": "demo-journey-10-6",
+      "date": "2024-02-03",
+      "flight": "BR195",
+      "from": "NRT",
+      "to": "TPE",
+      "departure": "",
+      "arrival": "",
+      "status": "flown",
+      "note": "虛構示範資料，並非任何人的真實旅行紀錄。聖保羅長程與東京往返。日期與搭乘狀態皆為模擬，班號僅參考公開航線，不代表當日執飛；未模擬疫情入境限制。Fictional journey; dates and flown status are synthetic, not historical operations.",
+      "sources": [
+        {
+          "type": "demo",
+          "label": "虛構示範資料 · 聖保羅長程與東京往返"
+        },
+        {
+          "type": "route_reference",
+          "label": "EVA Air · 僅核對班號與航線 · 2026-09-17",
+          "url": "https://booking.evaair.com/flyeva/eva/b2c/flight-status-erc.aspx?ACTCODE=&Orderby=&airport=FUK%2FMYJ%2FKIX%2FNGO%2FKMQ%2FHND%2FNRT%2FSDJ%2FAOJ&cmstitle=erc-note1&date=20191011-20191013&lang=zh-tw&reqtime="
+        }
+      ]
+    },
+    {
+      "id": "demo-journey-11-1",
+      "date": "2024-03-29",
+      "flight": "EK367",
+      "from": "TPE",
+      "to": "DXB",
+      "departure": "",
+      "arrival": "",
+      "status": "flown",
+      "note": "虛構示範資料，並非任何人的真實旅行紀錄。伊斯坦堡與倫敦串聯。日期與搭乘狀態皆為模擬，班號僅參考公開航線，不代表當日執飛；未模擬疫情入境限制。Fictional journey; dates and flown status are synthetic, not historical operations.",
+      "sources": [
+        {
+          "type": "demo",
+          "label": "虛構示範資料 · 伊斯坦堡與倫敦串聯"
+        },
+        {
+          "type": "route_reference",
+          "label": "Emirates · 僅核對班號與航線 · 2026-09-17",
+          "url": "https://www.emirates.com/tw/chinese/destinations/dxb/tpe/flights-from-dubai-to-taipei/"
+        }
+      ]
+    },
+    {
+      "id": "demo-journey-11-2",
+      "date": "2024-04-05",
+      "flight": "EK123",
+      "from": "DXB",
+      "to": "IST",
+      "departure": "",
+      "arrival": "",
+      "status": "flown",
+      "note": "虛構示範資料，並非任何人的真實旅行紀錄。伊斯坦堡與倫敦串聯。日期與搭乘狀態皆為模擬，班號僅參考公開航線，不代表當日執飛；未模擬疫情入境限制。Fictional journey; dates and flown status are synthetic, not historical operations.",
+      "sources": [
+        {
+          "type": "demo",
+          "label": "虛構示範資料 · 伊斯坦堡與倫敦串聯"
+        },
+        {
+          "type": "route_reference",
+          "label": "Emirates · 僅核對班號與航線 · 2026-09-17",
+          "url": "https://www.emirates.com/media-centre/emirates-announces-start-of-scheduled-daily-a380-service-to-istanbul/"
+        }
+      ]
+    },
+    {
+      "id": "demo-journey-11-3",
+      "date": "2024-04-08",
+      "flight": "EK124",
+      "from": "IST",
+      "to": "DXB",
+      "departure": "",
+      "arrival": "",
+      "status": "flown",
+      "note": "虛構示範資料，並非任何人的真實旅行紀錄。伊斯坦堡與倫敦串聯。日期與搭乘狀態皆為模擬，班號僅參考公開航線，不代表當日執飛；未模擬疫情入境限制。Fictional journey; dates and flown status are synthetic, not historical operations.",
+      "sources": [
+        {
+          "type": "demo",
+          "label": "虛構示範資料 · 伊斯坦堡與倫敦串聯"
+        },
+        {
+          "type": "route_reference",
+          "label": "Emirates · 僅核對班號與航線 · 2026-09-17",
+          "url": "https://www.emirates.com/media-centre/emirates-announces-start-of-scheduled-daily-a380-service-to-istanbul/"
+        }
+      ]
+    },
+    {
+      "id": "demo-journey-11-4",
+      "date": "2024-04-22",
+      "flight": "EK1",
+      "from": "DXB",
+      "to": "LHR",
+      "departure": "",
+      "arrival": "",
+      "status": "flown",
+      "note": "虛構示範資料，並非任何人的真實旅行紀錄。伊斯坦堡與倫敦串聯。日期與搭乘狀態皆為模擬，班號僅參考公開航線，不代表當日執飛；未模擬疫情入境限制。Fictional journey; dates and flown status are synthetic, not historical operations.",
+      "sources": [
+        {
+          "type": "demo",
+          "label": "虛構示範資料 · 伊斯坦堡與倫敦串聯"
+        },
+        {
+          "type": "route_reference",
+          "label": "Emirates · 僅核對班號與航線 · 2026-09-17",
+          "url": "https://www.emirates.com/english/destinations/dxb/lhr/flights-from-dubai-to-london-heathrow/"
+        }
+      ]
+    },
+    {
+      "id": "demo-journey-11-5",
+      "date": "2024-04-25",
+      "flight": "EK2",
+      "from": "LHR",
+      "to": "DXB",
+      "departure": "",
+      "arrival": "",
+      "status": "flown",
+      "note": "虛構示範資料，並非任何人的真實旅行紀錄。伊斯坦堡與倫敦串聯。日期與搭乘狀態皆為模擬，班號僅參考公開航線，不代表當日執飛；未模擬疫情入境限制。Fictional journey; dates and flown status are synthetic, not historical operations.",
+      "sources": [
+        {
+          "type": "demo",
+          "label": "虛構示範資料 · 伊斯坦堡與倫敦串聯"
+        },
+        {
+          "type": "route_reference",
+          "label": "Emirates · 僅核對班號與航線 · 2026-09-17",
+          "url": "https://www.emirates.com/english/destinations/dxb/lhr/flights-from-dubai-to-london-heathrow/"
+        }
+      ]
+    },
+    {
+      "id": "demo-journey-11-6",
+      "date": "2024-05-04",
+      "flight": "EK366",
+      "from": "DXB",
+      "to": "TPE",
+      "departure": "",
+      "arrival": "",
+      "status": "flown",
+      "note": "虛構示範資料，並非任何人的真實旅行紀錄。伊斯坦堡與倫敦串聯。日期與搭乘狀態皆為模擬，班號僅參考公開航線，不代表當日執飛；未模擬疫情入境限制。Fictional journey; dates and flown status are synthetic, not historical operations.",
+      "sources": [
+        {
+          "type": "demo",
+          "label": "虛構示範資料 · 伊斯坦堡與倫敦串聯"
+        },
+        {
+          "type": "route_reference",
+          "label": "Emirates · 僅核對班號與航線 · 2026-09-17",
+          "url": "https://www.emirates.com/tw/chinese/destinations/dxb/tpe/flights-from-dubai-to-taipei/"
+        }
+      ]
+    },
+    {
+      "id": "demo-journey-12-1",
+      "date": "2024-06-29",
+      "flight": "BR227",
+      "from": "TPE",
+      "to": "KUL",
+      "departure": "",
+      "arrival": "",
+      "status": "flown",
+      "note": "虛構示範資料，並非任何人的真實旅行紀錄。吉隆坡與曼谷多城市旅行。日期與搭乘狀態皆為模擬，班號僅參考公開航線，不代表當日執飛；未模擬疫情入境限制。Fictional journey; dates and flown status are synthetic, not historical operations.",
+      "sources": [
+        {
+          "type": "demo",
+          "label": "虛構示範資料 · 吉隆坡與曼谷多城市旅行"
+        },
+        {
+          "type": "route_reference",
+          "label": "EVA Air · 僅核對班號與航線 · 2026-09-17",
+          "url": "https://booking.evaair.com/flyeva/eva/b2c/flight-status-erc.aspx?ACTCODE=&Orderby=&REASON=&airport=TPE%2FTSA%2FKHH&cmstitle=erc-note2&date=20260710-20260713&lang=sc-cn&reqtime="
+        }
+      ]
+    },
+    {
+      "id": "demo-journey-12-2",
+      "date": "2024-07-06",
+      "flight": "SQ107",
+      "from": "KUL",
+      "to": "SIN",
+      "departure": "",
+      "arrival": "",
+      "status": "flown",
+      "note": "虛構示範資料，並非任何人的真實旅行紀錄。吉隆坡與曼谷多城市旅行。日期與搭乘狀態皆為模擬，班號僅參考公開航線，不代表當日執飛；未模擬疫情入境限制。Fictional journey; dates and flown status are synthetic, not historical operations.",
+      "sources": [
+        {
+          "type": "demo",
+          "label": "虛構示範資料 · 吉隆坡與曼谷多城市旅行"
+        },
+        {
+          "type": "route_reference",
+          "label": "Singapore Airlines · 僅核對班號與航線 · 2026-09-17",
+          "url": "https://www.singaporeair.com/saar5/pdf/media-centre/200322SoutheastAsiaFlightCanxTable.pdf"
+        }
+      ]
+    },
+    {
+      "id": "demo-journey-12-3",
+      "date": "2024-07-09",
+      "flight": "SQ706",
+      "from": "SIN",
+      "to": "BKK",
+      "departure": "",
+      "arrival": "",
+      "status": "flown",
+      "note": "虛構示範資料，並非任何人的真實旅行紀錄。吉隆坡與曼谷多城市旅行。日期與搭乘狀態皆為模擬，班號僅參考公開航線，不代表當日執飛；未模擬疫情入境限制。Fictional journey; dates and flown status are synthetic, not historical operations.",
+      "sources": [
+        {
+          "type": "demo",
+          "label": "虛構示範資料 · 吉隆坡與曼谷多城市旅行"
+        },
+        {
+          "type": "route_reference",
+          "label": "Singapore Airlines · 僅核對班號與航線 · 2026-09-17",
+          "url": "https://www.singaporeair.com/saar5/pdf/media-centre/NE-0822_AnnexeB.pdf"
+        }
+      ]
+    },
+    {
+      "id": "demo-journey-12-4",
+      "date": "2024-07-23",
+      "flight": "SQ705",
+      "from": "BKK",
+      "to": "SIN",
+      "departure": "",
+      "arrival": "",
+      "status": "flown",
+      "note": "虛構示範資料，並非任何人的真實旅行紀錄。吉隆坡與曼谷多城市旅行。日期與搭乘狀態皆為模擬，班號僅參考公開航線，不代表當日執飛；未模擬疫情入境限制。Fictional journey; dates and flown status are synthetic, not historical operations.",
+      "sources": [
+        {
+          "type": "demo",
+          "label": "虛構示範資料 · 吉隆坡與曼谷多城市旅行"
+        },
+        {
+          "type": "route_reference",
+          "label": "Singapore Airlines · 僅核對班號與航線 · 2026-09-17",
+          "url": "https://www.singaporeair.com/saar5/pdf/media-centre/NE-0822_AnnexeB.pdf"
+        }
+      ]
+    },
+    {
+      "id": "demo-journey-12-5",
+      "date": "2024-07-26",
+      "flight": "SQ830",
+      "from": "SIN",
+      "to": "PVG",
+      "departure": "",
+      "arrival": "",
+      "status": "flown",
+      "note": "虛構示範資料，並非任何人的真實旅行紀錄。吉隆坡與曼谷多城市旅行。日期與搭乘狀態皆為模擬，班號僅參考公開航線，不代表當日執飛；未模擬疫情入境限制。Fictional journey; dates and flown status are synthetic, not historical operations.",
+      "sources": [
+        {
+          "type": "demo",
+          "label": "虛構示範資料 · 吉隆坡與曼谷多城市旅行"
+        },
+        {
+          "type": "route_reference",
+          "label": "Singapore Airlines · 僅核對班號與航線 · 2026-09-17",
+          "url": "https://www.singaporeair.com/zh_CN/cn/plan-travel/local-promotions/cn-exCN/"
+        }
+      ]
+    },
+    {
+      "id": "demo-journey-12-6",
+      "date": "2024-08-04",
+      "flight": "BR711",
+      "from": "PVG",
+      "to": "TPE",
+      "departure": "",
+      "arrival": "",
+      "status": "flown",
+      "note": "虛構示範資料，並非任何人的真實旅行紀錄。吉隆坡與曼谷多城市旅行。日期與搭乘狀態皆為模擬，班號僅參考公開航線，不代表當日執飛；未模擬疫情入境限制。Fictional journey; dates and flown status are synthetic, not historical operations.",
+      "sources": [
+        {
+          "type": "demo",
+          "label": "虛構示範資料 · 吉隆坡與曼谷多城市旅行"
+        },
+        {
+          "type": "route_reference",
+          "label": "EVA Air · 僅核對班號與航線 · 2026-09-17",
+          "url": "https://booking.evaair.com/flyeva/eva/b2c/flight-status-erc.aspx?ACTCODE=&Orderby=&REASON=&airport=TPE%2FTSA%2FKHH&cmstitle=erc-note1&date=20260710-20260713&lang=&reqtime="
+        }
+      ]
+    },
+    {
+      "id": "demo-journey-13-1",
+      "date": "2024-09-29",
+      "flight": "BR712",
+      "from": "TPE",
+      "to": "PVG",
+      "departure": "",
+      "arrival": "",
+      "status": "flown",
+      "note": "虛構示範資料，並非任何人的真實旅行紀錄。上海出發重訪法蘭克福。日期與搭乘狀態皆為模擬，班號僅參考公開航線，不代表當日執飛；未模擬疫情入境限制。Fictional journey; dates and flown status are synthetic, not historical operations.",
+      "sources": [
+        {
+          "type": "demo",
+          "label": "虛構示範資料 · 上海出發重訪法蘭克福"
+        },
+        {
+          "type": "route_reference",
+          "label": "EVA Air · 僅核對班號與航線 · 2026-09-17",
+          "url": "https://booking.evaair.com/flyeva/eva/b2c/flight-status-erc.aspx?ACTCODE=&Orderby=&REASON=&airport=TPE%2FTSA%2FKHH&cmstitle=erc-note1&date=20260710-20260713&lang=&reqtime="
+        }
+      ]
+    },
+    {
+      "id": "demo-journey-13-2",
+      "date": "2024-10-06",
+      "flight": "EK303",
+      "from": "PVG",
+      "to": "DXB",
+      "departure": "",
+      "arrival": "",
+      "status": "flown",
+      "note": "虛構示範資料，並非任何人的真實旅行紀錄。上海出發重訪法蘭克福。日期與搭乘狀態皆為模擬，班號僅參考公開航線，不代表當日執飛；未模擬疫情入境限制。Fictional journey; dates and flown status are synthetic, not historical operations.",
+      "sources": [
+        {
+          "type": "demo",
+          "label": "虛構示範資料 · 上海出發重訪法蘭克福"
+        },
+        {
+          "type": "route_reference",
+          "label": "Emirates · 僅核對班號與航線 · 2026-09-17",
+          "url": "https://www.emirates.com/cn/chinese/destinations/dxb/pvg/flights-from-dubai-to-shanghai/"
+        }
+      ]
+    },
+    {
+      "id": "demo-journey-13-3",
+      "date": "2024-10-09",
+      "flight": "EK45",
+      "from": "DXB",
+      "to": "FRA",
+      "departure": "",
+      "arrival": "",
+      "status": "flown",
+      "note": "虛構示範資料，並非任何人的真實旅行紀錄。上海出發重訪法蘭克福。日期與搭乘狀態皆為模擬，班號僅參考公開航線，不代表當日執飛；未模擬疫情入境限制。Fictional journey; dates and flown status are synthetic, not historical operations.",
+      "sources": [
+        {
+          "type": "demo",
+          "label": "虛構示範資料 · 上海出發重訪法蘭克福"
+        },
+        {
+          "type": "route_reference",
+          "label": "Emirates · 僅核對班號與航線 · 2026-09-17",
+          "url": "https://www.emirates.com/english/destinations/dxb/fra/flights-from-dubai-to-frankfurt/"
+        }
+      ]
+    },
+    {
+      "id": "demo-journey-13-4",
+      "date": "2024-10-23",
+      "flight": "EK46",
+      "from": "FRA",
+      "to": "DXB",
+      "departure": "",
+      "arrival": "",
+      "status": "flown",
+      "note": "虛構示範資料，並非任何人的真實旅行紀錄。上海出發重訪法蘭克福。日期與搭乘狀態皆為模擬，班號僅參考公開航線，不代表當日執飛；未模擬疫情入境限制。Fictional journey; dates and flown status are synthetic, not historical operations.",
+      "sources": [
+        {
+          "type": "demo",
+          "label": "虛構示範資料 · 上海出發重訪法蘭克福"
+        },
+        {
+          "type": "route_reference",
+          "label": "Emirates · 僅核對班號與航線 · 2026-09-17",
+          "url": "https://www.emirates.com/english/destinations/dxb/fra/flights-from-dubai-to-frankfurt/"
+        }
+      ]
+    },
+    {
+      "id": "demo-journey-13-5",
+      "date": "2024-10-26",
+      "flight": "EK302",
+      "from": "DXB",
+      "to": "PVG",
+      "departure": "",
+      "arrival": "",
+      "status": "flown",
+      "note": "虛構示範資料，並非任何人的真實旅行紀錄。上海出發重訪法蘭克福。日期與搭乘狀態皆為模擬，班號僅參考公開航線，不代表當日執飛；未模擬疫情入境限制。Fictional journey; dates and flown status are synthetic, not historical operations.",
+      "sources": [
+        {
+          "type": "demo",
+          "label": "虛構示範資料 · 上海出發重訪法蘭克福"
+        },
+        {
+          "type": "route_reference",
+          "label": "Emirates · 僅核對班號與航線 · 2026-09-17",
+          "url": "https://www.emirates.com/cn/chinese/destinations/dxb/pvg/flights-from-dubai-to-shanghai/"
+        }
+      ]
+    },
+    {
+      "id": "demo-journey-13-6",
+      "date": "2024-11-04",
+      "flight": "BR711",
+      "from": "PVG",
+      "to": "TPE",
+      "departure": "",
+      "arrival": "",
+      "status": "flown",
+      "note": "虛構示範資料，並非任何人的真實旅行紀錄。上海出發重訪法蘭克福。日期與搭乘狀態皆為模擬，班號僅參考公開航線，不代表當日執飛；未模擬疫情入境限制。Fictional journey; dates and flown status are synthetic, not historical operations.",
+      "sources": [
+        {
+          "type": "demo",
+          "label": "虛構示範資料 · 上海出發重訪法蘭克福"
+        },
+        {
+          "type": "route_reference",
+          "label": "EVA Air · 僅核對班號與航線 · 2026-09-17",
+          "url": "https://booking.evaair.com/flyeva/eva/b2c/flight-status-erc.aspx?ACTCODE=&Orderby=&REASON=&airport=TPE%2FTSA%2FKHH&cmstitle=erc-note1&date=20260710-20260713&lang=&reqtime="
+        }
+      ]
+    },
+    {
+      "id": "demo-journey-14-1",
+      "date": "2024-12-29",
+      "flight": "BR225",
+      "from": "TPE",
+      "to": "SIN",
+      "departure": "",
+      "arrival": "",
+      "status": "flown",
+      "note": "虛構示範資料，並非任何人的真實旅行紀錄。澳紐旅行後返回上海。日期與搭乘狀態皆為模擬，班號僅參考公開航線，不代表當日執飛；未模擬疫情入境限制。Fictional journey; dates and flown status are synthetic, not historical operations.",
+      "sources": [
+        {
+          "type": "demo",
+          "label": "虛構示範資料 · 澳紐旅行後返回上海"
+        },
+        {
+          "type": "route_reference",
+          "label": "EVA Air · 僅核對班號與航線 · 2026-09-17",
+          "url": "https://flights.evaair.com/zh-tw/premium-economy-class-flights-from-taipei-to-singapore"
+        }
+      ]
+    },
+    {
+      "id": "demo-journey-14-2",
+      "date": "2025-01-05",
+      "flight": "SQ231",
+      "from": "SIN",
+      "to": "SYD",
+      "departure": "",
+      "arrival": "",
+      "status": "flown",
+      "note": "虛構示範資料，並非任何人的真實旅行紀錄。澳紐旅行後返回上海。日期與搭乘狀態皆為模擬，班號僅參考公開航線，不代表當日執飛；未模擬疫情入境限制。Fictional journey; dates and flown status are synthetic, not historical operations.",
+      "sources": [
+        {
+          "type": "demo",
+          "label": "虛構示範資料 · 澳紐旅行後返回上海"
+        },
+        {
+          "type": "route_reference",
+          "label": "Singapore Airlines · 僅核對班號與航線 · 2026-09-17",
+          "url": "https://www.singaporeair.com/en_UK/tw/corporate/newsroom/press-release/2026/january---march-2026/Singapore_Airlines_WSI/"
+        }
+      ]
+    },
+    {
+      "id": "demo-journey-14-3",
+      "date": "2025-01-08",
+      "flight": "SQ222",
+      "from": "SYD",
+      "to": "SIN",
+      "departure": "",
+      "arrival": "",
+      "status": "flown",
+      "note": "虛構示範資料，並非任何人的真實旅行紀錄。澳紐旅行後返回上海。日期與搭乘狀態皆為模擬，班號僅參考公開航線，不代表當日執飛；未模擬疫情入境限制。Fictional journey; dates and flown status are synthetic, not historical operations.",
+      "sources": [
+        {
+          "type": "demo",
+          "label": "虛構示範資料 · 澳紐旅行後返回上海"
+        },
+        {
+          "type": "route_reference",
+          "label": "Singapore Airlines · 僅核對班號與航線 · 2026-09-17",
+          "url": "https://www.singaporeair.com/en_UK/tw/corporate/newsroom/press-release/2026/january---march-2026/Singapore_Airlines_WSI/"
+        }
+      ]
+    },
+    {
+      "id": "demo-journey-14-4",
+      "date": "2025-01-22",
+      "flight": "SQ285",
+      "from": "SIN",
+      "to": "AKL",
+      "departure": "",
+      "arrival": "",
+      "status": "flown",
+      "note": "虛構示範資料，並非任何人的真實旅行紀錄。澳紐旅行後返回上海。日期與搭乘狀態皆為模擬，班號僅參考公開航線，不代表當日執飛；未模擬疫情入境限制。Fictional journey; dates and flown status are synthetic, not historical operations.",
+      "sources": [
+        {
+          "type": "demo",
+          "label": "虛構示範資料 · 澳紐旅行後返回上海"
+        },
+        {
+          "type": "route_reference",
+          "label": "Singapore Airlines · 僅核對班號與航線 · 2026-09-17",
+          "url": "https://agent360.singaporeair.com/content/dam/agent360/web-assets/pdf/local/nz/SQxNZ_Trade_Brochure_SQ_small.pdf"
+        }
+      ]
+    },
+    {
+      "id": "demo-journey-14-5",
+      "date": "2025-01-25",
+      "flight": "NZ77",
+      "from": "AKL",
+      "to": "TPE",
+      "departure": "",
+      "arrival": "",
+      "status": "flown",
+      "note": "虛構示範資料，並非任何人的真實旅行紀錄。澳紐旅行後返回上海。日期與搭乘狀態皆為模擬，班號僅參考公開航線，不代表當日執飛；未模擬疫情入境限制。Fictional journey; dates and flown status are synthetic, not historical operations.",
+      "sources": [
+        {
+          "type": "demo",
+          "label": "虛構示範資料 · 澳紐旅行後返回上海"
+        },
+        {
+          "type": "route_reference",
+          "label": "Air New Zealand · 僅核對班號與航線 · 2026-09-17",
+          "url": "https://www.airnewzealand.tw/flight-deals-to-new-zealand"
+        }
+      ]
+    },
+    {
+      "id": "demo-journey-14-6",
+      "date": "2025-02-03",
+      "flight": "BR712",
+      "from": "TPE",
+      "to": "PVG",
+      "departure": "",
+      "arrival": "",
+      "status": "flown",
+      "note": "虛構示範資料，並非任何人的真實旅行紀錄。澳紐旅行後返回上海。日期與搭乘狀態皆為模擬，班號僅參考公開航線，不代表當日執飛；未模擬疫情入境限制。Fictional journey; dates and flown status are synthetic, not historical operations.",
+      "sources": [
+        {
+          "type": "demo",
+          "label": "虛構示範資料 · 澳紐旅行後返回上海"
+        },
+        {
+          "type": "route_reference",
+          "label": "EVA Air · 僅核對班號與航線 · 2026-09-17",
+          "url": "https://booking.evaair.com/flyeva/eva/b2c/flight-status-erc.aspx?ACTCODE=&Orderby=&REASON=&airport=TPE%2FTSA%2FKHH&cmstitle=erc-note1&date=20260710-20260713&lang=&reqtime="
+        }
+      ]
+    },
+    {
+      "id": "demo-journey-15-1",
+      "date": "2025-03-25",
+      "flight": "BR711",
+      "from": "PVG",
+      "to": "TPE",
+      "departure": "",
+      "arrival": "",
+      "status": "flown",
+      "note": "虛構示範資料，並非任何人的真實旅行紀錄。上海基地與北美往返。日期與搭乘狀態皆為模擬，班號僅參考公開航線，不代表當日執飛；未模擬疫情入境限制。Fictional journey; dates and flown status are synthetic, not historical operations.",
+      "sources": [
+        {
+          "type": "demo",
+          "label": "虛構示範資料 · 上海基地與北美往返"
+        },
+        {
+          "type": "route_reference",
+          "label": "EVA Air · 僅核對班號與航線 · 2026-09-17",
+          "url": "https://booking.evaair.com/flyeva/eva/b2c/flight-status-erc.aspx?ACTCODE=&Orderby=&REASON=&airport=TPE%2FTSA%2FKHH&cmstitle=erc-note1&date=20260710-20260713&lang=&reqtime="
+        }
+      ]
+    },
+    {
+      "id": "demo-journey-15-2",
+      "date": "2025-04-01",
+      "flight": "BR10",
+      "from": "TPE",
+      "to": "YVR",
+      "departure": "",
+      "arrival": "",
+      "status": "flown",
+      "note": "虛構示範資料，並非任何人的真實旅行紀錄。上海基地與北美往返。日期與搭乘狀態皆為模擬，班號僅參考公開航線，不代表當日執飛；未模擬疫情入境限制。Fictional journey; dates and flown status are synthetic, not historical operations.",
+      "sources": [
+        {
+          "type": "demo",
+          "label": "虛構示範資料 · 上海基地與北美往返"
+        },
+        {
+          "type": "route_reference",
+          "label": "EVA Air · 僅核對班號與航線 · 2026-09-17",
+          "url": "https://booking.evaair.com/flyeva/eva/b2c/flight-status-erc.aspx?ACTCODE=&Orderby=&REASON=&airport=YVR&cmstitle=erc-note1&date=20221221-20221226&lang=en-US&reqtime="
+        }
+      ]
+    },
+    {
+      "id": "demo-journey-15-3",
+      "date": "2025-04-21",
+      "flight": "BR9",
+      "from": "YVR",
+      "to": "TPE",
+      "departure": "",
+      "arrival": "",
+      "status": "flown",
+      "note": "虛構示範資料，並非任何人的真實旅行紀錄。上海基地與北美往返。日期與搭乘狀態皆為模擬，班號僅參考公開航線，不代表當日執飛；未模擬疫情入境限制。Fictional journey; dates and flown status are synthetic, not historical operations.",
+      "sources": [
+        {
+          "type": "demo",
+          "label": "虛構示範資料 · 上海基地與北美往返"
+        },
+        {
+          "type": "route_reference",
+          "label": "EVA Air · 僅核對班號與航線 · 2026-09-17",
+          "url": "https://booking.evaair.com/flyeva/eva/b2c/flight-status-erc.aspx?ACTCODE=&Orderby=&REASON=&airport=YVR&cmstitle=erc-note1&date=20221221-20221226&lang=en-US&reqtime="
+        }
+      ]
+    },
+    {
+      "id": "demo-journey-15-4",
+      "date": "2025-04-28",
+      "flight": "BR32",
+      "from": "TPE",
+      "to": "JFK",
+      "departure": "",
+      "arrival": "",
+      "status": "flown",
+      "note": "虛構示範資料，並非任何人的真實旅行紀錄。上海基地與北美往返。日期與搭乘狀態皆為模擬，班號僅參考公開航線，不代表當日執飛；未模擬疫情入境限制。Fictional journey; dates and flown status are synthetic, not historical operations.",
+      "sources": [
+        {
+          "type": "demo",
+          "label": "虛構示範資料 · 上海基地與北美往返"
+        },
+        {
+          "type": "route_reference",
+          "label": "EVA Air · 僅核對班號與航線 · 2026-09-17",
+          "url": "https://booking.evaair.com/flyeva/eva/b2c/flight-status-erc.aspx?ACTCODE=&Orderby=&REASON=&airport=JFK%2FDFW&cmstitle=erc-note1&date=20260123-20260126&lang=en-US&reqtime="
+        }
+      ]
+    },
+    {
+      "id": "demo-journey-15-5",
+      "date": "2025-05-19",
+      "flight": "BR31",
+      "from": "JFK",
+      "to": "TPE",
+      "departure": "",
+      "arrival": "",
+      "status": "flown",
+      "note": "虛構示範資料，並非任何人的真實旅行紀錄。上海基地與北美往返。日期與搭乘狀態皆為模擬，班號僅參考公開航線，不代表當日執飛；未模擬疫情入境限制。Fictional journey; dates and flown status are synthetic, not historical operations.",
+      "sources": [
+        {
+          "type": "demo",
+          "label": "虛構示範資料 · 上海基地與北美往返"
+        },
+        {
+          "type": "route_reference",
+          "label": "EVA Air · 僅核對班號與航線 · 2026-09-17",
+          "url": "https://booking.evaair.com/flyeva/eva/b2c/flight-status-erc.aspx?ACTCODE=&Orderby=&REASON=&airport=JFK%2FDFW&cmstitle=erc-note1&date=20260123-20260126&lang=en-US&reqtime="
+        }
+      ]
+    },
+    {
+      "id": "demo-journey-15-6",
+      "date": "2025-05-26",
+      "flight": "BR712",
+      "from": "TPE",
+      "to": "PVG",
+      "departure": "",
+      "arrival": "",
+      "status": "flown",
+      "note": "虛構示範資料，並非任何人的真實旅行紀錄。上海基地與北美往返。日期與搭乘狀態皆為模擬，班號僅參考公開航線，不代表當日執飛；未模擬疫情入境限制。Fictional journey; dates and flown status are synthetic, not historical operations.",
+      "sources": [
+        {
+          "type": "demo",
+          "label": "虛構示範資料 · 上海基地與北美往返"
+        },
+        {
+          "type": "route_reference",
+          "label": "EVA Air · 僅核對班號與航線 · 2026-09-17",
+          "url": "https://booking.evaair.com/flyeva/eva/b2c/flight-status-erc.aspx?ACTCODE=&Orderby=&REASON=&airport=TPE%2FTSA%2FKHH&cmstitle=erc-note1&date=20260710-20260713&lang=&reqtime="
+        }
+      ]
+    },
+    {
+      "id": "demo-journey-16-1",
+      "date": "2025-06-29",
+      "flight": "SQ833",
+      "from": "PVG",
+      "to": "SIN",
+      "departure": "",
+      "arrival": "",
+      "status": "flown",
+      "note": "虛構示範資料，並非任何人的真實旅行紀錄。上海出發的新馬泰環線。日期與搭乘狀態皆為模擬，班號僅參考公開航線，不代表當日執飛；未模擬疫情入境限制。Fictional journey; dates and flown status are synthetic, not historical operations.",
+      "sources": [
+        {
+          "type": "demo",
+          "label": "虛構示範資料 · 上海出發的新馬泰環線"
+        },
+        {
+          "type": "route_reference",
+          "label": "Singapore Airlines · 僅核對班號與航線 · 2026-09-17",
+          "url": "https://www.singaporeair.com/zh_CN/cn/plan-travel/local-promotions/cn-exCN/"
+        }
+      ]
+    },
+    {
+      "id": "demo-journey-16-2",
+      "date": "2025-07-06",
+      "flight": "SQ706",
+      "from": "SIN",
+      "to": "BKK",
+      "departure": "",
+      "arrival": "",
+      "status": "flown",
+      "note": "虛構示範資料，並非任何人的真實旅行紀錄。上海出發的新馬泰環線。日期與搭乘狀態皆為模擬，班號僅參考公開航線，不代表當日執飛；未模擬疫情入境限制。Fictional journey; dates and flown status are synthetic, not historical operations.",
+      "sources": [
+        {
+          "type": "demo",
+          "label": "虛構示範資料 · 上海出發的新馬泰環線"
+        },
+        {
+          "type": "route_reference",
+          "label": "Singapore Airlines · 僅核對班號與航線 · 2026-09-17",
+          "url": "https://www.singaporeair.com/saar5/pdf/media-centre/NE-0822_AnnexeB.pdf"
+        }
+      ]
+    },
+    {
+      "id": "demo-journey-16-3",
+      "date": "2025-07-09",
+      "flight": "SQ705",
+      "from": "BKK",
+      "to": "SIN",
+      "departure": "",
+      "arrival": "",
+      "status": "flown",
+      "note": "虛構示範資料，並非任何人的真實旅行紀錄。上海出發的新馬泰環線。日期與搭乘狀態皆為模擬，班號僅參考公開航線，不代表當日執飛；未模擬疫情入境限制。Fictional journey; dates and flown status are synthetic, not historical operations.",
+      "sources": [
+        {
+          "type": "demo",
+          "label": "虛構示範資料 · 上海出發的新馬泰環線"
+        },
+        {
+          "type": "route_reference",
+          "label": "Singapore Airlines · 僅核對班號與航線 · 2026-09-17",
+          "url": "https://www.singaporeair.com/saar5/pdf/media-centre/NE-0822_AnnexeB.pdf"
+        }
+      ]
+    },
+    {
+      "id": "demo-journey-16-4",
+      "date": "2025-07-23",
+      "flight": "SQ106",
+      "from": "SIN",
+      "to": "KUL",
+      "departure": "",
+      "arrival": "",
+      "status": "flown",
+      "note": "虛構示範資料，並非任何人的真實旅行紀錄。上海出發的新馬泰環線。日期與搭乘狀態皆為模擬，班號僅參考公開航線，不代表當日執飛；未模擬疫情入境限制。Fictional journey; dates and flown status are synthetic, not historical operations.",
+      "sources": [
+        {
+          "type": "demo",
+          "label": "虛構示範資料 · 上海出發的新馬泰環線"
+        },
+        {
+          "type": "route_reference",
+          "label": "Singapore Airlines · 僅核對班號與航線 · 2026-09-17",
+          "url": "https://www.singaporeair.com/saar5/pdf/media-centre/200322SoutheastAsiaFlightCanxTable.pdf"
+        }
+      ]
+    },
+    {
+      "id": "demo-journey-16-5",
+      "date": "2025-07-26",
+      "flight": "BR228",
+      "from": "KUL",
+      "to": "TPE",
+      "departure": "",
+      "arrival": "",
+      "status": "flown",
+      "note": "虛構示範資料，並非任何人的真實旅行紀錄。上海出發的新馬泰環線。日期與搭乘狀態皆為模擬，班號僅參考公開航線，不代表當日執飛；未模擬疫情入境限制。Fictional journey; dates and flown status are synthetic, not historical operations.",
+      "sources": [
+        {
+          "type": "demo",
+          "label": "虛構示範資料 · 上海出發的新馬泰環線"
+        },
+        {
+          "type": "route_reference",
+          "label": "EVA Air · 僅核對班號與航線 · 2026-09-17",
+          "url": "https://booking.evaair.com/flyeva/eva/b2c/flight-status-erc.aspx?ACTCODE=&Orderby=&REASON=&airport=TPE%2FTSA%2FKHH&cmstitle=erc-note2&date=20260710-20260713&lang=sc-cn&reqtime="
+        }
+      ]
+    },
+    {
+      "id": "demo-journey-16-6",
+      "date": "2025-08-04",
+      "flight": "BR712",
+      "from": "TPE",
+      "to": "PVG",
+      "departure": "",
+      "arrival": "",
+      "status": "flown",
+      "note": "虛構示範資料，並非任何人的真實旅行紀錄。上海出發的新馬泰環線。日期與搭乘狀態皆為模擬，班號僅參考公開航線，不代表當日執飛；未模擬疫情入境限制。Fictional journey; dates and flown status are synthetic, not historical operations.",
+      "sources": [
+        {
+          "type": "demo",
+          "label": "虛構示範資料 · 上海出發的新馬泰環線"
+        },
+        {
+          "type": "route_reference",
+          "label": "EVA Air · 僅核對班號與航線 · 2026-09-17",
+          "url": "https://booking.evaair.com/flyeva/eva/b2c/flight-status-erc.aspx?ACTCODE=&Orderby=&REASON=&airport=TPE%2FTSA%2FKHH&cmstitle=erc-note1&date=20260710-20260713&lang=&reqtime="
+        }
+      ]
+    },
+    {
+      "id": "demo-journey-17-1",
+      "date": "2025-09-29",
+      "flight": "EK303",
+      "from": "PVG",
+      "to": "DXB",
+      "departure": "",
+      "arrival": "",
+      "status": "flown",
+      "note": "虛構示範資料，並非任何人的真實旅行紀錄。上海出發重訪聖保羅。日期與搭乘狀態皆為模擬，班號僅參考公開航線，不代表當日執飛；未模擬疫情入境限制。Fictional journey; dates and flown status are synthetic, not historical operations.",
+      "sources": [
+        {
+          "type": "demo",
+          "label": "虛構示範資料 · 上海出發重訪聖保羅"
+        },
+        {
+          "type": "route_reference",
+          "label": "Emirates · 僅核對班號與航線 · 2026-09-17",
+          "url": "https://www.emirates.com/cn/chinese/destinations/dxb/pvg/flights-from-dubai-to-shanghai/"
+        }
+      ]
+    },
+    {
+      "id": "demo-journey-17-2",
+      "date": "2025-10-06",
+      "flight": "EK261",
+      "from": "DXB",
+      "to": "GRU",
+      "departure": "",
+      "arrival": "",
+      "status": "flown",
+      "note": "虛構示範資料，並非任何人的真實旅行紀錄。上海出發重訪聖保羅。日期與搭乘狀態皆為模擬，班號僅參考公開航線，不代表當日執飛；未模擬疫情入境限制。Fictional journey; dates and flown status are synthetic, not historical operations.",
+      "sources": [
+        {
+          "type": "demo",
+          "label": "虛構示範資料 · 上海出發重訪聖保羅"
+        },
+        {
+          "type": "route_reference",
+          "label": "Emirates · 僅核對班號與航線 · 2026-09-17",
+          "url": "https://www.emirates.com/br/portuguese/destinations/gru/dxb/flights-from-sao-paulo-to-dubai/"
+        }
+      ]
+    },
+    {
+      "id": "demo-journey-17-3",
+      "date": "2025-10-09",
+      "flight": "EK262",
+      "from": "GRU",
+      "to": "DXB",
+      "departure": "",
+      "arrival": "",
+      "status": "flown",
+      "note": "虛構示範資料，並非任何人的真實旅行紀錄。上海出發重訪聖保羅。日期與搭乘狀態皆為模擬，班號僅參考公開航線，不代表當日執飛；未模擬疫情入境限制。Fictional journey; dates and flown status are synthetic, not historical operations.",
+      "sources": [
+        {
+          "type": "demo",
+          "label": "虛構示範資料 · 上海出發重訪聖保羅"
+        },
+        {
+          "type": "route_reference",
+          "label": "Emirates · 僅核對班號與航線 · 2026-09-17",
+          "url": "https://www.emirates.com/br/portuguese/destinations/gru/dxb/flights-from-sao-paulo-to-dubai/"
+        }
+      ]
+    },
+    {
+      "id": "demo-journey-17-4",
+      "date": "2025-10-23",
+      "flight": "EK366",
+      "from": "DXB",
+      "to": "TPE",
+      "departure": "",
+      "arrival": "",
+      "status": "flown",
+      "note": "虛構示範資料，並非任何人的真實旅行紀錄。上海出發重訪聖保羅。日期與搭乘狀態皆為模擬，班號僅參考公開航線，不代表當日執飛；未模擬疫情入境限制。Fictional journey; dates and flown status are synthetic, not historical operations.",
+      "sources": [
+        {
+          "type": "demo",
+          "label": "虛構示範資料 · 上海出發重訪聖保羅"
+        },
+        {
+          "type": "route_reference",
+          "label": "Emirates · 僅核對班號與航線 · 2026-09-17",
+          "url": "https://www.emirates.com/tw/chinese/destinations/dxb/tpe/flights-from-dubai-to-taipei/"
+        }
+      ]
+    },
+    {
+      "id": "demo-journey-17-5",
+      "date": "2025-10-26",
+      "flight": "BR712",
+      "from": "TPE",
+      "to": "PVG",
+      "departure": "",
+      "arrival": "",
+      "status": "flown",
+      "note": "虛構示範資料，並非任何人的真實旅行紀錄。上海出發重訪聖保羅。日期與搭乘狀態皆為模擬，班號僅參考公開航線，不代表當日執飛；未模擬疫情入境限制。Fictional journey; dates and flown status are synthetic, not historical operations.",
+      "sources": [
+        {
+          "type": "demo",
+          "label": "虛構示範資料 · 上海出發重訪聖保羅"
+        },
+        {
+          "type": "route_reference",
+          "label": "EVA Air · 僅核對班號與航線 · 2026-09-17",
+          "url": "https://booking.evaair.com/flyeva/eva/b2c/flight-status-erc.aspx?ACTCODE=&Orderby=&REASON=&airport=TPE%2FTSA%2FKHH&cmstitle=erc-note1&date=20260710-20260713&lang=&reqtime="
+        }
+      ]
+    },
+    {
+      "id": "demo-journey-17-6",
+      "date": "2025-11-04",
+      "flight": "BR711",
+      "from": "PVG",
+      "to": "TPE",
+      "departure": "",
+      "arrival": "",
+      "status": "flown",
+      "note": "虛構示範資料，並非任何人的真實旅行紀錄。上海出發重訪聖保羅。日期與搭乘狀態皆為模擬，班號僅參考公開航線，不代表當日執飛；未模擬疫情入境限制。Fictional journey; dates and flown status are synthetic, not historical operations.",
+      "sources": [
+        {
+          "type": "demo",
+          "label": "虛構示範資料 · 上海出發重訪聖保羅"
+        },
+        {
+          "type": "route_reference",
+          "label": "EVA Air · 僅核對班號與航線 · 2026-09-17",
+          "url": "https://booking.evaair.com/flyeva/eva/b2c/flight-status-erc.aspx?ACTCODE=&Orderby=&REASON=&airport=TPE%2FTSA%2FKHH&cmstitle=erc-note1&date=20260710-20260713&lang=&reqtime="
+        }
+      ]
+    },
+    {
+      "id": "demo-journey-18-1",
+      "date": "2025-12-29",
+      "flight": "EK367",
+      "from": "TPE",
+      "to": "DXB",
+      "departure": "",
+      "arrival": "",
+      "status": "flown",
+      "note": "虛構示範資料，並非任何人的真實旅行紀錄。南非與巴黎串聯。日期與搭乘狀態皆為模擬，班號僅參考公開航線，不代表當日執飛；未模擬疫情入境限制。Fictional journey; dates and flown status are synthetic, not historical operations.",
+      "sources": [
+        {
+          "type": "demo",
+          "label": "虛構示範資料 · 南非與巴黎串聯"
+        },
+        {
+          "type": "route_reference",
+          "label": "Emirates · 僅核對班號與航線 · 2026-09-17",
+          "url": "https://www.emirates.com/tw/chinese/destinations/dxb/tpe/flights-from-dubai-to-taipei/"
+        }
+      ]
+    },
+    {
+      "id": "demo-journey-18-2",
+      "date": "2026-01-05",
+      "flight": "EK761",
+      "from": "DXB",
+      "to": "JNB",
+      "departure": "",
+      "arrival": "",
+      "status": "flown",
+      "note": "虛構示範資料，並非任何人的真實旅行紀錄。南非與巴黎串聯。日期與搭乘狀態皆為模擬，班號僅參考公開航線，不代表當日執飛；未模擬疫情入境限制。Fictional journey; dates and flown status are synthetic, not historical operations.",
+      "sources": [
+        {
+          "type": "demo",
+          "label": "虛構示範資料 · 南非與巴黎串聯"
+        },
+        {
+          "type": "route_reference",
+          "label": "Emirates · 僅核對班號與航線 · 2026-09-17",
+          "url": "https://www.emirates.com/english/destinations/dxb/jnb/flights-from-dubai-to-johannesburg/"
+        }
+      ]
+    },
+    {
+      "id": "demo-journey-18-3",
+      "date": "2026-01-08",
+      "flight": "EK762",
+      "from": "JNB",
+      "to": "DXB",
+      "departure": "",
+      "arrival": "",
+      "status": "flown",
+      "note": "虛構示範資料，並非任何人的真實旅行紀錄。南非與巴黎串聯。日期與搭乘狀態皆為模擬，班號僅參考公開航線，不代表當日執飛；未模擬疫情入境限制。Fictional journey; dates and flown status are synthetic, not historical operations.",
+      "sources": [
+        {
+          "type": "demo",
+          "label": "虛構示範資料 · 南非與巴黎串聯"
+        },
+        {
+          "type": "route_reference",
+          "label": "Emirates · 僅核對班號與航線 · 2026-09-17",
+          "url": "https://www.emirates.com/english/destinations/dxb/jnb/flights-from-dubai-to-johannesburg/"
+        }
+      ]
+    },
+    {
+      "id": "demo-journey-18-4",
+      "date": "2026-01-22",
+      "flight": "EK73",
+      "from": "DXB",
+      "to": "CDG",
+      "departure": "",
+      "arrival": "",
+      "status": "flown",
+      "note": "虛構示範資料，並非任何人的真實旅行紀錄。南非與巴黎串聯。日期與搭乘狀態皆為模擬，班號僅參考公開航線，不代表當日執飛；未模擬疫情入境限制。Fictional journey; dates and flown status are synthetic, not historical operations.",
+      "sources": [
+        {
+          "type": "demo",
+          "label": "虛構示範資料 · 南非與巴黎串聯"
+        },
+        {
+          "type": "route_reference",
+          "label": "Emirates · 僅核對班號與航線 · 2026-09-17",
+          "url": "https://www.emirates.com/english/destinations/dxb/cdg/flights-from-dubai-to-paris/"
+        }
+      ]
+    },
+    {
+      "id": "demo-journey-18-5",
+      "date": "2026-01-25",
+      "flight": "EK74",
+      "from": "CDG",
+      "to": "DXB",
+      "departure": "",
+      "arrival": "",
+      "status": "flown",
+      "note": "虛構示範資料，並非任何人的真實旅行紀錄。南非與巴黎串聯。日期與搭乘狀態皆為模擬，班號僅參考公開航線，不代表當日執飛；未模擬疫情入境限制。Fictional journey; dates and flown status are synthetic, not historical operations.",
+      "sources": [
+        {
+          "type": "demo",
+          "label": "虛構示範資料 · 南非與巴黎串聯"
+        },
+        {
+          "type": "route_reference",
+          "label": "Emirates · 僅核對班號與航線 · 2026-09-17",
+          "url": "https://www.emirates.com/english/destinations/dxb/cdg/flights-from-dubai-to-paris/"
+        }
+      ]
+    },
+    {
+      "id": "demo-journey-18-6",
+      "date": "2026-02-03",
+      "flight": "EK366",
+      "from": "DXB",
+      "to": "TPE",
+      "departure": "",
+      "arrival": "",
+      "status": "flown",
+      "note": "虛構示範資料，並非任何人的真實旅行紀錄。南非與巴黎串聯。日期與搭乘狀態皆為模擬，班號僅參考公開航線，不代表當日執飛；未模擬疫情入境限制。Fictional journey; dates and flown status are synthetic, not historical operations.",
+      "sources": [
+        {
+          "type": "demo",
+          "label": "虛構示範資料 · 南非與巴黎串聯"
+        },
+        {
+          "type": "route_reference",
+          "label": "Emirates · 僅核對班號與航線 · 2026-09-17",
+          "url": "https://www.emirates.com/tw/chinese/destinations/dxb/tpe/flights-from-dubai-to-taipei/"
+        }
+      ]
+    },
+    {
+      "id": "demo-journey-19-1",
+      "date": "2026-03-29",
+      "flight": "BR712",
+      "from": "TPE",
+      "to": "PVG",
+      "departure": "",
+      "arrival": "",
+      "status": "flown",
+      "note": "虛構示範資料，並非任何人的真實旅行紀錄。上海出發重訪伊斯坦堡。日期與搭乘狀態皆為模擬，班號僅參考公開航線，不代表當日執飛；未模擬疫情入境限制。Fictional journey; dates and flown status are synthetic, not historical operations.",
+      "sources": [
+        {
+          "type": "demo",
+          "label": "虛構示範資料 · 上海出發重訪伊斯坦堡"
+        },
+        {
+          "type": "route_reference",
+          "label": "EVA Air · 僅核對班號與航線 · 2026-09-17",
+          "url": "https://booking.evaair.com/flyeva/eva/b2c/flight-status-erc.aspx?ACTCODE=&Orderby=&REASON=&airport=TPE%2FTSA%2FKHH&cmstitle=erc-note1&date=20260710-20260713&lang=&reqtime="
+        }
+      ]
+    },
+    {
+      "id": "demo-journey-19-2",
+      "date": "2026-04-05",
+      "flight": "EK303",
+      "from": "PVG",
+      "to": "DXB",
+      "departure": "",
+      "arrival": "",
+      "status": "flown",
+      "note": "虛構示範資料，並非任何人的真實旅行紀錄。上海出發重訪伊斯坦堡。日期與搭乘狀態皆為模擬，班號僅參考公開航線，不代表當日執飛；未模擬疫情入境限制。Fictional journey; dates and flown status are synthetic, not historical operations.",
+      "sources": [
+        {
+          "type": "demo",
+          "label": "虛構示範資料 · 上海出發重訪伊斯坦堡"
+        },
+        {
+          "type": "route_reference",
+          "label": "Emirates · 僅核對班號與航線 · 2026-09-17",
+          "url": "https://www.emirates.com/cn/chinese/destinations/dxb/pvg/flights-from-dubai-to-shanghai/"
+        }
+      ]
+    },
+    {
+      "id": "demo-journey-19-3",
+      "date": "2026-04-08",
+      "flight": "EK123",
+      "from": "DXB",
+      "to": "IST",
+      "departure": "",
+      "arrival": "",
+      "status": "flown",
+      "note": "虛構示範資料，並非任何人的真實旅行紀錄。上海出發重訪伊斯坦堡。日期與搭乘狀態皆為模擬，班號僅參考公開航線，不代表當日執飛；未模擬疫情入境限制。Fictional journey; dates and flown status are synthetic, not historical operations.",
+      "sources": [
+        {
+          "type": "demo",
+          "label": "虛構示範資料 · 上海出發重訪伊斯坦堡"
+        },
+        {
+          "type": "route_reference",
+          "label": "Emirates · 僅核對班號與航線 · 2026-09-17",
+          "url": "https://www.emirates.com/media-centre/emirates-announces-start-of-scheduled-daily-a380-service-to-istanbul/"
+        }
+      ]
+    },
+    {
+      "id": "demo-journey-19-4",
+      "date": "2026-04-22",
+      "flight": "EK124",
+      "from": "IST",
+      "to": "DXB",
+      "departure": "",
+      "arrival": "",
+      "status": "flown",
+      "note": "虛構示範資料，並非任何人的真實旅行紀錄。上海出發重訪伊斯坦堡。日期與搭乘狀態皆為模擬，班號僅參考公開航線，不代表當日執飛；未模擬疫情入境限制。Fictional journey; dates and flown status are synthetic, not historical operations.",
+      "sources": [
+        {
+          "type": "demo",
+          "label": "虛構示範資料 · 上海出發重訪伊斯坦堡"
+        },
+        {
+          "type": "route_reference",
+          "label": "Emirates · 僅核對班號與航線 · 2026-09-17",
+          "url": "https://www.emirates.com/media-centre/emirates-announces-start-of-scheduled-daily-a380-service-to-istanbul/"
+        }
+      ]
+    },
+    {
+      "id": "demo-journey-19-5",
+      "date": "2026-04-25",
+      "flight": "EK302",
+      "from": "DXB",
+      "to": "PVG",
+      "departure": "",
+      "arrival": "",
+      "status": "flown",
+      "note": "虛構示範資料，並非任何人的真實旅行紀錄。上海出發重訪伊斯坦堡。日期與搭乘狀態皆為模擬，班號僅參考公開航線，不代表當日執飛；未模擬疫情入境限制。Fictional journey; dates and flown status are synthetic, not historical operations.",
+      "sources": [
+        {
+          "type": "demo",
+          "label": "虛構示範資料 · 上海出發重訪伊斯坦堡"
+        },
+        {
+          "type": "route_reference",
+          "label": "Emirates · 僅核對班號與航線 · 2026-09-17",
+          "url": "https://www.emirates.com/cn/chinese/destinations/dxb/pvg/flights-from-dubai-to-shanghai/"
+        }
+      ]
+    },
+    {
+      "id": "demo-journey-19-6",
+      "date": "2026-05-04",
+      "flight": "BR711",
+      "from": "PVG",
+      "to": "TPE",
+      "departure": "",
+      "arrival": "",
+      "status": "flown",
+      "note": "虛構示範資料，並非任何人的真實旅行紀錄。上海出發重訪伊斯坦堡。日期與搭乘狀態皆為模擬，班號僅參考公開航線，不代表當日執飛；未模擬疫情入境限制。Fictional journey; dates and flown status are synthetic, not historical operations.",
+      "sources": [
+        {
+          "type": "demo",
+          "label": "虛構示範資料 · 上海出發重訪伊斯坦堡"
+        },
+        {
+          "type": "route_reference",
+          "label": "EVA Air · 僅核對班號與航線 · 2026-09-17",
+          "url": "https://booking.evaair.com/flyeva/eva/b2c/flight-status-erc.aspx?ACTCODE=&Orderby=&REASON=&airport=TPE%2FTSA%2FKHH&cmstitle=erc-note1&date=20260710-20260713&lang=&reqtime="
+        }
+      ]
+    },
+    {
+      "id": "demo-journey-20-1",
+      "date": "2026-06-25",
+      "flight": "BR196",
+      "from": "TPE",
+      "to": "NRT",
+      "departure": "",
+      "arrival": "",
+      "status": "flown",
+      "note": "虛構示範資料，並非任何人的真實旅行紀錄。東京與奧克蘭後返回台灣。日期與搭乘狀態皆為模擬，班號僅參考公開航線，不代表當日執飛；未模擬疫情入境限制。Fictional journey; dates and flown status are synthetic, not historical operations.",
+      "sources": [
+        {
+          "type": "demo",
+          "label": "虛構示範資料 · 東京與奧克蘭後返回台灣"
+        },
+        {
+          "type": "route_reference",
+          "label": "EVA Air · 僅核對班號與航線 · 2026-09-17",
+          "url": "https://booking.evaair.com/flyeva/eva/b2c/flight-status-erc.aspx?ACTCODE=&Orderby=&REASON=&airport=TPE%2FTSA%2FKHH&cmstitle=erc-note1&date=20260710-20260713&lang=&reqtime="
+        }
+      ]
+    },
+    {
+      "id": "demo-journey-20-2",
+      "date": "2026-07-02",
+      "flight": "BR195",
+      "from": "NRT",
+      "to": "TPE",
+      "departure": "",
+      "arrival": "",
+      "status": "flown",
+      "note": "虛構示範資料，並非任何人的真實旅行紀錄。東京與奧克蘭後返回台灣。日期與搭乘狀態皆為模擬，班號僅參考公開航線，不代表當日執飛；未模擬疫情入境限制。Fictional journey; dates and flown status are synthetic, not historical operations.",
+      "sources": [
+        {
+          "type": "demo",
+          "label": "虛構示範資料 · 東京與奧克蘭後返回台灣"
+        },
+        {
+          "type": "route_reference",
+          "label": "EVA Air · 僅核對班號與航線 · 2026-09-17",
+          "url": "https://booking.evaair.com/flyeva/eva/b2c/flight-status-erc.aspx?ACTCODE=&Orderby=&airport=FUK%2FMYJ%2FKIX%2FNGO%2FKMQ%2FHND%2FNRT%2FSDJ%2FAOJ&cmstitle=erc-note1&date=20191011-20191013&lang=zh-tw&reqtime="
+        }
+      ]
+    },
+    {
+      "id": "demo-journey-20-3",
+      "date": "2026-07-22",
+      "flight": "NZ78",
+      "from": "TPE",
+      "to": "AKL",
+      "departure": "",
+      "arrival": "",
+      "status": "flown",
+      "note": "虛構示範資料，並非任何人的真實旅行紀錄。東京與奧克蘭後返回台灣。日期與搭乘狀態皆為模擬，班號僅參考公開航線，不代表當日執飛；未模擬疫情入境限制。Fictional journey; dates and flown status are synthetic, not historical operations.",
+      "sources": [
+        {
+          "type": "demo",
+          "label": "虛構示範資料 · 東京與奧克蘭後返回台灣"
+        },
+        {
+          "type": "route_reference",
+          "label": "Air New Zealand · 僅核對班號與航線 · 2026-09-17",
+          "url": "https://www.airnewzealand.tw/flight-deals-to-new-zealand"
+        }
+      ]
+    },
+    {
+      "id": "demo-journey-20-4",
+      "date": "2026-07-29",
+      "flight": "SQ286",
+      "from": "AKL",
+      "to": "SIN",
+      "departure": "",
+      "arrival": "",
+      "status": "flown",
+      "note": "虛構示範資料，並非任何人的真實旅行紀錄。東京與奧克蘭後返回台灣。日期與搭乘狀態皆為模擬，班號僅參考公開航線，不代表當日執飛；未模擬疫情入境限制。Fictional journey; dates and flown status are synthetic, not historical operations.",
+      "sources": [
+        {
+          "type": "demo",
+          "label": "虛構示範資料 · 東京與奧克蘭後返回台灣"
+        },
+        {
+          "type": "route_reference",
+          "label": "Singapore Airlines · 僅核對班號與航線 · 2026-09-17",
+          "url": "https://agent360.singaporeair.com/content/dam/agent360/web-assets/pdf/local/nz/SQxNZ_Trade_Brochure_SQ_small.pdf"
+        }
+      ]
+    },
+    {
+      "id": "demo-journey-20-5",
+      "date": "2026-08-19",
+      "flight": "SQ830",
+      "from": "SIN",
+      "to": "PVG",
+      "departure": "",
+      "arrival": "",
+      "status": "flown",
+      "note": "虛構示範資料，並非任何人的真實旅行紀錄。東京與奧克蘭後返回台灣。日期與搭乘狀態皆為模擬，班號僅參考公開航線，不代表當日執飛；未模擬疫情入境限制。Fictional journey; dates and flown status are synthetic, not historical operations.",
+      "sources": [
+        {
+          "type": "demo",
+          "label": "虛構示範資料 · 東京與奧克蘭後返回台灣"
+        },
+        {
+          "type": "route_reference",
+          "label": "Singapore Airlines · 僅核對班號與航線 · 2026-09-17",
+          "url": "https://www.singaporeair.com/zh_CN/cn/plan-travel/local-promotions/cn-exCN/"
+        }
+      ]
+    },
+    {
+      "id": "demo-journey-20-6",
+      "date": "2026-09-16",
+      "flight": "BR711",
+      "from": "PVG",
+      "to": "TPE",
+      "departure": "",
+      "arrival": "",
+      "status": "flown",
+      "note": "虛構示範資料，並非任何人的真實旅行紀錄。東京與奧克蘭後返回台灣。日期與搭乘狀態皆為模擬，班號僅參考公開航線，不代表當日執飛；未模擬疫情入境限制。Fictional journey; dates and flown status are synthetic, not historical operations.",
+      "sources": [
+        {
+          "type": "demo",
+          "label": "虛構示範資料 · 東京與奧克蘭後返回台灣"
+        },
+        {
+          "type": "route_reference",
+          "label": "EVA Air · 僅核對班號與航線 · 2026-09-17",
+          "url": "https://booking.evaair.com/flyeva/eva/b2c/flight-status-erc.aspx?ACTCODE=&Orderby=&REASON=&airport=TPE%2FTSA%2FKHH&cmstitle=erc-note1&date=20260710-20260713&lang=&reqtime="
         }
       ]
     }
