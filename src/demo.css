@@ -1,97 +1,21 @@
-.demo-notice {
-  position: absolute;
-  z-index: 45;
-  top: calc(84px + env(safe-area-inset-top));
-  left: max(16px, env(safe-area-inset-left));
+.demo-settings {
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid var(--map-glass-line);
 }
-.demo-trigger {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  min-height: 44px;
-  padding: 6px 12px;
-  border-radius: 20px;
-  font: inherit;
+.demo-settings > strong {
+  display: block;
+  padding: 4px 10px 8px;
   font-size: 12px;
-  cursor: pointer;
-}
-.demo-trigger strong {
   font-weight: 600;
-}
-.demo-popover {
-  width: 260px;
-  padding: 16px;
-  border-radius: 20px;
-}
-.demo-popover > strong {
-  font-size: 14px;
-  font-weight: 600;
-}
-.demo-popover p {
-  font-size: 13px;
-  margin: 4px 0 12px;
   color: var(--map-glass-muted);
 }
-.demo-actions {
-  display: grid;
-  gap: 4px;
-}
-.demo-actions button {
-  display: flex;
-  align-items: center;
-  gap: 8px;
+.more-menu .demo-settings button {
   min-height: 44px;
-  padding: 8px 12px;
-  border: 0;
-  border-radius: 12px;
-  background: rgb(255 255 255 / 24%);
-  color: var(--map-glass-ink);
-  text-align: left;
-  font: inherit;
-  font-size: 13px;
-  cursor: pointer;
 }
-.demo-actions button:disabled {
-  opacity: 0.45;
-  cursor: wait;
-}
-.demo-actions button:hover {
-  background: var(--map-glass-active);
-}
-.camera-demo-label {
-  position: absolute;
-  display: inline-flex;
-  align-items: center;
-  min-height: 44px;
-  top: max(84px, calc(env(safe-area-inset-top) + 72px));
-  left: max(24px, env(safe-area-inset-left));
-  z-index: 2;
-  padding: 8px 12px;
-  border-radius: 20px;
+.camera-demo-info {
+  margin: 0;
+  padding: 10px 14px 0;
+  color: var(--map-glass-muted);
   font-size: 12px;
-  text-decoration: none;
-}
-@media (max-width: 760px) {
-  .demo-notice {
-    top: auto;
-    bottom: calc(88px + env(safe-area-inset-bottom));
-    left: max(12px, env(safe-area-inset-left));
-  }
-  .demo-trigger {
-    gap: 6px;
-    padding-inline: 10px;
-    min-height: 44px;
-  }
-  .demo-trigger > svg:first-child {
-    display: none;
-  }
-  .records-shell .demo-notice {
-    top: 80px;
-    bottom: auto;
-  }
-  .camera-demo-label {
-    top: 76px;
-    left: 12px;
-    padding: 6px 10px;
-  }
 }

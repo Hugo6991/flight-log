@@ -38,4 +38,4 @@ npx wrangler deploy --config wrangler.demo.jsonc
 
 首次建立新的示範資料庫時，先以 `npx wrangler d1 migrations apply flight-log-demo --remote --config wrangler.demo.jsonc` 建立空白來源。後續更新程式不必重新匯入資料，也不應將個人備份放進示範資料庫。
 
-部署後用乾淨瀏覽器檢查首頁與 `/journey/`：應顯示虛構標記和 120 段航班。`/api/state` 應回傳空白紀錄，非 GET 請求應回傳 405。再檢查清空後重新整理仍保持空白，另一個乾淨瀏覽器則仍看得到示範。
+部署後用乾淨瀏覽器檢查首頁與 `/journey/`：首次載入應有 120 段航班，首頁的更多功能及放映的航班選單應有虛構標記。示範資訊不常駐在地圖上。`/api/state` 應回傳空白紀錄，非 GET 請求應回傳 405。再檢查清空後重新整理仍保持空白，另一個乾淨瀏覽器則仍看得到示範。

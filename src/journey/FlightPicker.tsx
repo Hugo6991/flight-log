@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import { ArrowRight, Check, ChevronsUpDown, Search, X } from "lucide-react";
 import type { Airport, Flight } from "../../shared/model";
+import { demoLabel } from "../demo";
 import { Button } from "../components/ui/button";
 import { Command } from "../components/ui/command";
 import {
@@ -80,6 +81,9 @@ export default function FlightPicker({
           if (event.key === "Escape") event.stopPropagation();
         }}
       >
+        {demoLabel(flights) && (
+          <p className="camera-demo-info">{demoLabel(flights)}</p>
+        )}
         <Command
           label="搜尋航班"
           value={active}
