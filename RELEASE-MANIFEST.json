@@ -33,6 +33,7 @@
     "package-lock.json",
     "package.json",
     "public/airports.json",
+    "scripts/check-demo-deploy.mjs",
     "scripts/check-deploy.mjs",
     "scripts/dev.mjs",
     "scripts/generate-demo.mjs",
@@ -94,6 +95,8 @@
     "tsconfig.worker.json",
     "vite.config.ts",
     "vitest.config.ts",
+    "worker/browser-migration.test.ts",
+    "worker/browser-migration.ts",
     "worker/index.test.ts",
     "worker/index.ts",
     "wrangler.jsonc"

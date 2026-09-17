@@ -2,7 +2,7 @@
 
 Turn your flight history into a personal travel map you can replay and keep
 
-[Live demo](https://flight-log.vibeencode.dev/) · [Journey replay](https://flight-log.vibeencode.dev/journey/) · [繁體中文](README.md) · [Deploy](docs/SELF-HOST.md)
+[Live demo](https://flights.vibeencode.dev/) · [Journey replay](https://flights.vibeencode.dev/journey/) · [繁體中文](README.md) · [Deploy](docs/SELF-HOST.md)
 
 Explore five years of fictional travel across 120 flights without installing anything. The public demo runs separately from the private version. Imports and edits stay in your current browser, so they are never uploaded to the demo server or shared with other visitors
 

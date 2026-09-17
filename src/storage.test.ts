@@ -56,3 +56,17 @@ it("keeps the data revision and manual correction across reload and a legacy sto
   expect(reloaded.state.flights).toEqual([manual]);
   expect(await applyHistoryUpdate(reloaded.state)).toBe(reloaded.state);
 });
+
+it("isolates a repurposed domain while preserving other visitors' storage", async () => {
+  const { storageKeys } = await import("./storage");
+  const old = "https://old.example.com";
+  expect(storageKeys(old, old)).toEqual({
+    state: "flight-log.public.browser.v1",
+    backup: "flight-log.public.before-restore.v1",
+  });
+  expect(storageKeys("https://demo.example.com", old)).toEqual({
+    state: "flight-log.browser.v1",
+    backup: "flight-log.before-restore.v1",
+  });
+  expect(storageKeys(old, undefined).state).toBe("flight-log.browser.v1");
+});

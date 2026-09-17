@@ -1,3 +1,4 @@
+import { browserMigrationResponse } from "./browser-migration";
 import { applyHistoryUpdate } from "../shared/history-update";
 import { stateSchema } from "../shared/model";
 const json = (data: unknown, status = 200) =>
@@ -12,6 +13,14 @@ const json = (data: unknown, status = 200) =>
 export default {
   async fetch(request: Request, env: Env): Promise<Response> {
     const path = new URL(request.url).pathname;
+    if (path === "/browser-migration/")
+      return browserMigrationResponse(
+        request,
+        env as Env & {
+          BROWSER_MIGRATION_SOURCE_ORIGIN?: string;
+          BROWSER_MIGRATION_TARGET_ORIGIN?: string;
+        },
+      );
     if (path === "/api/state") {
       if (request.method !== "GET")
         return json(

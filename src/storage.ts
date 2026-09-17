@@ -1,6 +1,22 @@
 import { stateSchema, type FlightState } from "../shared/model";
-export const STORAGE_KEY = "flight-log.browser.v1";
-export const BEFORE_RESTORE_KEY = "flight-log.before-restore.v1";
+// A reused domain must not load personal records left by its previous application.
+// Other existing domains keep their original storage keys and visitor edits.
+export function storageKeys(
+  origin: string | undefined,
+  isolatedOrigin: string | undefined,
+) {
+  const scope = isolatedOrigin && origin === isolatedOrigin ? "public." : "";
+  return {
+    state: `flight-log.${scope}browser.v1`,
+    backup: `flight-log.${scope}before-restore.v1`,
+  };
+}
+const keys = storageKeys(
+  globalThis.location?.origin,
+  import.meta.env.VITE_STORAGE_SCOPE_ORIGIN,
+);
+export const STORAGE_KEY = keys.state;
+export const BEFORE_RESTORE_KEY = keys.backup;
 type Store = Pick<Storage, "getItem" | "setItem">;
 export function readSaved(
   storage: Store = localStorage,
