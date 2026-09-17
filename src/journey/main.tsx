@@ -57,8 +57,12 @@ function App() {
     <>
       <CameraMap flights={queue} airports={data.airports} />
       {demoLabel(data.flights) && (
-        <a className="camera-demo-label" href="/">
-          {demoLabel(data.flights)} · 可替換自己的紀錄
+        <a
+          className="camera-demo-label map-glass"
+          href="/"
+          aria-label={`${demoLabel(data.flights)}，返回地圖替換紀錄`}
+        >
+          {demoLabel(data.flights)}
         </a>
       )}
     </>

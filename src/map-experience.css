@@ -1,22 +1,4 @@
-/* Earth-specific summary; map controls share the translucent map-glass material. */
-.map-panel:has(.space-view) .journey-stats {
-  background: transparent;
-  border-color: transparent;
-  backdrop-filter: none;
-  box-shadow: none;
-  color: #f1f5ff;
-  width: min(470px, calc(100% - 48px));
-}
-.map-panel:has(.space-view) .journey-stats > div > span,
-.map-panel:has(.space-view) .journey-stats strong small {
-  color: #b8c9e1;
-}
-.map-panel:has(.space-view) .journey-stats strong {
-  text-shadow: 0 2px 12px #03091770;
-}
-.space-view .maplibregl-ctrl-attrib {
-  background: #ffffffde;
-}
+/* Map notices use the shared glass material. */
 .earth-notice {
   position: absolute;
   top: 155px;
@@ -26,8 +8,6 @@
   gap: 12px;
   padding: 10px 14px;
   border-radius: 12px;
-  background: #fff;
-  color: #344052;
   font-size: 12px;
   max-width: calc(100% - 48px);
 }
@@ -42,10 +22,6 @@
   }
 }
 @media (max-width: 760px) {
-  .map-panel:has(.space-view) .journey-stats {
-    width: calc(100% - 24px);
-    padding: 9px 12px;
-  }
   .earth-notice {
     top: 144px;
     left: 12px;

@@ -1,7 +1,7 @@
 /* Shared map chrome: one translucent surface, no nested backdrop filters. */
 :root {
-  --map-glass-surface: rgb(242 248 255 / 66%);
-  --map-glass-ink: #172b43;
+  --map-glass-surface: rgb(242 248 255 / 52%);
+  --map-glass-ink: #14283f;
   --map-glass-muted: #26374a;
   --map-glass-accent: #033770;
   --map-glass-line: rgb(34 65 99 / 14%);
@@ -17,6 +17,7 @@
 }
 /* Specificity keeps the same material over both legacy and primitive controls. */
 .map-glass.map-glass,
+.flight-ui.ui-popover.map-glass,
 .map-panel .map-glass,
 .flight-ui .ui-card.map-glass[data-material="glass"],
 .flight-ui .ui-button.map-glass {
@@ -28,8 +29,8 @@
   box-shadow:
     inset 0 1px 0 rgb(255 255 255 / 42%),
     var(--map-glass-shadow);
-  -webkit-backdrop-filter: blur(16px) saturate(145%);
-  backdrop-filter: blur(16px) saturate(145%);
+  -webkit-backdrop-filter: blur(24px) saturate(155%);
+  backdrop-filter: blur(24px) saturate(155%);
 }
 .map-glass .ui-button[data-variant="ghost"] {
   color: var(--map-glass-muted);
@@ -84,6 +85,7 @@
   (backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))
 ) {
   .map-glass.map-glass,
+  .flight-ui.ui-popover.map-glass,
   .map-panel .map-glass,
   .flight-ui .ui-card.map-glass[data-material="glass"],
   .flight-ui .ui-button.map-glass {
@@ -92,6 +94,7 @@
 }
 @media (prefers-reduced-transparency: reduce), (prefers-contrast: more) {
   .map-glass.map-glass,
+  .flight-ui.ui-popover.map-glass,
   .map-panel .map-glass,
   .flight-ui .ui-card.map-glass[data-material="glass"],
   .flight-ui .ui-button.map-glass {

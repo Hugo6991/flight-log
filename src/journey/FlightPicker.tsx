@@ -70,7 +70,7 @@ export default function FlightPicker({
       </PopoverTrigger>
       <PopoverContent
         side="top"
-        className="camera-flight-menu"
+        className="camera-flight-menu map-glass"
         aria-label="切換回放航班"
         onCloseAutoFocus={(event) => {
           if (!visible) event.preventDefault();

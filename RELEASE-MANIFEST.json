@@ -77,6 +77,7 @@
     "src/map-experience.css",
     "src/map-geometry.test.ts",
     "src/map-geometry.ts",
+    "src/map-shell.css",
     "src/passport-art.test.ts",
     "src/passport-art.ts",
     "src/passport.css",
