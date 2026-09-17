@@ -2,7 +2,9 @@
 
 Turn your flight history into a personal travel map you can replay and keep
 
-[繁體中文](README.md) · [Import guide](docs/GMAIL-IMPORT.md) · [Deploy](docs/SELF-HOST.md)
+[Live demo](https://flight-log.vibeencode.dev/) · [Journey replay](https://flight-log.vibeencode.dev/journey/) · [繁體中文](README.md) · [Deploy](docs/SELF-HOST.md)
+
+Explore five years of fictional travel across 120 flights without installing anything. The public demo runs separately from the private version. Imports and edits stay in your current browser, so they are never uploaded to the demo server or shared with other visitors
 
 ![Five years of fictional travel with 120 flights across 20 countries and regions](docs/media/world-map.png)
 
@@ -63,5 +65,7 @@ npm run build
 See [CONTRIBUTING](CONTRIBUTING.md), [SECURITY](SECURITY.md), and [third party notices](THIRD_PARTY_NOTICES.md). Use synthetic data in issues, screenshots and tests
 
 See the [demo verification report](docs/DEMO-VERIFICATION.md) for data checks and browser results, including mobile screenshots
+
+Hosted demo updates use a [separate deployment configuration](docs/PUBLIC-DEMO.md)
 
 MIT License covers the original code and synthetic sample data. Personal travel records and airline source pages are excluded, as are map services and third party brands

@@ -11,7 +11,7 @@ npx wrangler login
 npx wrangler d1 create my-flight-log
 ```
 
-`login` 在瀏覽器完成你自己的登入。把 create 回傳的 database_id、database_name 填進 `wrangler.jsonc`，binding 必須維持 `DB`。將 Worker 的 `name` 改成你想要的名稱，例如 `my-flight-log`。範本沒有作者帳號、網域或 database ID。
+`login` 在瀏覽器完成你自己的登入。把 create 回傳的 database_id、database_name 填進 `wrangler.jsonc`，binding 必須維持 `DB`。將 Worker 的 `name` 改成你想要的名稱，例如 `my-flight-log`。預設部署設定沒有作者帳號、網域或 database ID。
 
 ```sh
 npx wrangler d1 migrations apply my-flight-log --remote

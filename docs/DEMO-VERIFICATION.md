@@ -56,6 +56,14 @@ npm run build
 
 ![手機示範地圖](media/mobile-map.png)
 
+## 公開部署複驗
+
+2026 年 9 月 17 日將同一份建置部署至 [flight-log.vibeencode.dev](https://flight-log.vibeencode.dev/)，使用獨立的示範 Worker 與空白 D1，既有私人服務的網域綁定保持不變。
+
+正式網址另通過 9 組檢查：未登入可開啟首頁、清單與放映，HTTPS 與安全標頭正常；公開資料來源維持空白並拒絕寫入。桌面實際顯示 120 段與地圖，回放可搜尋並前進，護照能下載。清空、復原及人工自訂資料的整份替換正常，另一個乾淨手機瀏覽器仍顯示完整示範，年度篩選與搜尋亦正常。
+
+Cloudflare 與 Google 公開 DNS 均已解析新子網域。本機曾保留部署前的不存在紀錄快取，因此這次瀏覽器驗證使用公開 DNS 已確認的位址，仍正常驗證 HTTPS 憑證，沒有略過 TLS 檢查。
+
 ## English
 
 The public fixture passed all 62 automated tests, TypeScript checks and the production build. Seventeen browser checks covered first use, data replacement, clearing, undo and failed reads, plus desktop and mobile playback. Passport PNG downloads retained the fictional label, including mixed data. The browser tests used synthetic imports and a separate empty local database. No private installation was modified or deployed.

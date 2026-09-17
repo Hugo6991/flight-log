@@ -2,7 +2,9 @@
 
 把歷年航班變成可以回放、收藏與分享的旅行地圖
 
-[開始使用](#先在本機跑起來) · [整理 Gmail](docs/GMAIL-IMPORT.md) · [部署自己的網址](docs/SELF-HOST.md) · [English](README.en.md)
+[線上示範](https://flight-log.vibeencode.dev/) · [旅程放映](https://flight-log.vibeencode.dev/journey/) · [開始使用](#先在本機跑起來) · [English](README.en.md)
+
+免安裝即可瀏覽五年、120 段虛構航班。公開示範站與私人版本分開，所有旅行紀錄都是假資料；匯入或編輯只保存在目前瀏覽器，不會上傳到示範站或影響其他訪客
 
 ![Flight Log 五年虛構示範，120 段航班與 20 個國家／地區](docs/media/world-map.png)
 
@@ -71,6 +73,7 @@ npm run build
 - [安全與私人資料](SECURITY.md)
 - [操作與資料限制](docs/IMPORT-FORMAT.md)
 - [部署與備份](docs/SELF-HOST.md)
+- [公開示範站維護](docs/PUBLIC-DEMO.md)
 - [Gmail 搜尋和整理提示詞](docs/GMAIL-IMPORT.md)
 - [元件／設計參考](docs/DESIGN-REFERENCES.md)
 - [第三方資料與授權](THIRD_PARTY_NOTICES.md)

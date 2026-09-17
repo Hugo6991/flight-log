@@ -24,3 +24,6 @@ test-results/
 .dev.vars*
 .wrangler/
 worker-configuration.d.ts
+
+# Maintainer deployment settings for the hosted public demo
+/wrangler.demo.jsonc
