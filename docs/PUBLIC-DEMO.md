@@ -43,3 +43,7 @@ npm run deploy:demo
 維護者的 `.env.demo` 設定 `VITE_STORAGE_SCOPE_ORIGIN=https://flights.vibeencode.dev`，讓曾作為個人站的網址使用新的瀏覽器儲存空間。舊紀錄保留原位，不會被載入展示畫面或刪除；其他原有網址仍沿用原儲存空間
 
 網域移轉可在 `wrangler.demo.jsonc` 的 `vars` 指定 `BROWSER_MIGRATION_SOURCE_ORIGIN` 與 `BROWSER_MIGRATION_TARGET_ORIGIN`。來源站的 `/browser-migration/` 僅接受指定目標 origin 的父視窗，透過 `postMessage` 將同一瀏覽器的舊紀錄交給新站。Worker 不接收航班內容，未設定或 origin 不符時此端點回傳 404。此功能不提供跨装置同步
+
+## 示範資料庫不得是個人資料庫
+
+`npm run deploy:demo` 會先跑 `scripts/check-demo-deploy.mjs`。在 `.env.demo`（已排除於 Git）加一行 `DEMO_FORBIDDEN_D1_IDS=<個人 D1 的 database_id>`，多個用逗號分隔；示範設定檔的 `database_id` 若等於其中任何一個，部署會直接中止。沒有設定時只會印出警告，不會擋下部署
