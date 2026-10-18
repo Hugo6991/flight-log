@@ -14,9 +14,11 @@ Everything above is synthetic. The demo site ships 120 fictional flights, and an
 
 ## Why I built this
 
-I had seven years of flights buried in Trip.com confirmation emails and no way to see them as one picture. Flighty does this beautifully for live tracking, but my history was the part I cared about, and I wanted it on a page I own rather than inside someone else's account
+I fly a lot, and I wanted to see every flight I have ever taken on one map. Flighty does this well for trips you track from now on. My past flights were the part I cared about, and they were nowhere
 
-One limitation stayed on purpose. There is no Gmail button inside the app, because holding mail credentials in a hobby project is a bad trade. Import goes through an AI assistant you already trust with your inbox, and the app only ever sees the JSON you decide to hand it
+The map was the easy part. The hard part was finding all the flights. Seven years of bookings sit in Trip.com and airline emails, with changes and cancellations mixed in, and no export gives you a clean list
+
+Today that part is easy too. I ask Grok to search my Gmail and hand back every flight as JSON, then I check it and import it. So the app never needs access to your inbox. It only reads the JSON you give it
 
 ## What it does
 
@@ -66,7 +68,7 @@ Open http://127.0.0.1:4173 and you will see the 120 fictional flights. `setup:lo
 
 ## Add your own flights
 
-1. In an AI assistant that has a Gmail connector, paste the prompt from [docs/GMAIL-IMPORT.md](docs/GMAIL-IMPORT.md). It reads your booking emails and writes `data/local/flights.reviewed.json` in the [import format](docs/IMPORT-FORMAT.md)
+1. In an AI assistant that can read your Gmail (I use Grok), paste the prompt from [docs/GMAIL-IMPORT.md](docs/GMAIL-IMPORT.md). It reads your booking emails and writes `data/local/flights.reviewed.json` in the [import format](docs/IMPORT-FORMAT.md)
 2. Run `npm run import:prepare -- data/local/flights.reviewed.json`. This validates dates and airport codes, removes duplicates, flags changed or cancelled segments and strips email subjects and order ids
 3. In the app, open the menu and choose restore backup, then pick the generated `flights.json`. Your flights replace the demo in this browser only
 
