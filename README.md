@@ -2,7 +2,9 @@
 
 Turn years of flights into a map you can replay, keep and share
 
-[Live demo](https://flights.vibeencode.dev/) · [Journey replay](https://flights.vibeencode.dev/journey/) · [Run it](#run-it) · [Self-host](docs/SELF-HOST.md) · [繁體中文](README.zh-TW.md)
+**Live demo: https://flights.vibeencode.dev** · [Journey replay](https://flights.vibeencode.dev/journey/)
+
+[Run it](#run-it) · [Self-host](docs/SELF-HOST.md) · [繁體中文](README.zh-TW.md)
 
 ![Five years of fictional travel, 120 flights across 20 countries and regions, shown on a globe](docs/media/world-map.png)
 
@@ -13,8 +15,6 @@ Everything above is synthetic. The demo site ships 120 fictional flights, and an
 ## Why I built this
 
 I had seven years of flights buried in Trip.com confirmation emails and no way to see them as one picture. Flighty does this beautifully for live tracking, but my history was the part I cared about, and I wanted it on a page I own rather than inside someone else's account
-
-The first version read my own inbox and drew the routes. That turned out to be the easy part. The hard part was keeping real travel data out of a public repository while still having something worth showing, so the project split into separate lines. A private site holds my real log. This open source version runs on a fully synthetic dataset, and a cloud version with accounts is still in progress. Everything in this repository comes from the synthetic line
 
 One limitation stayed on purpose. There is no Gmail button inside the app, because holding mail credentials in a hobby project is a bad trade. Import goes through an AI assistant you already trust with your inbox, and the app only ever sees the JSON you decide to hand it
 
